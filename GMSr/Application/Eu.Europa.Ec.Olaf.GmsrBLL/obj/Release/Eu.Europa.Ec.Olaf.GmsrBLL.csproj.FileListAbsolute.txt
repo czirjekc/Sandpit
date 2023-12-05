@@ -1,0 +1,7 @@
+D:\data\janquer\Visual Studio 2010\Projects\GMSR\Application\Eu.Europa.Ec.Olaf.GmsrBLL\bin\Release\Eu.Europa.Ec.Olaf.GmsrBLL.dll
+D:\data\janquer\Visual Studio 2010\Projects\GMSR\Application\Eu.Europa.Ec.Olaf.GmsrBLL\bin\Release\Eu.Europa.Ec.Olaf.GmsrBLL.pdb
+D:\data\janquer\Visual Studio 2010\Projects\GMSR\Application\Eu.Europa.Ec.Olaf.GmsrBLL\bin\Release\Eu.Europa.Ec.Olaf.GmsrDAL.dll
+D:\data\janquer\Visual Studio 2010\Projects\GMSR\Application\Eu.Europa.Ec.Olaf.GmsrBLL\bin\Release\Eu.Europa.Ec.Olaf.GmsrDAL.pdb
+D:\data\janquer\Visual Studio 2010\Projects\GMSR\Application\Eu.Europa.Ec.Olaf.GmsrBLL\obj\Release\ResolveAssemblyReference.cache
+D:\data\janquer\Visual Studio 2010\Projects\GMSR\Application\Eu.Europa.Ec.Olaf.GmsrBLL\obj\Release\Eu.Europa.Ec.Olaf.GmsrBLL.dll
+D:\data\janquer\Visual Studio 2010\Projects\GMSR\Application\Eu.Europa.Ec.Olaf.GmsrBLL\obj\Release\Eu.Europa.Ec.Olaf.GmsrBLL.pdb

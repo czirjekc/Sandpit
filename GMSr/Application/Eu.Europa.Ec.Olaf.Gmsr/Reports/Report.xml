@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <sensors>
+   <prtg-version>8.3.1.2080</prtg-version>
+   <item>
+    <objid>3754</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME1</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>1.322 GB</lastvalue>
+    <lastvalue_raw>1322.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3757</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME2</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>614 GB</lastvalue>
+    <lastvalue_raw>614.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3758</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME3</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>394 GB</lastvalue>
+    <lastvalue_raw>394.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3759</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME4</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>1.801 GB</lastvalue>
+    <lastvalue_raw>1801.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3760</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME5</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>1.950 GB</lastvalue>
+    <lastvalue_raw>1950.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3761</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME6</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>1.574 GB</lastvalue>
+    <lastvalue_raw>1574.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3762</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME7</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>1.376 GB</lastvalue>
+    <lastvalue_raw>1376.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3763</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER VOLUME8</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>68 GB</lastvalue>
+    <lastvalue_raw>68.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3764</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER WORKVOLUME</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>2.445 GB</lastvalue>
+    <lastvalue_raw>2445.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>3837</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CLUSTER LINUXSATA</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK</message_raw>
+    <lastvalue>1.050 GB</lastvalue>
+    <lastvalue_raw>1050.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4814</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME1</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 377 Gb Size Used 1322 Gb Total size 1700 Go</message_raw>
+    <lastvalue>22 %</lastvalue>
+    <lastvalue_raw>22.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4815</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME2</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 1285 Gb Size Used 614 Gb Total size 1900 Go</message_raw>
+    <lastvalue>67 %</lastvalue>
+    <lastvalue_raw>67.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4816</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME3</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 105 Gb Size Used 394 Gb Total size 500 Go</message_raw>
+    <lastvalue>21 %</lastvalue>
+    <lastvalue_raw>21.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4818</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME4</sensor>
+    <status>Warning</status>
+    <status_raw>4</status_raw>
+    <message_raw>Critical !! Size Free 247 Gb Size Used 1800 Gb Total size 2047 Go</message_raw>
+    <lastvalue>12 %</lastvalue>
+    <lastvalue_raw>12.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4819</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME5</sensor>
+    <status>Down</status>
+    <status_raw>5</status_raw>
+    <message_raw>4 % (Value) is below the error limit of 10 %</message_raw>
+    <lastvalue>4 %</lastvalue>
+    <lastvalue_raw>4.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4820</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME6</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 473 Gb Size Used 1574 Gb Total size 2047 Go</message_raw>
+    <lastvalue>23 %</lastvalue>
+    <lastvalue_raw>23.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4821</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME7</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 671 Gb Size Used 1376 Gb Total size 2047 Go</message_raw>
+    <lastvalue>32 %</lastvalue>
+    <lastvalue_raw>32.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4822</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION VOLUME8</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 231 Gb Size Used 68 Gb Total size 300 Go</message_raw>
+    <lastvalue>77 %</lastvalue>
+    <lastvalue_raw>77.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4823</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION WORKVOLUME</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 626 Gb Size Used 2445 Gb Total size 3072 Go</message_raw>
+    <lastvalue>20 %</lastvalue>
+    <lastvalue_raw>20.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+   <item>
+    <objid>4826</objid>
+    <group>HYPERVISOR</group>
+    <device>S-OLAF-CLUSTER1</device>
+    <sensor>CAPACITY OCCUPATION LINUXSATA</sensor>
+    <status>Up</status>
+    <status_raw>3</status_raw>
+    <message_raw>OK Size Free 997 Gb Size Used 1050 Gb Total size 2047 Go</message_raw>
+    <lastvalue>48 %</lastvalue>
+    <lastvalue_raw>48.0000</lastvalue_raw>
+    <priority>3</priority>
+    <favorite_raw>0</favorite_raw>
+   </item>
+  </sensors>
+  

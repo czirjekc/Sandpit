@@ -1,0 +1,1121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GmsrModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="GmsrModelStoreContainer">
+    <EntitySet Name="AUTO_GROUPXUSR" EntityType="GmsrModel.Store.AUTO_GROUPXUSR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contract_Amendment" EntityType="GmsrModel.Store.Contract_Amendment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contract_Framework" EntityType="GmsrModel.Store.Contract_Framework" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contract_Order" EntityType="GmsrModel.Store.Contract_Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contract_SpecContract" EntityType="GmsrModel.Store.Contract_SpecContract" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GLoan_Assignements" EntityType="GmsrModel.Store.GLoan_Assignements" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GLoan_Categories" EntityType="GmsrModel.Store.GLoan_Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GLoan_Items" EntityType="GmsrModel.Store.GLoan_Items" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GLoan_Status" EntityType="GmsrModel.Store.GLoan_Status" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IND_SqiHistory" EntityType="GmsrModel.Store.IND_SqiHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IND_SQISTYPES" EntityType="GmsrModel.Store.IND_SQISTYPES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Olaf_Hard" EntityType="GmsrModel.Store.Olaf_Hard" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Olaf_Hard_Historic" EntityType="GmsrModel.Store.Olaf_Hard_Historic" store:Type="Tables" store:Schema="dbo" store:Name="Olaf_Hard_Historic">
+      <DefiningQuery>SELECT 
+      [Olaf_Hard_Historic].[OlafHardHistoricId] AS [OlafHardHistoricId], 
+      [Olaf_Hard_Historic].[Mod_Date] AS [Mod_Date], 
+      [Olaf_Hard_Historic].[RMT_MAT_ID] AS [RMT_MAT_ID], 
+      [Olaf_Hard_Historic].[RMT_GEN_CD] AS [RMT_GEN_CD], 
+      [Olaf_Hard_Historic].[RMT_PRO_DESC] AS [RMT_PRO_DESC], 
+      [Olaf_Hard_Historic].[RMT_USERID_CD] AS [RMT_USERID_CD], 
+      [Olaf_Hard_Historic].[Old_user] AS [Old_user], 
+      [Olaf_Hard_Historic].[Status] AS [Status]
+      FROM [dbo].[Olaf_Hard_Historic] AS [Olaf_Hard_Historic]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Olaf_User" EntityType="GmsrModel.Store.Olaf_User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Olaf_User_Historic" EntityType="GmsrModel.Store.Olaf_User_Historic" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_Audit" EntityType="GmsrModel.Store.R_Audit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_BacklogItem" EntityType="GmsrModel.Store.R_BacklogItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_BacklogItemStatus" EntityType="GmsrModel.Store.R_BacklogItemStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_Group" EntityType="GmsrModel.Store.R_Group" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_GroupUser" EntityType="GmsrModel.Store.R_GroupUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_HardwareItemOrderForm" EntityType="GmsrModel.Store.R_HardwareItemOrderForm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_MediaItem" EntityType="GmsrModel.Store.R_MediaItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_MediaItemLocation" EntityType="GmsrModel.Store.R_MediaItemLocation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_MediaItemType" EntityType="GmsrModel.Store.R_MediaItemType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_MenuElement" EntityType="GmsrModel.Store.R_MenuElement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_MenuElementGroup" EntityType="GmsrModel.Store.R_MenuElementGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_MenuElementUser" EntityType="GmsrModel.Store.R_MenuElementUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_OrderFormDocument" EntityType="GmsrModel.Store.R_OrderFormDocument" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_SoftwareLicense" EntityType="GmsrModel.Store.R_SoftwareLicense" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_SoftwareLicenseInUse" EntityType="GmsrModel.Store.R_SoftwareLicenseInUse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_SoftwareLicenseType" EntityType="GmsrModel.Store.R_SoftwareLicenseType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_SoftwareOrder" EntityType="GmsrModel.Store.R_SoftwareOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_SoftwareOrderType" EntityType="GmsrModel.Store.R_SoftwareOrderType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_SoftwareProduct" EntityType="GmsrModel.Store.R_SoftwareProduct" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_SoftwareProductStatus" EntityType="GmsrModel.Store.R_SoftwareProductStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_UnknownHardware" EntityType="GmsrModel.Store.R_UnknownHardware" store:Type="Tables" store:Schema="dbo" store:Name="R_UnknownHardware">
+      <DefiningQuery>SELECT 
+      [R_UnknownHardware].[MachineName] AS [MachineName], 
+      [R_UnknownHardware].[FoundOn] AS [FoundOn], 
+      [R_UnknownHardware].[SourceName] AS [SourceName]
+      FROM [dbo].[R_UnknownHardware] AS [R_UnknownHardware]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="R_UnknownUser" EntityType="GmsrModel.Store.R_UnknownUser" store:Type="Tables" store:Schema="dbo" store:Name="R_UnknownUser">
+      <DefiningQuery>SELECT 
+      [R_UnknownUser].[UserName] AS [UserName], 
+      [R_UnknownUser].[FoundOn] AS [FoundOn], 
+      [R_UnknownUser].[SourceName] AS [SourceName]
+      FROM [dbo].[R_UnknownUser] AS [R_UnknownUser]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="R_User" EntityType="GmsrModel.Store.R_User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SWD_Installation" EntityType="GmsrModel.Store.SWD_Installation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SWD_Product" EntityType="GmsrModel.Store.SWD_Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SWD_ProductMatch" EntityType="GmsrModel.Store.SWD_ProductMatch" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SWD_Uninstallation" EntityType="GmsrModel.Store.SWD_Uninstallation" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_GLoan_Assignements_GLoan_Items" Association="GmsrModel.Store.FK_GLoan_Assignements_GLoan_Items">
+      <End Role="GLoan_Items" EntitySet="GLoan_Items" />
+      <End Role="GLoan_Assignements" EntitySet="GLoan_Assignements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLoan_Items_GLoan_Categories" Association="GmsrModel.Store.FK_GLoan_Items_GLoan_Categories">
+      <End Role="GLoan_Categories" EntitySet="GLoan_Categories" />
+      <End Role="GLoan_Items" EntitySet="GLoan_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLoan_Items_GLoan_Status" Association="GmsrModel.Store.FK_GLoan_Items_GLoan_Status">
+      <End Role="GLoan_Status" EntitySet="GLoan_Status" />
+      <End Role="GLoan_Items" EntitySet="GLoan_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_BacklogItem_R_BacklogItemType" Association="GmsrModel.Store.FK_R_BacklogItem_R_BacklogItemType">
+      <End Role="R_BacklogItemStatus" EntitySet="R_BacklogItemStatus" />
+      <End Role="R_BacklogItem" EntitySet="R_BacklogItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_GroupUser_R_Group" Association="GmsrModel.Store.FK_R_GroupUser_R_Group">
+      <End Role="R_Group" EntitySet="R_Group" />
+      <End Role="R_GroupUser" EntitySet="R_GroupUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_GroupUser_R_User" Association="GmsrModel.Store.FK_R_GroupUser_R_User">
+      <End Role="R_User" EntitySet="R_User" />
+      <End Role="R_GroupUser" EntitySet="R_GroupUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MediaItem_R_MediaItemLocation" Association="GmsrModel.Store.FK_R_MediaItem_R_MediaItemLocation">
+      <End Role="R_MediaItemLocation" EntitySet="R_MediaItemLocation" />
+      <End Role="R_MediaItem" EntitySet="R_MediaItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MediaItem_R_MediaItemType" Association="GmsrModel.Store.FK_R_MediaItem_R_MediaItemType">
+      <End Role="R_MediaItemType" EntitySet="R_MediaItemType" />
+      <End Role="R_MediaItem" EntitySet="R_MediaItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MediaItem_R_SoftwareOrder" Association="GmsrModel.Store.FK_R_MediaItem_R_SoftwareOrder">
+      <End Role="R_SoftwareOrder" EntitySet="R_SoftwareOrder" />
+      <End Role="R_MediaItem" EntitySet="R_MediaItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MenuElementGroup_R_Group" Association="GmsrModel.Store.FK_R_MenuElementGroup_R_Group">
+      <End Role="R_Group" EntitySet="R_Group" />
+      <End Role="R_MenuElementGroup" EntitySet="R_MenuElementGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MenuElementGroup_R_MenuElement" Association="GmsrModel.Store.FK_R_MenuElementGroup_R_MenuElement">
+      <End Role="R_MenuElement" EntitySet="R_MenuElement" />
+      <End Role="R_MenuElementGroup" EntitySet="R_MenuElementGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MenuElementUser_R_MenuElement" Association="GmsrModel.Store.FK_R_MenuElementUser_R_MenuElement">
+      <End Role="R_MenuElement" EntitySet="R_MenuElement" />
+      <End Role="R_MenuElementUser" EntitySet="R_MenuElementUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MenuElementUser_R_User" Association="GmsrModel.Store.FK_R_MenuElementUser_R_User">
+      <End Role="R_User" EntitySet="R_User" />
+      <End Role="R_MenuElementUser" EntitySet="R_MenuElementUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareLicense_R_SoftwareLicenseType" Association="GmsrModel.Store.FK_R_SoftwareLicense_R_SoftwareLicenseType">
+      <End Role="R_SoftwareLicenseType" EntitySet="R_SoftwareLicenseType" />
+      <End Role="R_SoftwareLicense" EntitySet="R_SoftwareLicense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareLicense_R_SoftwareOrder" Association="GmsrModel.Store.FK_R_SoftwareLicense_R_SoftwareOrder">
+      <End Role="R_SoftwareOrder" EntitySet="R_SoftwareOrder" />
+      <End Role="R_SoftwareLicense" EntitySet="R_SoftwareLicense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareLicenseInUse_R_SoftwareLicense" Association="GmsrModel.Store.FK_R_SoftwareLicenseInUse_R_SoftwareLicense">
+      <End Role="R_SoftwareLicense" EntitySet="R_SoftwareLicense" />
+      <End Role="R_SoftwareLicenseInUse" EntitySet="R_SoftwareLicenseInUse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareOrder_R_SoftwareOrderType" Association="GmsrModel.Store.FK_R_SoftwareOrder_R_SoftwareOrderType">
+      <End Role="R_SoftwareOrderType" EntitySet="R_SoftwareOrderType" />
+      <End Role="R_SoftwareOrder" EntitySet="R_SoftwareOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareOrder_R_SoftwareProduct" Association="GmsrModel.Store.FK_R_SoftwareOrder_R_SoftwareProduct">
+      <End Role="R_SoftwareProduct" EntitySet="R_SoftwareProduct" />
+      <End Role="R_SoftwareOrder" EntitySet="R_SoftwareOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareProduct_R_SoftwareProductStatus" Association="GmsrModel.Store.FK_R_SoftwareProduct_R_SoftwareProductStatus">
+      <End Role="R_SoftwareProductStatus" EntitySet="R_SoftwareProductStatus" />
+      <End Role="R_SoftwareProduct" EntitySet="R_SoftwareProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_Installation_Olaf_Hard" Association="GmsrModel.Store.FK_SWD_Installation_Olaf_Hard">
+      <End Role="Olaf_Hard" EntitySet="Olaf_Hard" />
+      <End Role="SWD_Installation" EntitySet="SWD_Installation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_Installation_SWD_Product" Association="GmsrModel.Store.FK_SWD_Installation_SWD_Product">
+      <End Role="SWD_Product" EntitySet="SWD_Product" />
+      <End Role="SWD_Installation" EntitySet="SWD_Installation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_ProductMatch_R_SoftwareProduct" Association="GmsrModel.Store.FK_SWD_ProductMatch_R_SoftwareProduct">
+      <End Role="R_SoftwareProduct" EntitySet="R_SoftwareProduct" />
+      <End Role="SWD_ProductMatch" EntitySet="SWD_ProductMatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_ProductMatch_SWD_Product" Association="GmsrModel.Store.FK_SWD_ProductMatch_SWD_Product">
+      <End Role="SWD_Product" EntitySet="SWD_Product" />
+      <End Role="SWD_ProductMatch" EntitySet="SWD_ProductMatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_Uninstallation_Olaf_Hard" Association="GmsrModel.Store.FK_SWD_Uninstallation_Olaf_Hard">
+      <End Role="Olaf_Hard" EntitySet="Olaf_Hard" />
+      <End Role="SWD_Uninstallation" EntitySet="SWD_Uninstallation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_Uninstallation_SWD_Product" Association="GmsrModel.Store.FK_SWD_Uninstallation_SWD_Product">
+      <End Role="SWD_Product" EntitySet="SWD_Product" />
+      <End Role="SWD_Uninstallation" EntitySet="SWD_Uninstallation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AUTO_GROUPXUSR">
+    <Key>
+      <PropertyRef Name="GROUP" />
+      <PropertyRef Name="USER" />
+    </Key>
+    <Property Name="GROUP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GROUP DESCRIPTION" Type="varchar" MaxLength="130" />
+    <Property Name="MANAGER" Type="varchar" MaxLength="50" />
+    <Property Name="USER" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USER DESCRIPTION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contract_Amendment">
+    <Key>
+      <PropertyRef Name="ContractAmendmentId" />
+    </Key>
+    <Property Name="ContractAmendmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractAmendmentNumber" Type="varchar" MaxLength="30" />
+    <Property Name="ContractCCId" Type="int" />
+    <Property Name="DateBegin" Type="datetime" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="Activity" Type="int" />
+    <Property Name="BudgetLine" Type="int" />
+    <Property Name="Prices" Type="money" />
+    <Property Name="Title" Type="varchar" MaxLength="120" />
+    <Property Name="Object" Type="varchar" MaxLength="2000" />
+    <Property Name="Duration" Type="numeric" />
+    <Property Name="Status" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Contract_Framework">
+    <Key>
+      <PropertyRef Name="ContractCCId" />
+    </Key>
+    <Property Name="ContractCCId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractNumber" Type="char" MaxLength="30" />
+    <Property Name="DateBegin" Type="datetime" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="Prices" Type="money" />
+    <Property Name="Title" Type="varchar" MaxLength="120" />
+    <Property Name="Object" Type="varchar" MaxLength="2000" />
+    <Property Name="Duration" Type="numeric" />
+    <Property Name="IsSLA" Type="bit" />
+    <Property Name="IsIntraMuros" Type="bit" />
+    <Property Name="CEContact" Type="varchar" MaxLength="50" />
+    <Property Name="Company" Type="int" />
+    <Property Name="CompanyContact" Type="varchar" MaxLength="50" />
+    <Property Name="OlafContact" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Contract_Order">
+    <Key>
+      <PropertyRef Name="ContractOrderId" />
+    </Key>
+    <Property Name="ContractOrderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractAmendmentId" Type="int" />
+    <Property Name="ContractSpecContractId" Type="int" />
+    <Property Name="OrderName" Type="varchar" MaxLength="50" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="Scope" Type="varchar" MaxLength="50" />
+    <Property Name="datebegin" Type="datetime" />
+    <Property Name="dateend" Type="datetime" />
+    <Property Name="Duration" Type="numeric" />
+    <Property Name="Service_type" Type="char" MaxLength="10" />
+    <Property Name="ProfileId" Type="int" />
+    <Property Name="Status" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Contract_SpecContract">
+    <Key>
+      <PropertyRef Name="ContractSpecContrId" />
+    </Key>
+    <Property Name="ContractSpecContrId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractSpecContrNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ContractFrameworkId" Type="int" />
+    <Property Name="ContractAmendmentId" Type="int" />
+    <Property Name="Datebegin" Type="datetime" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="Object" Type="char" MaxLength="10" />
+    <Property Name="Duration" Type="char" MaxLength="10" />
+    <Property Name="Acceptance_Type" Type="char" MaxLength="10" />
+    <Property Name="AcceptanceDelay" Type="char" MaxLength="10" />
+    <Property Name="PriceTotal" Type="numeric" />
+    <Property Name="Price1_Def" Type="varchar" MaxLength="50" />
+    <Property Name="Price1" Type="numeric" />
+    <Property Name="Price2_def" Type="varchar" MaxLength="50" />
+    <Property Name="Price2" Type="numeric" />
+    <Property Name="Price3_def" Type="varchar" MaxLength="50" />
+    <Property Name="Price3" Type="numeric" />
+    <Property Name="Invoicing_Period" Type="char" MaxLength="10" />
+    <Property Name="IsPenalties" Type="bit" />
+    <Property Name="Garantees" Type="numeric" />
+    <Property Name="Contract_SpecContractPatch" Type="varchar" MaxLength="250" />
+    <Property Name="Comment" Type="varchar" MaxLength="250" />
+    <Property Name="Status" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="GLoan_Assignements">
+    <Key>
+      <PropertyRef Name="Id_Assignement_PK" />
+    </Key>
+    <Property Name="Id_Assignement_PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Item_FK" Type="int" Nullable="false" />
+    <Property Name="DateStart" Type="datetime" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" Nullable="false" />
+    <Property Name="TicketCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GLoan_Categories">
+    <Key>
+      <PropertyRef Name="Id_Category_PK" />
+    </Key>
+    <Property Name="Id_Category_PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GLoan_Items">
+    <Key>
+      <PropertyRef Name="Id_Item_PK" />
+    </Key>
+    <Property Name="Id_Item_PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Olaf_Hard_FK" Type="int" Nullable="false" />
+    <Property Name="IsItemActive" Type="bit" Nullable="false" />
+    <Property Name="IsPermaLoan" Type="bit" Nullable="false" />
+    <Property Name="Id_Category_FK" Type="int" />
+    <Property Name="Id_Status_FK" Type="int" />
+  </EntityType>
+  <EntityType Name="GLoan_Status">
+    <Key>
+      <PropertyRef Name="Id_Status_PK" />
+    </Key>
+    <Property Name="Id_Status_PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="IND_SqiHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Sqi_Id" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AverageProfiledSQI_Value" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="ComputationDate" Type="datetime" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="IND_SQISTYPES">
+    <Key>
+      <PropertyRef Name="SQISTYPESID" />
+    </Key>
+    <Property Name="SQISTYPESID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DOMAINSTYPESID" Type="int" />
+    <Property Name="UNITSID" Type="int" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="text" />
+    <Property Name="FORMULA" Type="varchar" MaxLength="300" />
+    <Property Name="TARGET" Type="decimal" Scale="4" />
+    <Property Name="LIMIT" Type="decimal" Scale="4" />
+    <Property Name="POINTS" Type="int" Nullable="false" />
+    <Property Name="MINNBROFQOS" Type="int" Nullable="false" />
+    <Property Name="MAXIMUMDELAY" Type="decimal" Scale="4" />
+    <Property Name="TARGETDESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="LIMITDESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="MINorMAX" Type="nvarchar" MaxLength="3" />
+    <Property Name="EXPLANATION" Type="nvarchar(max)" />
+    <Property Name="SOURCE" Type="nvarchar(max)" />
+    <Property Name="SERVER" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="QUERY" Type="nvarchar(max)" />
+    <Property Name="MMValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Olaf_Hard">
+    <Key>
+      <PropertyRef Name="OlafHardId" />
+    </Key>
+    <Property Name="OlafHardId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Olaf_status" Type="char" MaxLength="1" />
+    <Property Name="Olaf_local" Type="bit" />
+    <Property Name="OlafHardName" Type="varchar" MaxLength="20" />
+    <Property Name="RMT_MAT_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_GESTION_CRH_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_AFFECT_OIV_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_PAYEUR_CRH_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_PARENT_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_PRO_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_STM_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_DOSSIER_EXE_ID" Type="numeric" Precision="4" />
+    <Property Name="RMT_DOSSIER_NO" Type="numeric" Precision="8" />
+    <Property Name="RMT_DOSSIER_SEQ_NO" Type="numeric" Precision="8" />
+    <Property Name="RMT_TDO_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_ETD_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_TIV_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_CUR_CODE" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_CRC_EXE_ID" Type="numeric" Precision="4" />
+    <Property Name="RMT_CRC_NO" Type="numeric" Precision="8" />
+    <Property Name="RMT_CRC_SEQ_NO" Type="numeric" Precision="8" />
+    <Property Name="RMT_LCR_NO" Type="numeric" Precision="8" />
+    <Property Name="RMT_MAC_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_SIV_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_DSI_EXE_ID" Type="numeric" Precision="4" />
+    <Property Name="RMT_DSI_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_GEN_CD" Type="varchar" MaxLength="15" />
+    <Property Name="RMT_CLE_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_BX_LX_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_SERIE_NO" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_SERVICE_NO" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_MAINT_MT" Type="numeric" Precision="13" Scale="2" />
+    <Property Name="RMT_VALEUR_MT" Type="numeric" Precision="13" Scale="2" />
+    <Property Name="RMT_FIN_MAINT_DT" Type="datetime" />
+    <Property Name="RMT_ATTRIB_CR_DT" Type="datetime" />
+    <Property Name="RMT_RESILIATION_DT" Type="datetime" />
+    <Property Name="RMT_BARCODE_DT" Type="datetime" />
+    <Property Name="RMT_INSTALLATION_DT" Type="datetime" />
+    <Property Name="RMT_INV_TECH_DT" Type="datetime" />
+    <Property Name="RMT_ARRET_MAINT_FL" Type="varchar" MaxLength="1" />
+    <Property Name="RMT_MAINT_DI_FL" Type="varchar" MaxLength="1" />
+    <Property Name="RMT_MAINT_APRES_FL" Type="varchar" MaxLength="1" />
+    <Property Name="RMT_ARRET_MAINT_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_FORM_VENTE_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_LUN_SHORT_NM" Type="varchar" MaxLength="40" />
+    <Property Name="RMT_AVT_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_BONCOMM_DESC" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_CONVSPEC_DESC" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_LAST_NM" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_FIRST_NM" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_TELNR1_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_CLE_ACTION_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_BAT_CD" Type="varchar" MaxLength="4" />
+    <Property Name="RMT_PEO_ID" Type="numeric" Precision="9" />
+    <Property Name="RMT_LOCALISATION_DT" Type="datetime" />
+    <Property Name="RMT_BUREAU_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_BUREAU_GEN_CD" Type="varchar" MaxLength="15" />
+    <Property Name="RMT_TDE_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_DEM_EXE_ID" Type="numeric" Precision="4" />
+    <Property Name="RMT_DEM_ID" Type="numeric" Precision="8" />
+    <Property Name="RMT_VIL_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_COUVERT_GARANTIE_FL" Type="varchar" MaxLength="1" />
+    <Property Name="RMT_VEN_NM" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_PRO_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_PARENT_CTG_NM" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_CTG_NM" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_LIVRAISON_DT" Type="datetime" />
+    <Property Name="RMT_DEBUT_GARANTIE_DT" Type="datetime" />
+    <Property Name="RMT_DEBUT_MAINT_DT" Type="datetime" />
+    <Property Name="RMT_FAX_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_GARANTIE_NO" Type="numeric" Precision="8" />
+    <Property Name="RMT_LOCALISATION_REM" Type="varchar" MaxLength="240" />
+    <Property Name="RMT_TECHNIQUE_REM" Type="varchar" MaxLength="240" />
+    <Property Name="RMT_ADMIN_REM" Type="varchar" MaxLength="240" />
+    <Property Name="RMT_CR_REM" Type="varchar" MaxLength="240" />
+    <Property Name="RMT_RESPFIN_NM" Type="varchar" MaxLength="120" />
+    <Property Name="RMT_RESPFIN_BAT_CD" Type="varchar" MaxLength="4" />
+    <Property Name="RMT_RESPFIN_BUREAU_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_RESPFIN_TEL_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_RESPCRC_NM" Type="varchar" MaxLength="120" />
+    <Property Name="RMT_RESPCRC_BAT_CD" Type="varchar" MaxLength="4" />
+    <Property Name="RMT_RESPCRC_BUREAU_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_RESPCRC_TEL_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_DSI_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_DSI_EFFET_DT" Type="datetime" />
+    <Property Name="RMT_RDE_CD" Type="varchar" MaxLength="3" />
+    <Property Name="RMT_PRO_ARTICLE_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_IPADDR_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_MACADDR_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_LIGNE_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_LICENCE_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_VERSION_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_PC_NM" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_MODEM_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_PABX_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_PORTE_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_HOST_NM" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_TPR_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_MEMOIRE_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_DISQUE_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_RESOLUTION_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_IMPRESSION_CD" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_DEM_ARRET_MAINT_DT" Type="datetime" />
+    <Property Name="RMT_MAINT_REM" Type="varchar" MaxLength="240" />
+    <Property Name="RMT_PRO_DESC" Type="varchar" MaxLength="240" />
+    <Property Name="RMT_COUVERT_CD" Type="varchar" MaxLength="1" />
+    <Property Name="RMT_CRE_ID" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_CRE_DT" Type="datetime" />
+    <Property Name="RMT_MOD_ID" Type="varchar" MaxLength="30" />
+    <Property Name="RMT_MOD_DT" Type="datetime" />
+    <Property Name="RMT_SIGNATURE_DT" Type="datetime" />
+    <Property Name="RMT_FIN_GARANTIE_DT" Type="datetime" />
+    <Property Name="RMT_AFFECT_OIV_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_PAYEUR_CRH_CD" Type="varchar" MaxLength="16" />
+    <Property Name="RMT_VALEUR_EUR_MT" Type="numeric" Precision="13" Scale="2" />
+    <Property Name="RMT_MAINT_EUR_MT" Type="numeric" Precision="13" Scale="2" />
+    <Property Name="RMT_POSTE_BUDG_DESC" Type="varchar" MaxLength="60" />
+    <Property Name="RMT_USERID_CD" Type="varchar" MaxLength="7" />
+    <Property Name="RMT_LAST_ACTION_FL" Type="varchar" MaxLength="1" />
+    <Property Name="RMT_ORG_CD" Type="varchar" MaxLength="120" />
+    <Property Name="RMT_TRACKING_DT" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'GMS.dbo.Olaf_Hard_Historic' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Olaf_Hard_Historic">
+    <Key>
+      <PropertyRef Name="OlafHardHistoricId" />
+    </Key>
+    <Property Name="OlafHardHistoricId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Mod_Date" Type="datetime" />
+    <Property Name="RMT_MAT_ID" Type="numeric" Precision="9" />
+    <Property Name="RMT_GEN_CD" Type="varchar" MaxLength="15" />
+    <Property Name="RMT_PRO_DESC" Type="varchar" MaxLength="240" />
+    <Property Name="RMT_USERID_CD" Type="varchar" MaxLength="7" />
+    <Property Name="Old_user" Type="varchar" MaxLength="7" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Olaf_User">
+    <Key>
+      <PropertyRef Name="OlafUserId" />
+    </Key>
+    <Property Name="OlafUserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OLAF_STATUS" Type="char" MaxLength="1" />
+    <Property Name="OLAF_LOCAL" Type="bit" />
+    <Property Name="PEO_ID" Type="numeric" Precision="13" />
+    <Property Name="PEO_CD" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_LAST_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_FIRST_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_TITLE_CD" Type="varchar" MaxLength="3" />
+    <Property Name="PEO_STATUS_CD" Type="varchar" MaxLength="3" />
+    <Property Name="PEO_DG_CD" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_BAT_CD" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_BUR_CD" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_TELNR1_CD" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_TELNR2_CD" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_ORG_ID" Type="numeric" Precision="9" />
+    <Property Name="PEO_CRE_ID" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_CRE_DT" Type="datetime" />
+    <Property Name="PEO_MOD_ID" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_MOD_DT" Type="datetime" />
+    <Property Name="PEO_PERS_NO" Type="numeric" Precision="8" />
+    <Property Name="PEO_EXE_ID" Type="numeric" Precision="4" />
+    <Property Name="PEO_CRS_ID" Type="numeric" Precision="8" />
+    <Property Name="PEO_FORUM_FL" Type="varchar" MaxLength="1" />
+    <Property Name="PEO_ACTUEL_FL" Type="varchar" MaxLength="1" />
+    <Property Name="PEO_CRH_ID" Type="numeric" Precision="8" />
+    <Property Name="PEO_DESC" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_GEST_CRH_ID" Type="numeric" Precision="8" />
+    <Property Name="PEO_CAT_CD" Type="varchar" MaxLength="2" />
+    <Property Name="PEO_GRA_CD" Type="varchar" MaxLength="1" />
+    <Property Name="PEO_SUPERIEUR_PEO_ID" Type="numeric" Precision="9" />
+    <Property Name="PEO_ETAGE_CD" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_EMAIL_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_VIL_CD" Type="varchar" MaxLength="3" />
+    <Property Name="PEO_USERID_CD" Type="varchar" MaxLength="20" />
+    <Property Name="PEO_NAISSANCE_DT" Type="datetime" />
+    <Property Name="PEO_SEXE_FL" Type="varchar" MaxLength="1" />
+    <Property Name="PEO_NOMCONJOINT_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_PRENOMCONJOINT_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_STA_CD" Type="varchar" MaxLength="3" />
+    <Property Name="PEO_ECH_CONTRAT_DT" Type="datetime" />
+    <Property Name="PEO_ENTREE_DT" Type="datetime" />
+    <Property Name="PEO_DETACH_CRH_ID" Type="numeric" Precision="8" />
+    <Property Name="PEO_FCT_CD" Type="varchar" MaxLength="3" />
+    <Property Name="PEO_PER_ID" Type="numeric" Precision="8" />
+    <Property Name="PEO_PAD_CD" Type="varchar" MaxLength="6" />
+    <Property Name="PEO_ENCODED_NOMCONJOINT_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_ENCODED_PRENOMCONJOINT_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_OTHER_EMAIL_NM" Type="varchar" MaxLength="60" />
+    <Property Name="Trigram" Type="nchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="Olaf_User_Historic">
+    <Key>
+      <PropertyRef Name="OlafUserHistoricId" />
+    </Key>
+    <Property Name="OlafUserHistoricId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Mod_Date" Type="datetime" />
+    <Property Name="PEO_ID" Type="numeric" Precision="9" />
+    <Property Name="PEO_LAST_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_FIRST_NM" Type="varchar" MaxLength="60" />
+    <Property Name="PEO_USERID_CD" Type="varchar" MaxLength="20" />
+    <Property Name="Old_office" Type="varchar" MaxLength="30" />
+    <Property Name="PEO_BUR_CD" Type="varchar" MaxLength="30" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="R_Audit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="RevisionStamp" Type="datetime" />
+    <Property Name="TableName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserLogin" Type="nvarchar" MaxLength="50" />
+    <Property Name="Action" Type="nvarchar" MaxLength="1" />
+    <Property Name="OldData" Type="xml" />
+    <Property Name="NewData" Type="xml" />
+    <Property Name="ChangedColumns" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="R_BacklogItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="BacklogItemTypeId" Type="int" Nullable="false" />
+    <Property Name="DateStart" Type="datetime" />
+    <Property Name="DateEnd" Type="datetime" />
+  </EntityType>
+  <EntityType Name="R_BacklogItemStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="R_Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_GroupUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_HardwareItemOrderForm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OlafHardId" Type="int" Nullable="false" />
+    <Property Name="ContractOrderId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_MediaItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MediaItemTypeId" Type="int" />
+    <Property Name="MediaItemLocationId" Type="int" />
+    <Property Name="SoftwareOrderId" Type="int" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="R_MediaItemLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="R_MediaItemType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="R_MenuElement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Location" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Url" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="R_MenuElementGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MenuElementId" Type="int" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_MenuElementUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MenuElementId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_OrderFormDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractOrderId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Data" Type="varbinary(max)" />
+    <Property Name="Path" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="R_SoftwareLicense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SoftwareOrderId" Type="int" />
+    <Property Name="SoftwareLicenseTypeId" Type="int" />
+    <Property Name="MultiUserQuantity" Type="int" />
+    <Property Name="PreviousSoftwareLicenseId" Type="int" />
+    <Property Name="DateStart" Type="datetime" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="SerialKey" Type="nvarchar(max)" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsPresentInSource" Type="bit" Nullable="false" />
+    <Property Name="SourceId" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="R_SoftwareLicenseInUse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SoftwareLicenseId" Type="int" Nullable="false" />
+    <Property Name="OlafUserId" Type="int" />
+    <Property Name="HardwareItemId" Type="int" />
+    <Property Name="DateAssigned" Type="datetime" />
+    <Property Name="DateInstalled" Type="datetime" />
+    <Property Name="DateUnassigned" Type="datetime" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="R_SoftwareLicenseType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="R_SoftwareOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractOrderId" Type="int" />
+    <Property Name="SoftwareProductId" Type="int" />
+    <Property Name="SoftwareOrderTypeId" Type="int" />
+    <Property Name="PreviousSoftwareOrderId" Type="int" />
+    <Property Name="OlafRef" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vendor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="R_SoftwareOrderType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="R_SoftwareProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Version" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="Other" Type="nvarchar(max)" />
+    <Property Name="SoftwareProductStatusId" Type="int" />
+    <Property Name="SupportedUntil" Type="datetime" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="Source" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="R_SoftwareProductStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'GMS.dbo.R_UnknownHardware' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="R_UnknownHardware">
+    <Key>
+      <PropertyRef Name="MachineName" />
+      <PropertyRef Name="FoundOn" />
+      <PropertyRef Name="SourceName" />
+    </Key>
+    <Property Name="MachineName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FoundOn" Type="datetime" Nullable="false" />
+    <Property Name="SourceName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'GMS.dbo.R_UnknownUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="R_UnknownUser">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="FoundOn" />
+      <PropertyRef Name="SourceName" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FoundOn" Type="datetime" Nullable="false" />
+    <Property Name="SourceName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SWD_Installation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Olaf_HardId" Type="int" Nullable="false" />
+    <Property Name="DetectionDate" Type="datetime" Nullable="false" />
+    <Property Name="SWD_ProductId" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SourceName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AdditionalInfo" Type="nvarchar(max)" />
+    <Property Name="Hash" Type="binary" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="SWD_Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="SoftwareName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Version" Type="nvarchar(max)" />
+    <Property Name="SourceName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DetectionDate" Type="datetime" Nullable="false" />
+    <Property Name="Hash" Type="binary" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="SWD_ProductMatch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="SWD_ProductId" Type="int" Nullable="false" />
+    <Property Name="R_SoftwareProductId" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="SWD_Uninstallation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Olaf_HardId" Type="int" Nullable="false" />
+    <Property Name="DetectionDate" Type="datetime" Nullable="false" />
+    <Property Name="SWD_ProductId" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SourceName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InstallationDate" Type="datetime" Nullable="false" />
+    <Property Name="AdditonalInfo" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_GLoan_Assignements_GLoan_Items">
+    <End Role="GLoan_Items" Type="GmsrModel.Store.GLoan_Items" Multiplicity="1" />
+    <End Role="GLoan_Assignements" Type="GmsrModel.Store.GLoan_Assignements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GLoan_Items">
+        <PropertyRef Name="Id_Item_PK" />
+      </Principal>
+      <Dependent Role="GLoan_Assignements">
+        <PropertyRef Name="Id_Item_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GLoan_Items_GLoan_Categories">
+    <End Role="GLoan_Categories" Type="GmsrModel.Store.GLoan_Categories" Multiplicity="0..1" />
+    <End Role="GLoan_Items" Type="GmsrModel.Store.GLoan_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GLoan_Categories">
+        <PropertyRef Name="Id_Category_PK" />
+      </Principal>
+      <Dependent Role="GLoan_Items">
+        <PropertyRef Name="Id_Category_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GLoan_Items_GLoan_Status">
+    <End Role="GLoan_Status" Type="GmsrModel.Store.GLoan_Status" Multiplicity="0..1" />
+    <End Role="GLoan_Items" Type="GmsrModel.Store.GLoan_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GLoan_Status">
+        <PropertyRef Name="Id_Status_PK" />
+      </Principal>
+      <Dependent Role="GLoan_Items">
+        <PropertyRef Name="Id_Status_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_BacklogItem_R_BacklogItemType">
+    <End Role="R_BacklogItemStatus" Type="GmsrModel.Store.R_BacklogItemStatus" Multiplicity="1" />
+    <End Role="R_BacklogItem" Type="GmsrModel.Store.R_BacklogItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_BacklogItemStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_BacklogItem">
+        <PropertyRef Name="BacklogItemTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_GroupUser_R_Group">
+    <End Role="R_Group" Type="GmsrModel.Store.R_Group" Multiplicity="1" />
+    <End Role="R_GroupUser" Type="GmsrModel.Store.R_GroupUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_GroupUser">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_GroupUser_R_User">
+    <End Role="R_User" Type="GmsrModel.Store.R_User" Multiplicity="1" />
+    <End Role="R_GroupUser" Type="GmsrModel.Store.R_GroupUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_GroupUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MediaItem_R_MediaItemLocation">
+    <End Role="R_MediaItemLocation" Type="GmsrModel.Store.R_MediaItemLocation" Multiplicity="0..1" />
+    <End Role="R_MediaItem" Type="GmsrModel.Store.R_MediaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MediaItemLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MediaItem">
+        <PropertyRef Name="MediaItemLocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MediaItem_R_MediaItemType">
+    <End Role="R_MediaItemType" Type="GmsrModel.Store.R_MediaItemType" Multiplicity="0..1" />
+    <End Role="R_MediaItem" Type="GmsrModel.Store.R_MediaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MediaItemType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MediaItem">
+        <PropertyRef Name="MediaItemTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MediaItem_R_SoftwareOrder">
+    <End Role="R_SoftwareOrder" Type="GmsrModel.Store.R_SoftwareOrder" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="R_MediaItem" Type="GmsrModel.Store.R_MediaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MediaItem">
+        <PropertyRef Name="SoftwareOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MenuElementGroup_R_Group">
+    <End Role="R_Group" Type="GmsrModel.Store.R_Group" Multiplicity="1" />
+    <End Role="R_MenuElementGroup" Type="GmsrModel.Store.R_MenuElementGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MenuElementGroup">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MenuElementGroup_R_MenuElement">
+    <End Role="R_MenuElement" Type="GmsrModel.Store.R_MenuElement" Multiplicity="1" />
+    <End Role="R_MenuElementGroup" Type="GmsrModel.Store.R_MenuElementGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MenuElement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MenuElementGroup">
+        <PropertyRef Name="MenuElementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MenuElementUser_R_MenuElement">
+    <End Role="R_MenuElement" Type="GmsrModel.Store.R_MenuElement" Multiplicity="1" />
+    <End Role="R_MenuElementUser" Type="GmsrModel.Store.R_MenuElementUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MenuElement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MenuElementUser">
+        <PropertyRef Name="MenuElementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MenuElementUser_R_User">
+    <End Role="R_User" Type="GmsrModel.Store.R_User" Multiplicity="1" />
+    <End Role="R_MenuElementUser" Type="GmsrModel.Store.R_MenuElementUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MenuElementUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareLicense_R_SoftwareLicenseType">
+    <End Role="R_SoftwareLicenseType" Type="GmsrModel.Store.R_SoftwareLicenseType" Multiplicity="0..1" />
+    <End Role="R_SoftwareLicense" Type="GmsrModel.Store.R_SoftwareLicense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareLicenseType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareLicense">
+        <PropertyRef Name="SoftwareLicenseTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareLicense_R_SoftwareOrder">
+    <End Role="R_SoftwareOrder" Type="GmsrModel.Store.R_SoftwareOrder" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="R_SoftwareLicense" Type="GmsrModel.Store.R_SoftwareLicense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareLicense">
+        <PropertyRef Name="SoftwareOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareLicenseInUse_R_SoftwareLicense">
+    <End Role="R_SoftwareLicense" Type="GmsrModel.Store.R_SoftwareLicense" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="R_SoftwareLicenseInUse" Type="GmsrModel.Store.R_SoftwareLicenseInUse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareLicense">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareLicenseInUse">
+        <PropertyRef Name="SoftwareLicenseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareOrder_R_SoftwareOrderType">
+    <End Role="R_SoftwareOrderType" Type="GmsrModel.Store.R_SoftwareOrderType" Multiplicity="0..1" />
+    <End Role="R_SoftwareOrder" Type="GmsrModel.Store.R_SoftwareOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareOrderType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareOrder">
+        <PropertyRef Name="SoftwareOrderTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareOrder_R_SoftwareProduct">
+    <End Role="R_SoftwareProduct" Type="GmsrModel.Store.R_SoftwareProduct" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="R_SoftwareOrder" Type="GmsrModel.Store.R_SoftwareOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareOrder">
+        <PropertyRef Name="SoftwareProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareProduct_R_SoftwareProductStatus">
+    <End Role="R_SoftwareProductStatus" Type="GmsrModel.Store.R_SoftwareProductStatus" Multiplicity="0..1" />
+    <End Role="R_SoftwareProduct" Type="GmsrModel.Store.R_SoftwareProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareProductStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareProduct">
+        <PropertyRef Name="SoftwareProductStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_Installation_Olaf_Hard">
+    <End Role="Olaf_Hard" Type="GmsrModel.Store.Olaf_Hard" Multiplicity="1" />
+    <End Role="SWD_Installation" Type="GmsrModel.Store.SWD_Installation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Olaf_Hard">
+        <PropertyRef Name="OlafHardId" />
+      </Principal>
+      <Dependent Role="SWD_Installation">
+        <PropertyRef Name="Olaf_HardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_Installation_SWD_Product">
+    <End Role="SWD_Product" Type="GmsrModel.Store.SWD_Product" Multiplicity="1" />
+    <End Role="SWD_Installation" Type="GmsrModel.Store.SWD_Installation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SWD_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SWD_Installation">
+        <PropertyRef Name="SWD_ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_ProductMatch_R_SoftwareProduct">
+    <End Role="R_SoftwareProduct" Type="GmsrModel.Store.R_SoftwareProduct" Multiplicity="1" />
+    <End Role="SWD_ProductMatch" Type="GmsrModel.Store.SWD_ProductMatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SWD_ProductMatch">
+        <PropertyRef Name="R_SoftwareProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_ProductMatch_SWD_Product">
+    <End Role="SWD_Product" Type="GmsrModel.Store.SWD_Product" Multiplicity="1" />
+    <End Role="SWD_ProductMatch" Type="GmsrModel.Store.SWD_ProductMatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SWD_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SWD_ProductMatch">
+        <PropertyRef Name="SWD_ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_Uninstallation_Olaf_Hard">
+    <End Role="Olaf_Hard" Type="GmsrModel.Store.Olaf_Hard" Multiplicity="1" />
+    <End Role="SWD_Uninstallation" Type="GmsrModel.Store.SWD_Uninstallation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Olaf_Hard">
+        <PropertyRef Name="OlafHardId" />
+      </Principal>
+      <Dependent Role="SWD_Uninstallation">
+        <PropertyRef Name="Olaf_HardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_Uninstallation_SWD_Product">
+    <End Role="SWD_Product" Type="GmsrModel.Store.SWD_Product" Multiplicity="1" />
+    <End Role="SWD_Uninstallation" Type="GmsrModel.Store.SWD_Uninstallation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SWD_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SWD_Uninstallation">
+        <PropertyRef Name="SWD_ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

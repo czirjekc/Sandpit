@@ -1,0 +1,413 @@
+﻿body, html
+{
+    text-align: center;
+    font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    color: #888888;
+    background: #EEEEEE;
+    margin: 2px;
+    padding: 0px;
+}
+legend
+{
+    color: #888888;
+}
+table
+{
+    border-style: none;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+th
+{
+    border-style: solid;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-color: #AAAAAA;
+}
+img
+{
+    border-width: 0px;
+}
+.h1
+{
+    color: #557dc3;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.h2
+{
+    color: #557dc3;
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.separator
+{
+    background-position: center;
+    background-repeat: repeat-x;
+    background-image: url('../../Images/BackgroundSeparator.png');
+    height: 18px;
+}
+
+/**************************** Header *******************************/
+
+#dHeader
+{
+    height: 104px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#dHeaderLeft
+{
+    float: left;
+    text-align: left;
+    width: 400px;
+}
+
+#dLogo
+{
+    height: 62px;
+}
+
+#dAction
+{
+}
+
+.actionButton
+{
+    float: left;
+    margin-right: 12px;
+}
+
+#dLoading
+{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#dHeaderRight
+{
+    float: right;
+    text-align: right;
+    width: 400px;
+}
+
+#dUser
+{
+    float: right;
+    margin-right: 10px;
+    margin-top: 86px;
+}
+
+#dOlafLogo
+{
+    float: right;
+}
+
+/**************************** MenuBar ******************************/
+
+#dMenuBar
+{
+    border-style: solid;
+    border-color: #557dc3;
+    border-width: 1px;
+    font-weight: bold;
+    text-align: left;
+}
+#dMenu
+{
+    font-size: 14px;
+    float: left;
+}
+#dSitePath
+{
+    background-position: center;
+    background-repeat: repeat-x;
+    background-image: url('../../Images/BackgroundMenuBar.png');
+    padding: 4px;
+    padding-left: 54px;
+    height: 13px;
+    font-size: 12px;
+}
+.menuStart
+{
+    background-position: center;
+    background-repeat: repeat-x;
+    background-image: url('../../Images/BackgroundMenuStart.png');
+}
+.menuContent
+{
+    z-index: 100; /* IE8Fix */
+    background-color: #66aedb;
+}
+.a
+{
+    width: 100%;
+}
+
+/*******************************************************************/
+
+.modalBackground
+{
+    background-color: #999999;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+.confirm
+{
+    background-position: center;
+    background-repeat: repeat-y;
+    background-image: url('../../Images/BackgroundPopupRed.png');
+    border-style: solid;
+    border-color: #c35555;
+    border-width: 1px;
+    padding: 0px;
+    width: 300px;
+    color: #c35555;
+}
+
+/*******************************************************************
+
+GridView Colors (very light, light, normal):
+
+1  dff7fd  cbd7ed  557dc3
+2  e0f1e0  c5e1c5  4fad4f
+3  e7dbec  dac5e5  9562ae
+4  fff1d7  ffe3b0  d1982f
+5  eafdcf  dafcaa  85c62a
+6  ffe4e4  ffd4d4  ca8383
+7  e4f2ff  d4e9ff  6189af
+8  e4fff6  d4fff4  57b797
+9  ffe4fb  ffd4f8  ab4a9c
+
+*******************************************************************/
+
+.gvSortAscending
+{
+    background-image: url('/Images/Ascending.gif');
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+.gvSortDescending
+{
+    background-image: url('/Images/Descending.gif');
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+.gvHeader
+{
+    background-color: #557dc3;
+    height: 18px;
+}
+.gvImageButton
+{
+    /*width: 10px;*/
+    width: 6px;
+    height: 6px;
+}
+.gvGrid tr td
+{
+    border: 0px;
+    border-right: 1px solid #FFFFFF;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.odd1
+{
+    background-color: #dff7fd;
+}
+.odd2
+{
+    background-color: #e0f1e0;
+}
+.odd3
+{
+    background-color: #e7dbec;
+}
+.odd4
+{
+    background-color: #fff1d7;
+}
+.odd5
+{
+    background-color: #eafdcf;
+}
+.odd6
+{
+    background-color: #ffe4e4;
+}
+.odd7
+{
+    background-color: #e4f2ff;
+}
+.odd8
+{
+    background-color: #e4fff6;
+}
+.odd9
+{
+    background-color: #ffe4fb;
+}
+.even1
+{
+    background-color: #cbd7ed;
+}
+.even2
+{
+    background-color: #c5e1c5;
+}
+.even3
+{
+    background-color: #dac5e5;
+}
+.even4
+{
+    background-color: #ffe3b0;
+}
+.even5
+{
+    background-color: #dafcaa;
+}
+.even6
+{
+    background-color: #ffd4d4;
+}
+.even7
+{
+    background-color: #d4e9ff;
+}
+.even8
+{
+    background-color: #d4fff4;
+}
+.even9
+{
+    background-color: #ffd4f8;
+}
+.divHeader
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AAAAAA;
+    overflow: hidden;
+    text-align: left;
+    margin-right: 19px;
+    background: #EEEEEE;
+}
+.tblStaticHeader
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    text-align: center;
+}
+.divContainer
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AAAAAA;
+    border-top-width: 0px;
+    overflow: scroll;
+    text-align: left;
+    background: #FFFFFF;
+}
+
+
+
+
+/*******************************************************************/
+
+.h1Help
+{
+    color: #FF0000;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.imgHelp
+{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FF0000;
+}
+
+/************************* HardwareLoan ****************************/
+
+.InlineBlock
+{
+    display: inline-block;
+}
+.ContextMenuPanel
+{
+    border: 1px solid #868686;
+    z-index: 1000;
+    background: url('/Images/menu-bg.gif') repeat-y 0 0 #FAFAFA;
+    cursor: default;
+    padding: 1px 1px 0px 1px;
+    font-size: 11px;
+    text-align: left;
+}
+a.ContextMenuItem
+{
+    margin: 1px 0 1px 0;
+    display: block;
+    color: #039;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px 19px 4px 33px;
+    white-space: nowrap;
+}
+.DropDownBox
+{
+    display: block;
+    width: 300px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 50px;
+    font-family: Tahoma;
+    font-size: 11px;
+    background-color: White;
+    color: #666666;
+    text-align: left;
+    border: 1px solid #2353B2;
+}
+.SearchBox
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 50px;
+    font-family: Tahoma;
+    font-size: 11px;
+    background-color: White;
+    color: #666666;
+    text-align: left;
+    border: 1px solid #2353B2;
+}
+.SummaryLabel
+{
+    padding-left: 50px;
+}
+/*******************************************************************/
+/*****************************Ferret********************************/
+.FerretInline
+{
+    float: left;
+}
+.FerretRightFloat
+{
+    float:right;
+    }
+
+/*******************************************************************/

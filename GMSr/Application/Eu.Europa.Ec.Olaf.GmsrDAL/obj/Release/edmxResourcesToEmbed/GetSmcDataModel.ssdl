@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GetSmcDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2000" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="GetSmcDataModelStoreContainer">
+    <EntitySet Name="Helpdesk_ActionGroup" EntityType="GetSmcDataModel.Store.Helpdesk_ActionGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Helpdesk_Call" EntityType="GetSmcDataModel.Store.Helpdesk_Call" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Helpdesk_Item" EntityType="GetSmcDataModel.Store.Helpdesk_Item" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Helpdesk_Nature" EntityType="GetSmcDataModel.Store.Helpdesk_Nature" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Helpdesk_ActionGroup_Helpdesk_Item" Association="GetSmcDataModel.Store.FK_Helpdesk_ActionGroup_Helpdesk_Item">
+      <End Role="Helpdesk_Item" EntitySet="Helpdesk_Item" />
+      <End Role="Helpdesk_ActionGroup" EntitySet="Helpdesk_ActionGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Helpdesk_Call_Helpdesk_Nature" Association="GetSmcDataModel.Store.FK_Helpdesk_Call_Helpdesk_Nature">
+      <End Role="Helpdesk_Nature" EntitySet="Helpdesk_Nature" />
+      <End Role="Helpdesk_Call" EntitySet="Helpdesk_Call" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Helpdesk_Item_Helpdesk_Nature" Association="GetSmcDataModel.Store.FK_Helpdesk_Item_Helpdesk_Nature">
+      <End Role="Helpdesk_Nature" EntitySet="Helpdesk_Nature" />
+      <End Role="Helpdesk_Item" EntitySet="Helpdesk_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Helpdesk_Nature_Helpdesk_Nature" Association="GetSmcDataModel.Store.FK_Helpdesk_Nature_Helpdesk_Nature">
+      <End Role="Helpdesk_Nature" EntitySet="Helpdesk_Nature" />
+      <End Role="Helpdesk_Nature1" EntitySet="Helpdesk_Nature" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Helpdesk_ActionGroup">
+    <Key>
+      <PropertyRef Name="IdActionGroup" />
+    </Key>
+    <Property Name="IdActionGroup" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdItem" Type="int" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="IdCreator" Type="int" Nullable="false" />
+    <Property Name="CreationDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="StartingDate" Type="smalldatetime" />
+    <Property Name="IdFunctionalServiceCreator" Type="int" Nullable="false" />
+    <Property Name="IdFunctionalServiceCurrent" Type="int" Nullable="false" />
+    <Property Name="IdFunctionalServiceAffected" Type="int" Nullable="false" />
+    <Property Name="IdPersonInCharge" Type="int" />
+    <Property Name="IdPreviousPersonInCharge" Type="int" />
+    <Property Name="SendEmail" Type="char" MaxLength="1" />
+    <Property Name="Description" Type="text" Nullable="false" />
+    <Property Name="Report" Type="text" />
+    <Property Name="TransferDate" Type="smalldatetime" />
+    <Property Name="IdTransferedBy" Type="int" />
+    <Property Name="AcknowledgmentDate" Type="smalldatetime" />
+    <Property Name="IdAcknowledgedBy" Type="int" />
+    <Property Name="ResolutionDate" Type="smalldatetime" />
+    <Property Name="IdResolvedBy" Type="int" />
+    <Property Name="ClosureDate" Type="smalldatetime" />
+    <Property Name="IdClosedBy" Type="int" />
+    <Property Name="IdState" Type="int" Nullable="false" />
+    <Property Name="IsResponsabilityTransfer" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Helpdesk_Call">
+    <Key>
+      <PropertyRef Name="IdCall" />
+    </Key>
+    <Property Name="IdCall" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClosureDate" Type="smalldatetime" />
+    <Property Name="IdClosedBy" Type="int" />
+    <Property Name="CreationDate" Type="smalldatetime" />
+    <Property Name="IdCreator" Type="int" Nullable="false" />
+    <Property Name="IdConcern" Type="varchar" MaxLength="50" />
+    <Property Name="ConcernDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernCelluleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernCelluleTown" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernCentraleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernServiceDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernLanguageDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernLocation" Type="varchar" MaxLength="3" />
+    <Property Name="IdCaller" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CallerDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerCelluleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerCelluleTown" Type="varchar" MaxLength="250" />
+    <Property Name="CallerCentraleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerServiceDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerLanguageDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerLocation" Type="varchar" MaxLength="3" />
+    <Property Name="SendEmailCaller" Type="char" MaxLength="1" />
+    <Property Name="IdConfiguration" Type="int" />
+    <Property Name="IdFunctionalServiceCreator" Type="int" Nullable="false" />
+    <Property Name="IdFunctionalServiceCurrent" Type="int" Nullable="false" />
+    <Property Name="IdNature" Type="int" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Report" Type="text" />
+    <Property Name="SolutionCall" Type="char" MaxLength="1" />
+    <Property Name="ArtemisDescription" Type="varchar" MaxLength="200" />
+    <Property Name="IdState" Type="int" Nullable="false" />
+    <Property Name="SendEmailConcern" Type="char" MaxLength="1" />
+    <Property Name="ConfigurationDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerOfficeDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerPhoneDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernOfficeDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernPhoneDescription" Type="varchar" MaxLength="250" />
+    <Property Name="IdClassification" Type="int" />
+  </EntityType>
+  <EntityType Name="Helpdesk_Item">
+    <Key>
+      <PropertyRef Name="IdItem" />
+    </Key>
+    <Property Name="IdItem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="IdCreator" Type="int" Nullable="false" />
+    <Property Name="CreationDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ItemCreatorCode" Type="varchar" MaxLength="50" />
+    <Property Name="IdCaller" Type="varchar" MaxLength="50" />
+    <Property Name="CallerDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerCelluleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerCelluleTown" Type="varchar" MaxLength="250" />
+    <Property Name="CallerCentraleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerServiceDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerLanguageDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerLocation" Type="varchar" MaxLength="3" />
+    <Property Name="IdConcern" Type="varchar" MaxLength="50" />
+    <Property Name="ConcernDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernCelluleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernCelluleTown" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernCentraleDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernServiceDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernLanguageDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernLocation" Type="varchar" MaxLength="3" />
+    <Property Name="SendEmailCaller" Type="char" MaxLength="1" />
+    <Property Name="IdProject" Type="int" />
+    <Property Name="IdConfiguration" Type="int" />
+    <Property Name="IdRequestType" Type="int" />
+    <Property Name="IdNature" Type="int" />
+    <Property Name="IdPriority" Type="int" />
+    <Property Name="IdProblem" Type="int" />
+    <Property Name="IsPaying" Type="char" MaxLength="1" />
+    <Property Name="IdFunctionalServiceCreator" Type="int" Nullable="false" />
+    <Property Name="IdFunctionalServiceCurrent" Type="int" Nullable="false" />
+    <Property Name="IdPersonInCharge" Type="int" />
+    <Property Name="Description" Type="text" Nullable="false" />
+    <Property Name="IsSolution" Type="char" MaxLength="1" />
+    <Property Name="Report" Type="text" />
+    <Property Name="AcknowledgmentDate" Type="smalldatetime" />
+    <Property Name="IdAcknowledgedBy" Type="int" />
+    <Property Name="ResolutionDate" Type="smalldatetime" />
+    <Property Name="IdResolvedBy" Type="int" />
+    <Property Name="ClosureDate" Type="smalldatetime" />
+    <Property Name="IdClosedBy" Type="int" />
+    <Property Name="IdState" Type="int" Nullable="false" />
+    <Property Name="IdItemType" Type="int" Nullable="false" />
+    <Property Name="Valid" Type="char" MaxLength="1" />
+    <Property Name="ArtemisDescription" Type="varchar" MaxLength="200" />
+    <Property Name="SendEmailConcern" Type="char" MaxLength="1" />
+    <Property Name="ConfigurationDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerOfficeDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CallerPhoneDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernOfficeDescription" Type="varchar" MaxLength="250" />
+    <Property Name="ConcernPhoneDescription" Type="varchar" MaxLength="250" />
+    <Property Name="AgreedDate" Type="smalldatetime" />
+    <Property Name="IsVIP" Type="char" MaxLength="1" />
+    <Property Name="ImpactedComputer" Type="int" />
+    <Property Name="IdAnnexTableQualification" Type="int" />
+    <Property Name="IdClassification" Type="int" />
+  </EntityType>
+  <EntityType Name="Helpdesk_Nature">
+    <Key>
+      <PropertyRef Name="IdNature" />
+    </Key>
+    <Property Name="IdNature" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdParent" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="text" />
+    <Property Name="EmptyNode" Type="char" MaxLength="1" />
+    <Property Name="Level" Type="int" />
+    <Property Name="Node1" Type="int" />
+    <Property Name="Node2" Type="int" />
+    <Property Name="Node3" Type="int" />
+    <Property Name="Node4" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="Valid" Type="char" MaxLength="1" />
+    <Property Name="ArtemisDescription" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <Association Name="FK_Helpdesk_ActionGroup_Helpdesk_Item">
+    <End Role="Helpdesk_Item" Type="GetSmcDataModel.Store.Helpdesk_Item" Multiplicity="1" />
+    <End Role="Helpdesk_ActionGroup" Type="GetSmcDataModel.Store.Helpdesk_ActionGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helpdesk_Item">
+        <PropertyRef Name="IdItem" />
+      </Principal>
+      <Dependent Role="Helpdesk_ActionGroup">
+        <PropertyRef Name="IdItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Helpdesk_Call_Helpdesk_Nature">
+    <End Role="Helpdesk_Nature" Type="GetSmcDataModel.Store.Helpdesk_Nature" Multiplicity="0..1" />
+    <End Role="Helpdesk_Call" Type="GetSmcDataModel.Store.Helpdesk_Call" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helpdesk_Nature">
+        <PropertyRef Name="IdNature" />
+      </Principal>
+      <Dependent Role="Helpdesk_Call">
+        <PropertyRef Name="IdNature" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Helpdesk_Item_Helpdesk_Nature">
+    <End Role="Helpdesk_Nature" Type="GetSmcDataModel.Store.Helpdesk_Nature" Multiplicity="0..1" />
+    <End Role="Helpdesk_Item" Type="GetSmcDataModel.Store.Helpdesk_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helpdesk_Nature">
+        <PropertyRef Name="IdNature" />
+      </Principal>
+      <Dependent Role="Helpdesk_Item">
+        <PropertyRef Name="IdNature" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Helpdesk_Nature_Helpdesk_Nature">
+    <End Role="Helpdesk_Nature" Type="GetSmcDataModel.Store.Helpdesk_Nature" Multiplicity="0..1" />
+    <End Role="Helpdesk_Nature1" Type="GetSmcDataModel.Store.Helpdesk_Nature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helpdesk_Nature">
+        <PropertyRef Name="IdNature" />
+      </Principal>
+      <Dependent Role="Helpdesk_Nature1">
+        <PropertyRef Name="IdParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

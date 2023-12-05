@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="GetSmcDataModel" />
+  <Alias Key="Target" Value="GetSmcDataModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="GetSmcEntities" StorageEntityContainer="GetSmcDataModelStoreContainer">
+    <EntitySetMapping Name="HelpdeskActionGroupSet">
+      <EntityTypeMapping TypeName="GetSmcModel.HelpdeskActionGroup">
+        <MappingFragment StoreEntitySet="Helpdesk_ActionGroup">
+          <ScalarProperty Name="IsResponsabilityTransfer" ColumnName="IsResponsabilityTransfer" />
+          <ScalarProperty Name="IdState" ColumnName="IdState" />
+          <ScalarProperty Name="IdClosedBy" ColumnName="IdClosedBy" />
+          <ScalarProperty Name="ClosureDate" ColumnName="ClosureDate" />
+          <ScalarProperty Name="IdResolvedBy" ColumnName="IdResolvedBy" />
+          <ScalarProperty Name="ResolutionDate" ColumnName="ResolutionDate" />
+          <ScalarProperty Name="IdAcknowledgedBy" ColumnName="IdAcknowledgedBy" />
+          <ScalarProperty Name="AcknowledgmentDate" ColumnName="AcknowledgmentDate" />
+          <ScalarProperty Name="IdTransferedBy" ColumnName="IdTransferedBy" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="Report" ColumnName="Report" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SendEmail" ColumnName="SendEmail" />
+          <ScalarProperty Name="IdPreviousPersonInCharge" ColumnName="IdPreviousPersonInCharge" />
+          <ScalarProperty Name="IdPersonInCharge" ColumnName="IdPersonInCharge" />
+          <ScalarProperty Name="IdFunctionalServiceAffected" ColumnName="IdFunctionalServiceAffected" />
+          <ScalarProperty Name="IdFunctionalServiceCurrent" ColumnName="IdFunctionalServiceCurrent" />
+          <ScalarProperty Name="IdFunctionalServiceCreator" ColumnName="IdFunctionalServiceCreator" />
+          <ScalarProperty Name="StartingDate" ColumnName="StartingDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="IdCreator" ColumnName="IdCreator" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IdItem" ColumnName="IdItem" />
+          <ScalarProperty Name="IdActionGroup" ColumnName="IdActionGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HelpdeskItemSet">
+      <EntityTypeMapping TypeName="GetSmcModel.HelpdeskItem">
+        <MappingFragment StoreEntitySet="Helpdesk_Item">
+          <ScalarProperty Name="IdClassification" ColumnName="IdClassification" />
+          <ScalarProperty Name="IdAnnexTableQualification" ColumnName="IdAnnexTableQualification" />
+          <ScalarProperty Name="ImpactedComputer" ColumnName="ImpactedComputer" />
+          <ScalarProperty Name="IsVIP" ColumnName="IsVIP" />
+          <ScalarProperty Name="AgreedDate" ColumnName="AgreedDate" />
+          <ScalarProperty Name="ConcernPhoneDescription" ColumnName="ConcernPhoneDescription" />
+          <ScalarProperty Name="ConcernOfficeDescription" ColumnName="ConcernOfficeDescription" />
+          <ScalarProperty Name="CallerPhoneDescription" ColumnName="CallerPhoneDescription" />
+          <ScalarProperty Name="CallerOfficeDescription" ColumnName="CallerOfficeDescription" />
+          <ScalarProperty Name="ConfigurationDescription" ColumnName="ConfigurationDescription" />
+          <ScalarProperty Name="SendEmailConcern" ColumnName="SendEmailConcern" />
+          <ScalarProperty Name="ArtemisDescription" ColumnName="ArtemisDescription" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="IdItemType" ColumnName="IdItemType" />
+          <ScalarProperty Name="IdState" ColumnName="IdState" />
+          <ScalarProperty Name="IdClosedBy" ColumnName="IdClosedBy" />
+          <ScalarProperty Name="ClosureDate" ColumnName="ClosureDate" />
+          <ScalarProperty Name="IdResolvedBy" ColumnName="IdResolvedBy" />
+          <ScalarProperty Name="ResolutionDate" ColumnName="ResolutionDate" />
+          <ScalarProperty Name="IdAcknowledgedBy" ColumnName="IdAcknowledgedBy" />
+          <ScalarProperty Name="AcknowledgmentDate" ColumnName="AcknowledgmentDate" />
+          <ScalarProperty Name="Report" ColumnName="Report" />
+          <ScalarProperty Name="IsSolution" ColumnName="IsSolution" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IdPersonInCharge" ColumnName="IdPersonInCharge" />
+          <ScalarProperty Name="IdFunctionalServiceCurrent" ColumnName="IdFunctionalServiceCurrent" />
+          <ScalarProperty Name="IdFunctionalServiceCreator" ColumnName="IdFunctionalServiceCreator" />
+          <ScalarProperty Name="IsPaying" ColumnName="IsPaying" />
+          <ScalarProperty Name="IdProblem" ColumnName="IdProblem" />
+          <ScalarProperty Name="IdPriority" ColumnName="IdPriority" />
+          <ScalarProperty Name="IdNature" ColumnName="IdNature" />
+          <ScalarProperty Name="IdRequestType" ColumnName="IdRequestType" />
+          <ScalarProperty Name="IdConfiguration" ColumnName="IdConfiguration" />
+          <ScalarProperty Name="IdProject" ColumnName="IdProject" />
+          <ScalarProperty Name="SendEmailCaller" ColumnName="SendEmailCaller" />
+          <ScalarProperty Name="ConcernLocation" ColumnName="ConcernLocation" />
+          <ScalarProperty Name="ConcernLanguageDescription" ColumnName="ConcernLanguageDescription" />
+          <ScalarProperty Name="ConcernServiceDescription" ColumnName="ConcernServiceDescription" />
+          <ScalarProperty Name="ConcernCentraleDescription" ColumnName="ConcernCentraleDescription" />
+          <ScalarProperty Name="ConcernCelluleTown" ColumnName="ConcernCelluleTown" />
+          <ScalarProperty Name="ConcernCelluleDescription" ColumnName="ConcernCelluleDescription" />
+          <ScalarProperty Name="ConcernDescription" ColumnName="ConcernDescription" />
+          <ScalarProperty Name="IdConcern" ColumnName="IdConcern" />
+          <ScalarProperty Name="CallerLocation" ColumnName="CallerLocation" />
+          <ScalarProperty Name="CallerLanguageDescription" ColumnName="CallerLanguageDescription" />
+          <ScalarProperty Name="CallerServiceDescription" ColumnName="CallerServiceDescription" />
+          <ScalarProperty Name="CallerCentraleDescription" ColumnName="CallerCentraleDescription" />
+          <ScalarProperty Name="CallerCelluleTown" ColumnName="CallerCelluleTown" />
+          <ScalarProperty Name="CallerCelluleDescription" ColumnName="CallerCelluleDescription" />
+          <ScalarProperty Name="CallerDescription" ColumnName="CallerDescription" />
+          <ScalarProperty Name="IdCaller" ColumnName="IdCaller" />
+          <ScalarProperty Name="ItemCreatorCode" ColumnName="ItemCreatorCode" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="IdCreator" ColumnName="IdCreator" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IdItem" ColumnName="IdItem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HelpdeskNatureSet">
+      <EntityTypeMapping TypeName="GetSmcModel.HelpdeskNature">
+        <MappingFragment StoreEntitySet="Helpdesk_Nature">
+          <ScalarProperty Name="ArtemisDescription" ColumnName="ArtemisDescription" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Node4" ColumnName="Node4" />
+          <ScalarProperty Name="Node3" ColumnName="Node3" />
+          <ScalarProperty Name="Node2" ColumnName="Node2" />
+          <ScalarProperty Name="Node1" ColumnName="Node1" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="EmptyNode" ColumnName="EmptyNode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IdParent" ColumnName="IdParent" />
+          <ScalarProperty Name="IdNature" ColumnName="IdNature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HelpdeskCallSet">
+      <EntityTypeMapping TypeName="GetSmcModel.HelpdeskCall">
+        <MappingFragment StoreEntitySet="Helpdesk_Call">
+          <ScalarProperty Name="IdClassification" ColumnName="IdClassification" />
+          <ScalarProperty Name="ConcernPhoneDescription" ColumnName="ConcernPhoneDescription" />
+          <ScalarProperty Name="ConcernOfficeDescription" ColumnName="ConcernOfficeDescription" />
+          <ScalarProperty Name="CallerPhoneDescription" ColumnName="CallerPhoneDescription" />
+          <ScalarProperty Name="CallerOfficeDescription" ColumnName="CallerOfficeDescription" />
+          <ScalarProperty Name="ConfigurationDescription" ColumnName="ConfigurationDescription" />
+          <ScalarProperty Name="SendEmailConcern" ColumnName="SendEmailConcern" />
+          <ScalarProperty Name="IdState" ColumnName="IdState" />
+          <ScalarProperty Name="ArtemisDescription" ColumnName="ArtemisDescription" />
+          <ScalarProperty Name="SolutionCall" ColumnName="SolutionCall" />
+          <ScalarProperty Name="Report" ColumnName="Report" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IdNature" ColumnName="IdNature" />
+          <ScalarProperty Name="IdFunctionalServiceCurrent" ColumnName="IdFunctionalServiceCurrent" />
+          <ScalarProperty Name="IdFunctionalServiceCreator" ColumnName="IdFunctionalServiceCreator" />
+          <ScalarProperty Name="IdConfiguration" ColumnName="IdConfiguration" />
+          <ScalarProperty Name="SendEmailCaller" ColumnName="SendEmailCaller" />
+          <ScalarProperty Name="CallerLocation" ColumnName="CallerLocation" />
+          <ScalarProperty Name="CallerLanguageDescription" ColumnName="CallerLanguageDescription" />
+          <ScalarProperty Name="CallerServiceDescription" ColumnName="CallerServiceDescription" />
+          <ScalarProperty Name="CallerCentraleDescription" ColumnName="CallerCentraleDescription" />
+          <ScalarProperty Name="CallerCelluleTown" ColumnName="CallerCelluleTown" />
+          <ScalarProperty Name="CallerCelluleDescription" ColumnName="CallerCelluleDescription" />
+          <ScalarProperty Name="CallerDescription" ColumnName="CallerDescription" />
+          <ScalarProperty Name="IdCaller" ColumnName="IdCaller" />
+          <ScalarProperty Name="ConcernLocation" ColumnName="ConcernLocation" />
+          <ScalarProperty Name="ConcernLanguageDescription" ColumnName="ConcernLanguageDescription" />
+          <ScalarProperty Name="ConcernServiceDescription" ColumnName="ConcernServiceDescription" />
+          <ScalarProperty Name="ConcernCentraleDescription" ColumnName="ConcernCentraleDescription" />
+          <ScalarProperty Name="ConcernCelluleTown" ColumnName="ConcernCelluleTown" />
+          <ScalarProperty Name="ConcernCelluleDescription" ColumnName="ConcernCelluleDescription" />
+          <ScalarProperty Name="ConcernDescription" ColumnName="ConcernDescription" />
+          <ScalarProperty Name="IdConcern" ColumnName="IdConcern" />
+          <ScalarProperty Name="IdCreator" ColumnName="IdCreator" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="IdClosedBy" ColumnName="IdClosedBy" />
+          <ScalarProperty Name="ClosureDate" ColumnName="ClosureDate" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IdCall" ColumnName="IdCall" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

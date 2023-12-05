@@ -1,0 +1,246 @@
+﻿<?xml version ="1.0"?>
+<configuration xmlns="urn:microsoft-catalog:XML_Metabase_V64_0">
+<MBProperty>
+<IIS_Global	Location ="."
+		SessionKey="496353625000000034000000100000000b0200000168000001680000b72d14cfb042d7df8aca990cabb95ab0ed40d73f6237b13a07956b059435a51f52691e6220f88c0d74006900f593c6f83801653682a3b9cdbd1ef52d"
+	>
+</IIS_Global>
+<IIsWebServer	Location ="/LM/W3SVC/73945314"
+		AuthFlags="0"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		ServerAutoStart="TRUE"
+		ServerBindings=":8080:"
+		ServerComment="GmsrTest"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/73945314/filters"
+		AdminACL="49634462f0000000a400000040000000a1071c9930746725a024b209750dc3ffc2abb5b8cc117e2f311fb9c238a097f6627abec552693fcb8a4bfb0da815245e050f4e3d31d3f4f5158a6124f6e60de736f603859eacc73fa312d4080513054a9e7b1624b0f27856ca30a2a6a0289b266bcfbc93dfd94a7c6114eb213d07760bbcc9f21f6162171fb5614af61602f3c9e59fea88ac44bcf4f8cd13a2b8be52b761da3c79b2e56fd1a58a1a9b6b71894729fdbb75750072006100740069006f006e002e0078006d006c0000001c470f000a000000000000000a0000002f004c004d002f0057003300530056004300000001000000fd506907"
+	>
+</IIsFilters>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/73945314/root"
+		AccessFlags="AccessRead | AccessScript"
+		AppFriendlyName="GmsrTest"
+		AppIsolated="2"
+		AppPoolId="GmsrTestApplicationPool"
+		AppRoot="/LM/W3SVC/73945314/Root"
+		AuthFlags="AuthNTLM"
+		DefaultDoc="Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		Path="C:\WebApplications\GmsrTest"
+		ScriptMaps=".asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.aspx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.config,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.idc,C:\WINDOWS\system32\inetsrv\httpodbc.dll,5,GET,POST
+			.licx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.shtm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.shtml,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.soap,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.stm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.vb,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.master,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.skin,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.compiled,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.browser,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdb,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5
+			.vjsproj,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sitemap,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.msgx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.ad,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dd,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldd,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sd,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cd,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.adprototype,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lddprototype,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdm,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdmDocument,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldb,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdf,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldf,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.java,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.exclude,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.refresh,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.xamlx,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspq,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cshtm,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5
+			.cshtml,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5
+			.vbhtm,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5
+			.vbhtml,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5
+			.svc,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1
+			.xoml,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,1
+			.rules,c:\windows\microsoft.net\framework\v4.0.30319\aspnet_isapi.dll,5"
+		UNCPassword="49634462500000000600000040000000a1071c993174000001680000b0cd46ce948ecafbce69579185c49351fd6ce310e437abea63dd616cc150412b86824c3f7cde450c74006900de8d7481e6f81c3c650984bdc0a3ffe1"
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/73945314/root/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsInheritedProperties	Location ="inherited:/LM/W3SVC/73945314"
+		AdminACL="4963446238010000ec00000040000000a1071c9930746725e824b2093d0dc3ffc2abb5b8cc117e2f311f61c23aa097f6627a8ec5d0693fcb8a4ffb0da815245e030f4e3d4dbba1f25903377812136183c2f503808aace33faa12f0088f16054a9f7e1621a5f27853a358e3a11bc98c7d49b286abd42e26188c17ff21b4076e0b16c8f61f6060171aa6614af33602e7c94c9dea88ac47bcf4f8cd13a28cbe52b741d818793ae76fd1a48f1a9e4b7189421cffbb75148ce0980b3edaf823f8929c1d33bc821c91947acaddf93713ea858262df8d01ac87d9cab8e66acef471320f0b2e022437c56e35804b418f098e12c16e9374da4087dfe7b448d34865002c008ef1de0f75198ade8a6cabac2cc38367a021bcf0c9dc8884fa1595c49f322dc461b24b37cbf54737f49c1c12ae42b01281b4ea2f5c6692c9b46c81c831a3a66b"
+		AllowKeepAlive="TRUE"
+		AnonymousUserName="IUSR_S-OLAF-VPROD137"
+		AnonymousUserPass="49634462700000002200000040000000a1071c99127450a56424e809a50d95fffaabdcb88811242f0f1fb1c20da0e1f6627a0000010001008cce9011aaa5034495f0c7cf73c990dd02000000000000000000000000000000000000000000000001000000000000004c4d454d680000000873150000000000"
+		AppAllowClientDebug="FALSE"
+		AppAllowDebugging="FALSE"
+		AppPoolId="DefaultAppPool"
+		AspAllowOutOfProcComponents="TRUE"
+		AspAllowSessionState="TRUE"
+		AspAppServiceFlags="0"
+		AspBufferingLimit="4194304"
+		AspBufferingOn="TRUE"
+		AspCalcLineNumber="TRUE"
+		AspCodepage="0"
+		AspDiskTemplateCacheDirectory="%windir%\system32\inetsrv\ASP Compiled Templates"
+		AspEnableApplicationRestart="TRUE"
+		AspEnableAspHtmlFallback="FALSE"
+		AspEnableChunkedEncoding="TRUE"
+		AspEnableParentPaths="FALSE"
+		AspEnableTypelibCache="TRUE"
+		AspErrorsToNTLog="FALSE"
+		AspExceptionCatchEnable="TRUE"
+		AspExecuteInMTA="0"
+		AspKeepSessionIDSecure="0"
+		AspLCID="2048"
+		AspLogErrorRequests="TRUE"
+		AspMaxDiskTemplateCacheFiles="2000"
+		AspMaxRequestEntityAllowed="204800"
+		AspProcessorThreadMax="25"
+		AspQueueConnectionTestTime="3"
+		AspQueueTimeout="4294967295"
+		AspRequestQueueMax="3000"
+		AspRunOnEndAnonymously="TRUE"
+		AspScriptEngineCacheMax="250"
+		AspScriptErrorMessage="An error occurred on the server when processing the URL.  Please contact the system administrator."
+		AspScriptErrorSentToBrowser="TRUE"
+		AspScriptFileCacheSize="500"
+		AspScriptLanguage="VBScript"
+		AspScriptTimeout="90"
+		AspSessionMax="4294967295"
+		AspSessionTimeout="20"
+		AspTrackThreadingModel="FALSE"
+		AuthChangeURL="/iisadmpwd/achg.asp"
+		AuthExpiredURL="/iisadmpwd/aexp.asp"
+		AuthExpiredUnsecureURL="/iisadmpwd/aexp3.asp"
+		AuthNotifyPwdExpURL="/iisadmpwd/anot.asp"
+		AuthNotifyPwdExpUnsecureURL="/iisadmpwd/anot3.asp"
+		CGITimeout="300"
+		CacheISAPI="TRUE"
+		ConnectionTimeout="120"
+		ContentIndexed="TRUE"
+		DefaultDoc="Default.htm,Default.asp,index.htm"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		DownlevelAdminInstance="1"
+		HttpCustomHeaders="X-Powered-By: ASP.NET"
+		HttpErrors="400,*,FILE,C:\WINDOWS\help\iisHelp\common\400.htm
+			401,1,FILE,C:\WINDOWS\help\iisHelp\common\401-1.htm
+			401,2,FILE,C:\WINDOWS\help\iisHelp\common\401-2.htm
+			401,3,FILE,C:\WINDOWS\help\iisHelp\common\401-3.htm
+			401,4,FILE,C:\WINDOWS\help\iisHelp\common\401-4.htm
+			401,5,FILE,C:\WINDOWS\help\iisHelp\common\401-5.htm
+			401,7,FILE,C:\WINDOWS\help\iisHelp\common\401-1.htm
+			403,1,FILE,C:\WINDOWS\help\iisHelp\common\403-1.htm
+			403,2,FILE,C:\WINDOWS\help\iisHelp\common\403-2.htm
+			403,3,FILE,C:\WINDOWS\help\iisHelp\common\403-3.htm
+			403,4,FILE,C:\WINDOWS\help\iisHelp\common\403-4.htm
+			403,5,FILE,C:\WINDOWS\help\iisHelp\common\403-5.htm
+			403,6,FILE,C:\WINDOWS\help\iisHelp\common\403-6.htm
+			403,7,FILE,C:\WINDOWS\help\iisHelp\common\403-7.htm
+			403,8,FILE,C:\WINDOWS\help\iisHelp\common\403-8.htm
+			403,9,FILE,C:\WINDOWS\help\iisHelp\common\403-9.htm
+			403,10,FILE,C:\WINDOWS\help\iisHelp\common\403-10.htm
+			403,11,FILE,C:\WINDOWS\help\iisHelp\common\403-11.htm
+			403,12,FILE,C:\WINDOWS\help\iisHelp\common\403-12.htm
+			403,13,FILE,C:\WINDOWS\help\iisHelp\common\403-13.htm
+			403,15,FILE,C:\WINDOWS\help\iisHelp\common\403-15.htm
+			403,16,FILE,C:\WINDOWS\help\iisHelp\common\403-16.htm
+			403,17,FILE,C:\WINDOWS\help\iisHelp\common\403-17.htm
+			403,18,FILE,C:\WINDOWS\help\iisHelp\common\403.htm
+			403,19,FILE,C:\WINDOWS\help\iisHelp\common\403.htm
+			403,20,FILE,C:\WINDOWS\help\iisHelp\common\403-20.htm
+			404,*,FILE,C:\WINDOWS\help\iisHelp\common\404b.htm
+			404,2,FILE,C:\WINDOWS\help\iisHelp\common\404b.htm
+			404,3,FILE,C:\WINDOWS\help\iisHelp\common\404b.htm
+			405,*,FILE,C:\WINDOWS\help\iisHelp\common\405.htm
+			406,*,FILE,C:\WINDOWS\help\iisHelp\common\406.htm
+			407,*,FILE,C:\WINDOWS\help\iisHelp\common\407.htm
+			412,*,FILE,C:\WINDOWS\help\iisHelp\common\412.htm
+			414,*,FILE,C:\WINDOWS\help\iisHelp\common\414.htm
+			415,*,FILE,C:\WINDOWS\help\iisHelp\common\415.htm
+			500,12,FILE,C:\WINDOWS\help\iisHelp\common\500-12.htm
+			500,13,FILE,C:\WINDOWS\help\iisHelp\common\500-13.htm
+			500,15,FILE,C:\WINDOWS\help\iisHelp\common\500-15.htm
+			500,16,FILE,C:\WINDOWS\help\iisHelp\common\500.htm
+			500,17,FILE,C:\WINDOWS\help\iisHelp\common\500.htm
+			500,18,FILE,C:\WINDOWS\help\iisHelp\common\500.htm
+			500,19,FILE,C:\WINDOWS\help\iisHelp\common\500.htm"
+		InProcessIsapiApps="C:\WINDOWS\system32\inetsrv\httpext.dll
+			C:\WINDOWS\system32\inetsrv\httpodbc.dll
+			C:\WINDOWS\system32\inetsrv\ssinc.dll
+			C:\WINDOWS\system32\msw3prt.dll
+			C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
+			C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll
+			C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll"
+		LogExtFileFlags="LogExtFileDate | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileSiteName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileHttpSubStatus"
+		LogFileDirectory="C:\WINDOWS\system32\LogFiles"
+		LogFilePeriod="1"
+		LogFileTruncateSize="20971520"
+		LogOdbcDataSource="HTTPLOG"
+		LogOdbcPassword="49634462600000001200000040000000a1071c99427411a54c24de098a0da4ffc2ab6f006c0075006d00650031005c00570049004e0044004f00570053005c00730079007300740065006d00330032005c006d006d0063002e00650078006500000074ca00000000"
+		LogOdbcTableName="InternetLog"
+		LogOdbcUserName="InternetAdmin"
+		LogType="1"
+		MaxBandwidth="4294967295"
+		MaxConnections="4294967295"
+		MinFileBytesPerSec="240"
+		PasswordChangeFlags="AuthChangeDisable | AuthAdvNotifyDisable"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.idc,C:\WINDOWS\system32\inetsrv\httpodbc.dll,5,GET,POST
+			.shtm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.shtml,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.stm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG"
+		WAMUserName="IWAM_S-OLAF-VPROD137"
+		WAMUserPass="49634462700000002200000040000000a1071c9973744ba50d24f1099b0df2ffa6ab81b8bb111c2f5a1fb8c20aa0e9f6627a0000010001008cce9011aaa5034495f0c7cf73c990dd02000000000000000000000000000000000000000000000001000000000000004c4d454d680000000873150000000000"
+	>
+</IIsInheritedProperties>
+</MBProperty>
+</configuration>

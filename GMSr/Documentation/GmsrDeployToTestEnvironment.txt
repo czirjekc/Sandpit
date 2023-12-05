@@ -1,0 +1,22 @@
+1) rebuild the code in 'Debug' mode
+
+2) make a temporary backup copy of '\\s-olaf-vprod137\WebApplications\GmsrTest'
+
+3) copy (overwrite) the new/updated files (don't forget the updated dll's):
+	from the local '...\Application\Eu.Europa.Ec.Olaf.Gmsr'
+	to '\\s-olaf-vprod137\WebApplications\GmsrTest'
+	
+- if the web.config is updated:
+	- check that the connectionString is set to the one with 's-olaf-vprod137'
+	- check that 'compilation debug' is 'true'
+	- check that 'customErrors mode' is 'Off'
+
+- if the MasterPage.Master is updated:
+	- check that the test OLAF logo is referenced
+
+- if necessary delete the old files that are not used anymore on '\\s-olaf-vprod137\WebApplications\GmsrTest'
+
+4) verify if everything is OK on 'http://s-olaf-vprod137:8080/'
+
+5) - if there is a problem, restore the original situation from the backup copy
+   - if everything is OK, remove the temporary backup copy

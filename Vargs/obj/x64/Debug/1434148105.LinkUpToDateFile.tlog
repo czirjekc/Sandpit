@@ -1,0 +1,1 @@
+g++ -o "/home/czirjekc/projects/Vargs/bin/x64/Debug/Vargs.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/czirjekc/projects/Vargs/obj/x64/Debug/main.o

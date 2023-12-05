@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Eu.Europa.Ec.Olaf.GmsrServices.RestWebService" CodeBehind="RestWebService.svc.cs" %>

@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GmsrModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="GmsrEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MenuElementSet" EntityType="GmsrModel.MenuElement" />
+    <EntitySet Name="MenuElementGroupSet" EntityType="GmsrModel.MenuElementGroup" />
+    <EntitySet Name="MenuElementUserSet" EntityType="GmsrModel.MenuElementUser" />
+    <AssociationSet Name="FK_R_MenuElementGroup_R_MenuElement" Association="GmsrModel.FK_R_MenuElementGroup_R_MenuElement">
+      <End Role="R_MenuElement" EntitySet="MenuElementSet" />
+      <End Role="R_MenuElementGroup" EntitySet="MenuElementGroupSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MenuElementUser_R_MenuElement" Association="GmsrModel.FK_R_MenuElementUser_R_MenuElement">
+      <End Role="R_MenuElement" EntitySet="MenuElementSet" />
+      <End Role="R_MenuElementUser" EntitySet="MenuElementUserSet" />
+    </AssociationSet>
+    <EntitySet Name="GroupSet" EntityType="GmsrModel.Group" />
+    <EntitySet Name="UserSet" EntityType="GmsrModel.User" />
+    <AssociationSet Name="FK_R_MenuElementGroup_R_Group" Association="GmsrModel.FK_R_MenuElementGroup_R_Group">
+      <End Role="R_Group" EntitySet="GroupSet" />
+      <End Role="MenuElementGroup" EntitySet="MenuElementGroupSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MenuElementUser_R_User" Association="GmsrModel.FK_R_MenuElementUser_R_User">
+      <End Role="R_User" EntitySet="UserSet" />
+      <End Role="MenuElementUser" EntitySet="MenuElementUserSet" />
+    </AssociationSet>
+    <EntitySet Name="AuditSet" EntityType="GmsrModel.Audit" />
+    <EntitySet Name="GroupUserSet" EntityType="GmsrModel.GroupUser" />
+    <AssociationSet Name="FK_R_GroupUser_R_Group1" Association="GmsrModel.FK_R_GroupUser_R_Group1">
+      <End Role="Group" EntitySet="GroupSet" />
+      <End Role="R_GroupUser" EntitySet="GroupUserSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_GroupUser_R_User1" Association="GmsrModel.FK_R_GroupUser_R_User1">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="R_GroupUser" EntitySet="GroupUserSet" />
+    </AssociationSet>
+    <EntitySet Name="MediaItemSet" EntityType="GmsrModel.MediaItem" />
+    <EntitySet Name="MediaItemLocationSet" EntityType="GmsrModel.MediaItemLocation" />
+    <EntitySet Name="MediaItemTypeSet" EntityType="GmsrModel.MediaItemType" />
+    <EntitySet Name="SoftwareLicenseSet" EntityType="GmsrModel.SoftwareLicense" />
+    <EntitySet Name="SoftwareLicenseAssignmentSet" EntityType="GmsrModel.SoftwareLicenseAssignment" />
+    <EntitySet Name="SoftwareLicenseTypeSet" EntityType="GmsrModel.SoftwareLicenseType" />
+    <EntitySet Name="SoftwareProductSet" EntityType="GmsrModel.SoftwareProduct" />
+    <AssociationSet Name="FK_R_MediaItem_R_MediaItemLocation" Association="GmsrModel.FK_R_MediaItem_R_MediaItemLocation">
+      <End Role="R_MediaItemLocation" EntitySet="MediaItemLocationSet" />
+      <End Role="R_MediaItem" EntitySet="MediaItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_MediaItem_R_MediaItemType" Association="GmsrModel.FK_R_MediaItem_R_MediaItemType">
+      <End Role="R_MediaItemType" EntitySet="MediaItemTypeSet" />
+      <End Role="R_MediaItem" EntitySet="MediaItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareLicense_R_SoftwareLicenseType" Association="GmsrModel.FK_R_SoftwareLicense_R_SoftwareLicenseType">
+      <End Role="R_SoftwareLicenseType" EntitySet="SoftwareLicenseTypeSet" />
+      <End Role="R_SoftwareLicense" EntitySet="SoftwareLicenseSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareLicenseInUse_R_SoftwareItem" Association="GmsrModel.FK_R_SoftwareLicenseInUse_R_SoftwareItem">
+      <End Role="R_SoftwareLicense" EntitySet="SoftwareLicenseSet" />
+      <End Role="R_SoftwareLicenseInUse" EntitySet="SoftwareLicenseAssignmentSet" />
+    </AssociationSet>
+    <EntitySet Name="OlafUserSet" EntityType="GmsrModel.OlafUser" />
+    <AssociationSet Name="FK_R_SoftwareLicenseInUse_Olaf_User" Association="GmsrModel.FK_R_SoftwareLicenseInUse_Olaf_User">
+      <End Role="Olaf_User" EntitySet="OlafUserSet" />
+      <End Role="R_SoftwareLicenseInUse" EntitySet="SoftwareLicenseAssignmentSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareLicense_R_SoftwareLicense1" Association="GmsrModel.FK_R_SoftwareLicense_R_SoftwareLicense1">
+      <End Role="SoftwareLicense" EntitySet="SoftwareLicenseSet" />
+      <End Role="SoftwareLicense1" EntitySet="SoftwareLicenseSet" />
+    </AssociationSet>
+    <EntitySet Name="SoftwareProductStatusSet" EntityType="GmsrModel.SoftwareProductStatus" />
+    <AssociationSet Name="FK_R_SoftwareProduct_R_SoftwareProductStatus" Association="GmsrModel.FK_R_SoftwareProduct_R_SoftwareProductStatus">
+      <End Role="R_SoftwareProductStatus" EntitySet="SoftwareProductStatusSet" />
+      <End Role="SoftwareProduct" EntitySet="SoftwareProductSet" />
+    </AssociationSet>
+    <EntitySet Name="HardwareItemOrderFormSet" EntityType="GmsrModel.HardwareItemOrderForm" />
+    <EntitySet Name="OrderFormDocumentSet" EntityType="GmsrModel.OrderFormDocument" />
+    <EntitySet Name="SoftwareOrderItemSet" EntityType="GmsrModel.SoftwareOrderItem" />
+    <EntitySet Name="SoftwareOrderItemTypeSet" EntityType="GmsrModel.SoftwareOrderItemType" />
+    <AssociationSet Name="FK_R_MediaItem_R_SoftwareContractorder1" Association="GmsrModel.FK_R_MediaItem_R_SoftwareContractorder1">
+      <End Role="R_SoftwareOrder" EntitySet="SoftwareOrderItemSet" />
+      <End Role="MediaItem" EntitySet="MediaItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareLicense_R_SoftwareContractOrder1" Association="GmsrModel.FK_R_SoftwareLicense_R_SoftwareContractOrder1">
+      <End Role="R_SoftwareOrder" EntitySet="SoftwareOrderItemSet" />
+      <End Role="SoftwareLicense" EntitySet="SoftwareLicenseSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareOrderUnit_R_SoftwareOrderUnit1" Association="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareOrderUnit1">
+      <End Role="R_SoftwareOrder" EntitySet="SoftwareOrderItemSet" />
+      <End Role="R_SoftwareOrder1" EntitySet="SoftwareOrderItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareOrderUnit_R_SoftwareOrderUnitType1" Association="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareOrderUnitType1">
+      <End Role="R_SoftwareOrderType" EntitySet="SoftwareOrderItemTypeSet" />
+      <End Role="R_SoftwareOrder" EntitySet="SoftwareOrderItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_R_SoftwareOrderUnit_R_SoftwareProduct1" Association="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareProduct1">
+      <End Role="SoftwareProduct" EntitySet="SoftwareProductSet" />
+      <End Role="R_SoftwareOrder" EntitySet="SoftwareOrderItemSet" />
+    </AssociationSet>
+    <EntitySet Name="HardwareItemSet" EntityType="GmsrModel.HardwareItem" />
+    <EntitySet Name="HardwareItemModificationSet" EntityType="GmsrModel.HardwareItemModification" />
+    <AssociationSet Name="HardwareItemHardwareItemOrderForm" Association="GmsrModel.HardwareItemHardwareItemOrderForm">
+      <End Role="HardwareItem" EntitySet="HardwareItemSet" />
+      <End Role="HardwareItemOrderForm" EntitySet="HardwareItemOrderFormSet" />
+    </AssociationSet>
+    <AssociationSet Name="HardwareItemSoftwareLicenseAssignment" Association="GmsrModel.HardwareItemSoftwareLicenseAssignment">
+      <End Role="HardwareItem" EntitySet="HardwareItemSet" />
+      <End Role="SoftwareLicenseAssignment" EntitySet="SoftwareLicenseAssignmentSet" />
+    </AssociationSet>
+    <EntitySet Name="OlafUserModificationSet" EntityType="GmsrModel.OlafUserModification" />
+    <EntitySet Name="ActiveDirectoryGroupOlafUserSet" EntityType="GmsrModel.ActiveDirectoryGroupOlafUser" />
+    <EntitySet Name="GLoanAssignementSet" EntityType="GmsrModel.GLoanAssignment" />
+    <EntitySet Name="GLoanCategorySet" EntityType="GmsrModel.GLoanCategory" />
+    <EntitySet Name="GLoanItemSet" EntityType="GmsrModel.GLoanItem" />
+    <EntitySet Name="GLoanStatusSet" EntityType="GmsrModel.GLoanStatus" />
+    <AssociationSet Name="FK_GLoan_Assignements_GLoan_Items" Association="GmsrModel.FK_GLoan_Assignements_GLoan_Items">
+      <End Role="GLoan_Items" EntitySet="GLoanItemSet" />
+      <End Role="GLoan_Assignements" EntitySet="GLoanAssignementSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLoan_Items_GLoan_Categories" Association="GmsrModel.FK_GLoan_Items_GLoan_Categories">
+      <End Role="GLoan_Categories" EntitySet="GLoanCategorySet" />
+      <End Role="GLoan_Items" EntitySet="GLoanItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLoan_Items_GLoan_Status" Association="GmsrModel.FK_GLoan_Items_GLoan_Status">
+      <End Role="GLoan_Status" EntitySet="GLoanStatusSet" />
+      <End Role="GLoan_Items" EntitySet="GLoanItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="HardwareItemGLoanItem" Association="GmsrModel.HardwareItemGLoanItem">
+      <End Role="HardwareItem" EntitySet="HardwareItemSet" />
+      <End Role="GLoanItem" EntitySet="GLoanItemSet" />
+    </AssociationSet>
+    <EntitySet Name="ContractAmendmentSet" EntityType="GmsrModel.ContractAmendment" />
+    <EntitySet Name="ContractFrameworkSet" EntityType="GmsrModel.ContractFramework" />
+    <EntitySet Name="OrderFormSet" EntityType="GmsrModel.OrderForm" />
+    <EntitySet Name="SpecificContractSet" EntityType="GmsrModel.SpecificContract" />
+    <AssociationSet Name="OrderFormHardwareItemOrderForm" Association="GmsrModel.OrderFormHardwareItemOrderForm">
+      <End Role="OrderForm" EntitySet="OrderFormSet" />
+      <End Role="HardwareItemOrderForm" EntitySet="HardwareItemOrderFormSet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderFormSoftwareOrder" Association="GmsrModel.OrderFormSoftwareOrder">
+      <End Role="OrderForm" EntitySet="OrderFormSet" />
+      <End Role="SoftwareOrderItem" EntitySet="SoftwareOrderItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderFormOrderFormDocument" Association="GmsrModel.OrderFormOrderFormDocument">
+      <End Role="OrderForm" EntitySet="OrderFormSet" />
+      <End Role="OrderFormDocument" EntitySet="OrderFormDocumentSet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderFormSpecificContract" Association="GmsrModel.OrderFormSpecificContract">
+      <End Role="OrderForm" EntitySet="OrderFormSet" />
+      <End Role="SpecificContract" EntitySet="SpecificContractSet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderFormContractAmendment" Association="GmsrModel.OrderFormContractAmendment">
+      <End Role="OrderForm" EntitySet="OrderFormSet" />
+      <End Role="ContractAmendment" EntitySet="ContractAmendmentSet" />
+    </AssociationSet>
+    <AssociationSet Name="ContractAmendmentSpecificContract" Association="GmsrModel.ContractAmendmentSpecificContract">
+      <End Role="ContractAmendment" EntitySet="ContractAmendmentSet" />
+      <End Role="SpecificContract" EntitySet="SpecificContractSet" />
+    </AssociationSet>
+    <AssociationSet Name="ContractFrameworkContractAmendment" Association="GmsrModel.ContractFrameworkContractAmendment">
+      <End Role="ContractFramework" EntitySet="ContractFrameworkSet" />
+      <End Role="ContractAmendment" EntitySet="ContractAmendmentSet" />
+    </AssociationSet>
+    <AssociationSet Name="ContractFrameworkSpecificContract" Association="GmsrModel.ContractFrameworkSpecificContract">
+      <End Role="ContractFramework" EntitySet="ContractFrameworkSet" />
+      <End Role="SpecificContract" EntitySet="SpecificContractSet" />
+    </AssociationSet>
+    <EntitySet Name="BacklogItemSet" EntityType="GmsrModel.BacklogItem" />
+    <EntitySet Name="BacklogItemStatusSet" EntityType="GmsrModel.BacklogItemStatus" />
+    <AssociationSet Name="FK_R_BacklogItem_R_BacklogItemType" Association="GmsrModel.FK_R_BacklogItem_R_BacklogItemType">
+      <End Role="R_BacklogItemStatus" EntitySet="BacklogItemStatusSet" />
+      <End Role="R_BacklogItem" EntitySet="BacklogItemSet" />
+    </AssociationSet>
+    <EntitySet Name="DetectedSoftwareProductMatchSet" EntityType="GmsrModel.DetectedSoftwareProductMatch" />
+    <AssociationSet Name="FK_SWD_ProductMatch_R_SoftwareProduct" Association="GmsrModel.FK_SWD_ProductMatch_R_SoftwareProduct">
+      <End Role="SoftwareProduct" EntitySet="SoftwareProductSet" />
+      <End Role="SWD_ProductMatch" EntitySet="DetectedSoftwareProductMatchSet" />
+    </AssociationSet>
+    <EntitySet Name="DetectedSoftwareInstallationSet" EntityType="GmsrModel.DetectedSoftwareInstallation" />
+    <EntitySet Name="DetectedSoftwareUninstallationSet" EntityType="GmsrModel.DetectedSoftwareUninstallation" />
+    <AssociationSet Name="FK_SWD_Installation_Olaf_Hard" Association="GmsrModel.FK_SWD_Installation_Olaf_Hard">
+      <End EntitySet="HardwareItemSet" Role="HardwareItem" />
+      <End EntitySet="DetectedSoftwareInstallationSet" Role="SWD_Installation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_Uninstallation_Olaf_Hard" Association="GmsrModel.FK_SWD_Uninstallation_Olaf_Hard">
+      <End EntitySet="HardwareItemSet" Role="HardwareItem" />
+      <End EntitySet="DetectedSoftwareUninstallationSet" Role="SWD_Uninstallation" />
+    </AssociationSet>
+    <EntitySet Name="DetectedSoftwareProductSet" EntityType="GmsrModel.DetectedSoftwareProduct" />
+    <AssociationSet Name="FK_SWD_Installation_SWD_Product" Association="GmsrModel.FK_SWD_Installation_SWD_Product">
+      <End EntitySet="DetectedSoftwareProductSet" Role="SWD_Product" />
+      <End EntitySet="DetectedSoftwareInstallationSet" Role="DetectedSoftwareInstallation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_ProductMatch_SWD_Product" Association="GmsrModel.FK_SWD_ProductMatch_SWD_Product">
+      <End Role="SWD_Product" EntitySet="DetectedSoftwareProductSet" />
+      <End Role="DetectedSoftwareProductMatch" EntitySet="DetectedSoftwareProductMatchSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SWD_Uninstallation_SWD_Product" Association="GmsrModel.FK_SWD_Uninstallation_SWD_Product">
+      <End EntitySet="DetectedSoftwareProductSet" Role="SWD_Product" />
+      <End EntitySet="DetectedSoftwareUninstallationSet" Role="DetectedSoftwareUninstallation" />
+    </AssociationSet>
+    <EntitySet Name="UnknownHardwareItemSet" EntityType="GmsrModel.UnknownHardwareItem" />
+    <EntitySet Name="UnknownUserSet" EntityType="GmsrModel.UnknownUser" />
+    <EntitySet Name="IND_SqiHistory" EntityType="GmsrModel.ServiceQualityIndicatorHistoryItem" />
+    <EntitySet Name="IND_SQISTYPES" EntityType="GmsrModel.ServiceQualityIndicatorType" />
+    <AssociationSet Name="IndicatorsSqiHistoryIndicatorsSqiType" Association="GmsrModel.IndicatorsSqiHistoryIndicatorsSqiType">
+      <End Role="IndicatorsSqiHistory" EntitySet="IND_SqiHistory" />
+      <End Role="IndicatorsSqiType" EntitySet="IND_SQISTYPES" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MenuElement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Location" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Url" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MenuElementGroup" Relationship="GmsrModel.FK_R_MenuElementGroup_R_MenuElement" FromRole="R_MenuElement" ToRole="R_MenuElementGroup" />
+    <NavigationProperty Name="MenuElementUser" Relationship="GmsrModel.FK_R_MenuElementUser_R_MenuElement" FromRole="R_MenuElement" ToRole="R_MenuElementUser" />
+  </EntityType>
+  <EntityType Name="MenuElementGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MenuElementId" Nullable="false" />
+    <Property Type="Int32" Name="GroupId" Nullable="false" />
+    <NavigationProperty Name="MenuElement" Relationship="GmsrModel.FK_R_MenuElementGroup_R_MenuElement" FromRole="R_MenuElementGroup" ToRole="R_MenuElement" />
+    <NavigationProperty Name="Group" Relationship="GmsrModel.FK_R_MenuElementGroup_R_Group" FromRole="MenuElementGroup" ToRole="R_Group" />
+  </EntityType>
+  <EntityType Name="MenuElementUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MenuElementId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <NavigationProperty Name="MenuElement" Relationship="GmsrModel.FK_R_MenuElementUser_R_MenuElement" FromRole="R_MenuElementUser" ToRole="R_MenuElement" />
+    <NavigationProperty Name="User" Relationship="GmsrModel.FK_R_MenuElementUser_R_User" FromRole="MenuElementUser" ToRole="R_User" />
+  </EntityType>
+  <Association Name="FK_R_MenuElementGroup_R_MenuElement">
+    <End Type="GmsrModel.MenuElement" Role="R_MenuElement" Multiplicity="1" />
+    <End Type="GmsrModel.MenuElementGroup" Role="R_MenuElementGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MenuElement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MenuElementGroup">
+        <PropertyRef Name="MenuElementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MenuElementUser_R_MenuElement">
+    <End Type="GmsrModel.MenuElement" Role="R_MenuElement" Multiplicity="1" />
+    <End Type="GmsrModel.MenuElementUser" Role="R_MenuElementUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MenuElement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MenuElementUser">
+        <PropertyRef Name="MenuElementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <NavigationProperty Name="MenuElementGroup" Relationship="GmsrModel.FK_R_MenuElementGroup_R_Group" FromRole="R_Group" ToRole="MenuElementGroup" />
+    <NavigationProperty Name="GroupUser" Relationship="GmsrModel.FK_R_GroupUser_R_Group1" FromRole="Group" ToRole="R_GroupUser" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Login" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Surname" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <NavigationProperty Name="MenuElementUser" Relationship="GmsrModel.FK_R_MenuElementUser_R_User" FromRole="R_User" ToRole="MenuElementUser" />
+    <NavigationProperty Name="GroupUser" Relationship="GmsrModel.FK_R_GroupUser_R_User1" FromRole="User" ToRole="R_GroupUser" />
+  </EntityType>
+  <Association Name="FK_R_MenuElementGroup_R_Group">
+    <End Type="GmsrModel.Group" Role="R_Group" Multiplicity="1" />
+    <End Type="GmsrModel.MenuElementGroup" Role="MenuElementGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuElementGroup">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MenuElementUser_R_User">
+    <End Type="GmsrModel.User" Role="R_User" Multiplicity="1" />
+    <End Type="GmsrModel.MenuElementUser" Role="MenuElementUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuElementUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Audit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RevisionStamp" />
+    <Property Type="String" Name="TableName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserLogin" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Action" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldData" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NewData" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChangedColumns" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GroupUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="GroupId" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="GmsrModel.FK_R_GroupUser_R_Group1" FromRole="R_GroupUser" ToRole="Group" />
+    <NavigationProperty Name="User" Relationship="GmsrModel.FK_R_GroupUser_R_User1" FromRole="R_GroupUser" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_R_GroupUser_R_Group1">
+    <End Type="GmsrModel.Group" Role="Group" Multiplicity="1" />
+    <End Type="GmsrModel.GroupUser" Role="R_GroupUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_GroupUser">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_GroupUser_R_User1">
+    <End Type="GmsrModel.User" Role="User" Multiplicity="1" />
+    <End Type="GmsrModel.GroupUser" Role="R_GroupUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_GroupUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="MediaItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MediaItemTypeId" />
+    <Property Type="Int32" Name="MediaItemLocationId" />
+    <Property Type="String" Name="Comment" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MediaItemLocation" Relationship="GmsrModel.FK_R_MediaItem_R_MediaItemLocation" FromRole="R_MediaItem" ToRole="R_MediaItemLocation" />
+    <NavigationProperty Name="MediaItemType" Relationship="GmsrModel.FK_R_MediaItem_R_MediaItemType" FromRole="R_MediaItem" ToRole="R_MediaItemType" />
+    <Property Type="Int32" Name="SoftwareOrderItemId" />
+    <NavigationProperty Name="SoftwareOrderItem" Relationship="GmsrModel.FK_R_MediaItem_R_SoftwareContractorder1" FromRole="MediaItem" ToRole="R_SoftwareOrder" />
+  </EntityType>
+  <EntityType Name="MediaItemLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MediaItem" Relationship="GmsrModel.FK_R_MediaItem_R_MediaItemLocation" FromRole="R_MediaItemLocation" ToRole="R_MediaItem" />
+  </EntityType>
+  <EntityType Name="MediaItemType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MediaItem" Relationship="GmsrModel.FK_R_MediaItem_R_MediaItemType" FromRole="R_MediaItemType" ToRole="R_MediaItem" />
+  </EntityType>
+  <EntityType Name="SoftwareLicense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="SoftwareLicenseType" Relationship="GmsrModel.FK_R_SoftwareLicense_R_SoftwareLicenseType" FromRole="R_SoftwareLicense" ToRole="R_SoftwareLicenseType" />
+    <NavigationProperty Name="SoftwareLicenseAssignment" Relationship="GmsrModel.FK_R_SoftwareLicenseInUse_R_SoftwareItem" FromRole="R_SoftwareLicense" ToRole="R_SoftwareLicenseInUse" />
+    <NavigationProperty Name="NextSoftwareLicense" Relationship="GmsrModel.FK_R_SoftwareLicense_R_SoftwareLicense1" FromRole="SoftwareLicense" ToRole="SoftwareLicense1" />
+    <NavigationProperty Name="PreviousSoftwareLicense" Relationship="GmsrModel.FK_R_SoftwareLicense_R_SoftwareLicense1" FromRole="SoftwareLicense1" ToRole="SoftwareLicense" />
+    <Property Type="Int32" Name="SoftwareOrderItemId" />
+    <NavigationProperty Name="SoftwareOrderItem" Relationship="GmsrModel.FK_R_SoftwareLicense_R_SoftwareContractOrder1" FromRole="SoftwareLicense" ToRole="R_SoftwareOrder" />
+    <Property Type="Int32" Name="SoftwareLicenseTypeId" />
+    <Property Type="Int32" Name="MultiUserQuantity" />
+    <Property Type="Int32" Name="PreviousSoftwareLicenseId" />
+    <Property Type="DateTime" Name="MaintenanceStartDate" />
+    <Property Type="DateTime" Name="MaintenanceEndDate" />
+    <Property Type="String" Name="SerialKey" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsPresentInSource" Nullable="false" />
+    <Property Type="String" Name="SourceId" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SoftwareLicenseAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SoftwareLicenseId" Nullable="false" />
+    <Property Type="Int32" Name="OlafUserId" />
+    <NavigationProperty Name="SoftwareLicense" Relationship="GmsrModel.FK_R_SoftwareLicenseInUse_R_SoftwareItem" FromRole="R_SoftwareLicenseInUse" ToRole="R_SoftwareLicense" />
+    <NavigationProperty Name="OlafUser" Relationship="GmsrModel.FK_R_SoftwareLicenseInUse_Olaf_User" FromRole="R_SoftwareLicenseInUse" ToRole="Olaf_User" />
+    <NavigationProperty Name="HardwareItem" Relationship="GmsrModel.HardwareItemSoftwareLicenseAssignment" FromRole="SoftwareLicenseAssignment" ToRole="HardwareItem" />
+    <Property Type="Int32" Name="HardwareItemId" />
+    <Property Type="String" Name="Comment" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateAssigned" />
+    <Property Type="DateTime" Name="DateInstalled" />
+    <Property Type="DateTime" Name="DateUnassigned" />
+  </EntityType>
+  <EntityType Name="SoftwareLicenseType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SoftwareLicense" Relationship="GmsrModel.FK_R_SoftwareLicense_R_SoftwareLicenseType" FromRole="R_SoftwareLicenseType" ToRole="R_SoftwareLicense" />
+  </EntityType>
+  <EntityType Name="SoftwareProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="String" Name="Version" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CompanyName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Other" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SoftwareProductStatusId" />
+    <NavigationProperty Name="SoftwareProductStatus" Relationship="GmsrModel.FK_R_SoftwareProduct_R_SoftwareProductStatus" FromRole="SoftwareProduct" ToRole="R_SoftwareProductStatus" />
+    <NavigationProperty Name="SoftwareOrderItem" Relationship="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareProduct1" FromRole="SoftwareProduct" ToRole="R_SoftwareOrder" />
+    <Property Type="String" Name="Source" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DetectedSoftwareProductMatch" Relationship="GmsrModel.FK_SWD_ProductMatch_R_SoftwareProduct" FromRole="SoftwareProduct" ToRole="SWD_ProductMatch" />
+  </EntityType>
+  <Association Name="FK_R_MediaItem_R_MediaItemLocation">
+    <End Type="GmsrModel.MediaItemLocation" Role="R_MediaItemLocation" Multiplicity="0..1" />
+    <End Type="GmsrModel.MediaItem" Role="R_MediaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MediaItemLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MediaItem">
+        <PropertyRef Name="MediaItemLocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_MediaItem_R_MediaItemType">
+    <End Type="GmsrModel.MediaItemType" Role="R_MediaItemType" Multiplicity="0..1" />
+    <End Type="GmsrModel.MediaItem" Role="R_MediaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_MediaItemType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_MediaItem">
+        <PropertyRef Name="MediaItemTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareLicense_R_SoftwareLicenseType">
+    <End Type="GmsrModel.SoftwareLicenseType" Role="R_SoftwareLicenseType" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareLicense" Role="R_SoftwareLicense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareLicenseType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareLicense">
+        <PropertyRef Name="SoftwareLicenseTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareLicenseInUse_R_SoftwareItem">
+    <End Type="GmsrModel.SoftwareLicense" Role="R_SoftwareLicense" Multiplicity="1" />
+    <End Type="GmsrModel.SoftwareLicenseAssignment" Role="R_SoftwareLicenseInUse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareLicense">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareLicenseInUse">
+        <PropertyRef Name="SoftwareLicenseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OlafUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LastName" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SoftwareLicenseAssignment" Relationship="GmsrModel.FK_R_SoftwareLicenseInUse_Olaf_User" FromRole="Olaf_User" ToRole="R_SoftwareLicenseInUse" />
+    <Property Type="String" Name="Title" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Login" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Building" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Office" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status" />
+    <Property Type="String" Name="Fl" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Act" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Local" />
+    <Property Type="Decimal" Name="PeoId" Precision="9" Scale="0" />
+    <Property Type="String" Name="Unit" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="60" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_R_SoftwareLicenseInUse_Olaf_User">
+    <End Type="GmsrModel.OlafUser" Role="Olaf_User" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareLicenseAssignment" Role="R_SoftwareLicenseInUse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Olaf_User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareLicenseInUse">
+        <PropertyRef Name="OlafUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareLicense_R_SoftwareLicense1">
+    <End Type="GmsrModel.SoftwareLicense" Role="SoftwareLicense" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareLicense" Role="SoftwareLicense1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SoftwareLicense">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SoftwareLicense1">
+        <PropertyRef Name="PreviousSoftwareLicenseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SoftwareProductStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SoftwareProduct" Relationship="GmsrModel.FK_R_SoftwareProduct_R_SoftwareProductStatus" FromRole="R_SoftwareProductStatus" ToRole="SoftwareProduct" />
+  </EntityType>
+  <Association Name="FK_R_SoftwareProduct_R_SoftwareProductStatus">
+    <End Type="GmsrModel.SoftwareProductStatus" Role="R_SoftwareProductStatus" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareProduct" Role="SoftwareProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareProductStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SoftwareProduct">
+        <PropertyRef Name="SoftwareProductStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HardwareItemOrderForm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OrderFormId" Nullable="false" />
+    <NavigationProperty Name="HardwareItem" Relationship="GmsrModel.HardwareItemHardwareItemOrderForm" FromRole="HardwareItemOrderForm" ToRole="HardwareItem" />
+    <Property Type="Int32" Name="HardwareItemId" Nullable="false" />
+    <NavigationProperty Name="OrderForm" Relationship="GmsrModel.OrderFormHardwareItemOrderForm" FromRole="HardwareItemOrderForm" ToRole="OrderForm" />
+  </EntityType>
+  <EntityType Name="OrderFormDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OrderFormId" />
+    <Property Type="String" Name="Path" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderForm" Relationship="GmsrModel.OrderFormOrderFormDocument" FromRole="OrderFormDocument" ToRole="OrderForm" />
+    <Property Type="Binary" Name="Data" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SoftwareOrderItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OrderFormId" />
+    <Property Type="Int32" Name="SoftwareProductId" />
+    <Property Type="Int32" Name="SoftwareOrderItemTypeId" />
+    <Property Type="Int32" Name="PreviousSoftwareOrderItemId" />
+    <Property Type="String" Name="OlafRef" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Vendor" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MediaItem" Relationship="GmsrModel.FK_R_MediaItem_R_SoftwareContractorder1" FromRole="R_SoftwareOrder" ToRole="MediaItem" />
+    <NavigationProperty Name="SoftwareLicense" Relationship="GmsrModel.FK_R_SoftwareLicense_R_SoftwareContractOrder1" FromRole="R_SoftwareOrder" ToRole="SoftwareLicense" />
+    <NavigationProperty Name="NextSoftwareOrderItem" Relationship="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareOrderUnit1" FromRole="R_SoftwareOrder" ToRole="R_SoftwareOrder1" />
+    <NavigationProperty Name="PreviousSoftwareOrderItem" Relationship="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareOrderUnit1" FromRole="R_SoftwareOrder1" ToRole="R_SoftwareOrder" />
+    <NavigationProperty Name="SoftwareOrderItemType" Relationship="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareOrderUnitType1" FromRole="R_SoftwareOrder" ToRole="R_SoftwareOrderType" />
+    <NavigationProperty Name="SoftwareProduct" Relationship="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareProduct1" FromRole="R_SoftwareOrder" ToRole="SoftwareProduct" />
+    <NavigationProperty Name="OrderForm" Relationship="GmsrModel.OrderFormSoftwareOrder" FromRole="SoftwareOrderItem" ToRole="OrderForm" />
+  </EntityType>
+  <EntityType Name="SoftwareOrderItemType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SoftwareOrderItem" Relationship="GmsrModel.FK_R_SoftwareOrderUnit_R_SoftwareOrderUnitType1" FromRole="R_SoftwareOrderType" ToRole="R_SoftwareOrder" />
+  </EntityType>
+  <Association Name="FK_R_MediaItem_R_SoftwareContractorder1">
+    <End Type="GmsrModel.SoftwareOrderItem" Role="R_SoftwareOrder" Multiplicity="0..1" />
+    <End Type="GmsrModel.MediaItem" Role="MediaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MediaItem">
+        <PropertyRef Name="SoftwareOrderItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareLicense_R_SoftwareContractOrder1">
+    <End Type="GmsrModel.SoftwareOrderItem" Role="R_SoftwareOrder" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareLicense" Role="SoftwareLicense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SoftwareLicense">
+        <PropertyRef Name="SoftwareOrderItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareOrderUnit_R_SoftwareOrderUnit1">
+    <End Type="GmsrModel.SoftwareOrderItem" Role="R_SoftwareOrder" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareOrderItem" Role="R_SoftwareOrder1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareOrder1">
+        <PropertyRef Name="PreviousSoftwareOrderItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareOrderUnit_R_SoftwareOrderUnitType1">
+    <End Type="GmsrModel.SoftwareOrderItemType" Role="R_SoftwareOrderType" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareOrderItem" Role="R_SoftwareOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R_SoftwareOrderType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareOrder">
+        <PropertyRef Name="SoftwareOrderItemTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_R_SoftwareOrderUnit_R_SoftwareProduct1">
+    <End Type="GmsrModel.SoftwareProduct" Role="SoftwareProduct" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareOrderItem" Role="R_SoftwareOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SoftwareProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="R_SoftwareOrder">
+        <PropertyRef Name="SoftwareProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HardwareItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="Local" />
+    <Property Type="String" Name="OlafName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InventoryNo" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Building" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Office" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Model" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LongName" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="240" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HardwareItemOrderForm" Relationship="GmsrModel.HardwareItemHardwareItemOrderForm" FromRole="HardwareItem" ToRole="HardwareItemOrderForm" />
+    <NavigationProperty Name="SoftwareLicenseAssignment" Relationship="GmsrModel.HardwareItemSoftwareLicenseAssignment" FromRole="HardwareItem" ToRole="SoftwareLicenseAssignment" />
+    <Property Type="String" Name="Serial" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="RmtMatId" />
+    <NavigationProperty Name="GLoanItem" Relationship="GmsrModel.HardwareItemGLoanItem" FromRole="HardwareItem" ToRole="GLoanItem" />
+    <Property Type="String" Name="Unit" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RmtCtgNm" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RmtParentCtgNm" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MaintenanceEndDate" />
+    <Property Type="String" Name="Login" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DetectedSoftwareInstallation" Relationship="GmsrModel.FK_SWD_Installation_Olaf_Hard" FromRole="HardwareItem" ToRole="SWD_Installation" />
+    <NavigationProperty Name="DetectedSoftwareUninstallation" Relationship="GmsrModel.FK_SWD_Uninstallation_Olaf_Hard" FromRole="HardwareItem" ToRole="SWD_Uninstallation" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="true" />
+  </EntityType>
+  <EntityType Name="HardwareItemModification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Date" />
+    <Property Type="Decimal" Name="RmtMatId" Precision="9" Scale="0" />
+    <Property Type="String" Name="InventoryNo" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NewUser" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OldUser" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Type" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="HardwareItemHardwareItemOrderForm">
+    <End Type="GmsrModel.HardwareItem" Role="HardwareItem" Multiplicity="1" />
+    <End Type="GmsrModel.HardwareItemOrderForm" Role="HardwareItemOrderForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HardwareItem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HardwareItemOrderForm">
+        <PropertyRef Name="HardwareItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HardwareItemSoftwareLicenseAssignment">
+    <End Type="GmsrModel.HardwareItem" Role="HardwareItem" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareLicenseAssignment" Role="SoftwareLicenseAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HardwareItem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SoftwareLicenseAssignment">
+        <PropertyRef Name="HardwareItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OlafUserModification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Date" />
+    <Property Type="Decimal" Name="PeoId" Precision="9" Scale="0" />
+    <Property Type="String" Name="LastName" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="User" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OldOffice" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NewOffice" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Type" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ActiveDirectoryGroupOlafUser">
+    <Key>
+      <PropertyRef Name="Group" />
+      <PropertyRef Name="User" />
+    </Key>
+    <Property Type="String" Name="Group" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="User" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GLoanAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="DateStart" Nullable="false" />
+    <Property Type="DateTime" Name="DateEnd" Nullable="false" />
+    <Property Type="String" Name="TicketCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GLoanItem" Relationship="GmsrModel.FK_GLoan_Assignements_GLoan_Items" FromRole="GLoan_Assignements" ToRole="GLoan_Items" />
+  </EntityType>
+  <EntityType Name="GLoanCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GLoanItem" Relationship="GmsrModel.FK_GLoan_Items_GLoan_Categories" FromRole="GLoan_Categories" ToRole="GLoan_Items" />
+  </EntityType>
+  <EntityType Name="GLoanItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="HardwareItemId" Nullable="false" />
+    <Property Type="Boolean" Name="IsItemActive" Nullable="false" />
+    <Property Type="Boolean" Name="IsPermaLoan" Nullable="false" />
+    <NavigationProperty Name="GLoanAssignement" Relationship="GmsrModel.FK_GLoan_Assignements_GLoan_Items" FromRole="GLoan_Items" ToRole="GLoan_Assignements" />
+    <NavigationProperty Name="GLoanCategory" Relationship="GmsrModel.FK_GLoan_Items_GLoan_Categories" FromRole="GLoan_Items" ToRole="GLoan_Categories" />
+    <NavigationProperty Name="GLoanStatus" Relationship="GmsrModel.FK_GLoan_Items_GLoan_Status" FromRole="GLoan_Items" ToRole="GLoan_Status" />
+    <NavigationProperty Name="HardwareItem" Relationship="GmsrModel.HardwareItemGLoanItem" FromRole="GLoanItem" ToRole="HardwareItem" />
+  </EntityType>
+  <EntityType Name="GLoanStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GLoanItem" Relationship="GmsrModel.FK_GLoan_Items_GLoan_Status" FromRole="GLoan_Status" ToRole="GLoan_Items" />
+  </EntityType>
+  <Association Name="FK_GLoan_Assignements_GLoan_Items">
+    <End Type="GmsrModel.GLoanItem" Role="GLoan_Items" Multiplicity="1" />
+    <End Type="GmsrModel.GLoanAssignment" Role="GLoan_Assignements" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_GLoan_Items_GLoan_Categories">
+    <End Type="GmsrModel.GLoanCategory" Role="GLoan_Categories" Multiplicity="0..1" />
+    <End Type="GmsrModel.GLoanItem" Role="GLoan_Items" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_GLoan_Items_GLoan_Status">
+    <End Type="GmsrModel.GLoanStatus" Role="GLoan_Status" Multiplicity="0..1" />
+    <End Type="GmsrModel.GLoanItem" Role="GLoan_Items" Multiplicity="*" />
+  </Association>
+  <Association Name="HardwareItemGLoanItem">
+    <End Type="GmsrModel.HardwareItem" Role="HardwareItem" Multiplicity="1" />
+    <End Type="GmsrModel.GLoanItem" Role="GLoanItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HardwareItem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GLoanItem">
+        <PropertyRef Name="HardwareItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ContractAmendment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ContractFrameworkId" />
+    <Property Type="DateTime" Name="DateBegin" />
+    <Property Type="DateTime" Name="DateEnd" />
+    <Property Type="Int32" Name="Activity" />
+    <Property Type="Int32" Name="BudgetLine" />
+    <Property Type="Decimal" Name="Prices" Precision="19" Scale="4" />
+    <Property Type="String" Name="Title" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Object" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Duration" Precision="18" Scale="0" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="OrderForm" Relationship="GmsrModel.OrderFormContractAmendment" FromRole="ContractAmendment" ToRole="OrderForm" />
+    <NavigationProperty Name="SpecificContract" Relationship="GmsrModel.ContractAmendmentSpecificContract" FromRole="ContractAmendment" ToRole="SpecificContract" />
+    <NavigationProperty Name="ContractFramework" Relationship="GmsrModel.ContractFrameworkContractAmendment" FromRole="ContractAmendment" ToRole="ContractFramework" />
+  </EntityType>
+  <EntityType Name="ContractFramework">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DateBegin" />
+    <Property Type="DateTime" Name="DateEnd" />
+    <Property Type="Decimal" Name="Prices" Precision="19" Scale="4" />
+    <Property Type="String" Name="Title" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Object" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Duration" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="IsSLA" />
+    <Property Type="Boolean" Name="IsIntraMuros" />
+    <Property Type="String" Name="CE_Contact" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Company" />
+    <Property Type="String" Name="CompanyContact" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OlafContact" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="ContractAmendment" Relationship="GmsrModel.ContractFrameworkContractAmendment" FromRole="ContractFramework" ToRole="ContractAmendment" />
+    <NavigationProperty Name="SpecificContract" Relationship="GmsrModel.ContractFrameworkSpecificContract" FromRole="ContractFramework" ToRole="SpecificContract" />
+  </EntityType>
+  <EntityType Name="OrderForm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ContractAmendmentId" />
+    <Property Type="Int32" Name="SpecificContractId" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Scope" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateBegin" />
+    <Property Type="DateTime" Name="DateEnd" />
+    <Property Type="Decimal" Name="Duration" Precision="18" Scale="0" />
+    <Property Type="String" Name="ServiceType" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="ProfileId" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="HardwareItemOrderForm" Relationship="GmsrModel.OrderFormHardwareItemOrderForm" FromRole="OrderForm" ToRole="HardwareItemOrderForm" />
+    <NavigationProperty Name="SoftwareOrderItem" Relationship="GmsrModel.OrderFormSoftwareOrder" FromRole="OrderForm" ToRole="SoftwareOrderItem" />
+    <NavigationProperty Name="OrderFormDocument" Relationship="GmsrModel.OrderFormOrderFormDocument" FromRole="OrderForm" ToRole="OrderFormDocument" />
+    <NavigationProperty Name="SpecificContract" Relationship="GmsrModel.OrderFormSpecificContract" FromRole="OrderForm" ToRole="SpecificContract" />
+    <NavigationProperty Name="ContractAmendment" Relationship="GmsrModel.OrderFormContractAmendment" FromRole="OrderForm" ToRole="ContractAmendment" />
+  </EntityType>
+  <EntityType Name="SpecificContract">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ContractFrameworkId" />
+    <Property Type="Int32" Name="ContractAmendmentId" />
+    <Property Type="DateTime" Name="DateBegin" />
+    <Property Type="DateTime" Name="DateEnd" />
+    <Property Type="String" Name="Object" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Duration" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="AcceptanceType" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="AcceptanceDelay" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="PriceTotal" Precision="18" Scale="0" />
+    <Property Type="String" Name="Price1Def" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Price1" Precision="18" Scale="0" />
+    <Property Type="String" Name="Price2Def" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Price2" Precision="18" Scale="0" />
+    <Property Type="String" Name="Price3Def" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Price3" Precision="18" Scale="0" />
+    <Property Type="String" Name="InvoicingPeriod" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="IsPenalties" />
+    <Property Type="Decimal" Name="Garantees" Precision="18" Scale="0" />
+    <Property Type="String" Name="SpecificContractPatch" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comment" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="OrderForm" Relationship="GmsrModel.OrderFormSpecificContract" FromRole="SpecificContract" ToRole="OrderForm" />
+    <NavigationProperty Name="ContractAmendment" Relationship="GmsrModel.ContractAmendmentSpecificContract" FromRole="SpecificContract" ToRole="ContractAmendment" />
+    <NavigationProperty Name="ContractFramework" Relationship="GmsrModel.ContractFrameworkSpecificContract" FromRole="SpecificContract" ToRole="ContractFramework" />
+  </EntityType>
+  <Association Name="OrderFormHardwareItemOrderForm">
+    <End Type="GmsrModel.OrderForm" Role="OrderForm" Multiplicity="1" />
+    <End Type="GmsrModel.HardwareItemOrderForm" Role="HardwareItemOrderForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderForm">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HardwareItemOrderForm">
+        <PropertyRef Name="OrderFormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderFormSoftwareOrder">
+    <End Type="GmsrModel.OrderForm" Role="OrderForm" Multiplicity="0..1" />
+    <End Type="GmsrModel.SoftwareOrderItem" Role="SoftwareOrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderForm">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SoftwareOrderItem">
+        <PropertyRef Name="OrderFormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderFormOrderFormDocument">
+    <End Type="GmsrModel.OrderForm" Role="OrderForm" Multiplicity="0..1" />
+    <End Type="GmsrModel.OrderFormDocument" Role="OrderFormDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderForm">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderFormDocument">
+        <PropertyRef Name="OrderFormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderFormSpecificContract">
+    <End Type="GmsrModel.OrderForm" Role="OrderForm" Multiplicity="*" />
+    <End Type="GmsrModel.SpecificContract" Role="SpecificContract" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SpecificContract">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderForm">
+        <PropertyRef Name="SpecificContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderFormContractAmendment">
+    <End Type="GmsrModel.OrderForm" Role="OrderForm" Multiplicity="*" />
+    <End Type="GmsrModel.ContractAmendment" Role="ContractAmendment" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ContractAmendment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderForm">
+        <PropertyRef Name="ContractAmendmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ContractAmendmentSpecificContract">
+    <End Type="GmsrModel.ContractAmendment" Role="ContractAmendment" Multiplicity="0..1" />
+    <End Type="GmsrModel.SpecificContract" Role="SpecificContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractAmendment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SpecificContract">
+        <PropertyRef Name="ContractAmendmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ContractFrameworkContractAmendment">
+    <End Type="GmsrModel.ContractFramework" Role="ContractFramework" Multiplicity="0..1" />
+    <End Type="GmsrModel.ContractAmendment" Role="ContractAmendment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractFramework">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContractAmendment">
+        <PropertyRef Name="ContractFrameworkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ContractFrameworkSpecificContract">
+    <End Type="GmsrModel.ContractFramework" Role="ContractFramework" Multiplicity="0..1" />
+    <End Type="GmsrModel.SpecificContract" Role="SpecificContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractFramework">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SpecificContract">
+        <PropertyRef Name="ContractFrameworkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BacklogItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BacklogItemStatus" Relationship="GmsrModel.FK_R_BacklogItem_R_BacklogItemType" FromRole="R_BacklogItem" ToRole="R_BacklogItemStatus" />
+    <Property Type="DateTime" Name="DateStart" />
+    <Property Type="DateTime" Name="DateEnd" />
+  </EntityType>
+  <EntityType Name="BacklogItemStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BacklogItem" Relationship="GmsrModel.FK_R_BacklogItem_R_BacklogItemType" FromRole="R_BacklogItemStatus" ToRole="R_BacklogItem" />
+  </EntityType>
+  <Association Name="FK_R_BacklogItem_R_BacklogItemType">
+    <End Type="GmsrModel.BacklogItemStatus" Role="R_BacklogItemStatus" Multiplicity="1" />
+    <End Type="GmsrModel.BacklogItem" Role="R_BacklogItem" Multiplicity="*" />
+  </Association>
+  <EntityType Name="DetectedSoftwareProductMatch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="DetectedSoftwareProductId" Nullable="false" />
+    <Property Type="Int32" Name="SoftwareProductId" Nullable="false" />
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="SoftwareProduct" Relationship="GmsrModel.FK_SWD_ProductMatch_R_SoftwareProduct" FromRole="SWD_ProductMatch" ToRole="SoftwareProduct" />
+    <NavigationProperty Name="DetectedSoftwareProduct" Relationship="GmsrModel.FK_SWD_ProductMatch_SWD_Product" FromRole="DetectedSoftwareProductMatch" ToRole="SWD_Product" />
+  </EntityType>
+  <Association Name="FK_SWD_ProductMatch_R_SoftwareProduct">
+    <End Type="GmsrModel.SoftwareProduct" Role="SoftwareProduct" Multiplicity="1" />
+    <End Type="GmsrModel.DetectedSoftwareProductMatch" Role="SWD_ProductMatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SoftwareProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SWD_ProductMatch">
+        <PropertyRef Name="SoftwareProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DetectedSoftwareInstallation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="HardwareItemId" Nullable="false" Type="Int32" />
+    <Property Name="DetectionDate" Nullable="false" Type="DateTime" />
+    <Property Name="DetectedSoftwareProductId" Nullable="false" Type="Int32" />
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="SourceName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="AdditionalInfo" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="HardwareItem" Relationship="GmsrModel.FK_SWD_Installation_Olaf_Hard" FromRole="SWD_Installation" ToRole="HardwareItem" />
+    <NavigationProperty Name="DetectedSoftwareProduct" Relationship="GmsrModel.FK_SWD_Installation_SWD_Product" FromRole="DetectedSoftwareInstallation" ToRole="SWD_Product" />
+    <Property Name="Hash" Nullable="false" MaxLength="20" FixedLength="true" Type="Binary" />
+  </EntityType>
+  <EntityType Name="DetectedSoftwareUninstallation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="HardwareItemId" Nullable="false" Type="Int32" />
+    <Property Name="DetectionDate" Nullable="false" Type="DateTime" />
+    <Property Name="DetectedSoftwareProductId" Nullable="false" Type="Int32" />
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="SourceName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="InstallationDate" Nullable="false" Type="DateTime" />
+    <Property Name="AdditionalInfo" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="HardwareItem" Relationship="GmsrModel.FK_SWD_Uninstallation_Olaf_Hard" FromRole="SWD_Uninstallation" ToRole="HardwareItem" />
+    <NavigationProperty Name="DetectedSoftwareProduct" Relationship="GmsrModel.FK_SWD_Uninstallation_SWD_Product" FromRole="DetectedSoftwareUninstallation" ToRole="SWD_Product" />
+  </EntityType>
+  <Association Name="FK_SWD_Installation_Olaf_Hard">
+    <End Type="GmsrModel.HardwareItem" Multiplicity="1" Role="HardwareItem" />
+    <End Type="GmsrModel.DetectedSoftwareInstallation" Multiplicity="*" Role="SWD_Installation" />
+    <ReferentialConstraint>
+      <Principal Role="HardwareItem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SWD_Installation">
+        <PropertyRef Name="HardwareItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_Uninstallation_Olaf_Hard">
+    <End Type="GmsrModel.HardwareItem" Multiplicity="1" Role="HardwareItem" />
+    <End Type="GmsrModel.DetectedSoftwareUninstallation" Multiplicity="*" Role="SWD_Uninstallation" />
+    <ReferentialConstraint>
+      <Principal Role="HardwareItem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SWD_Uninstallation">
+        <PropertyRef Name="HardwareItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DetectedSoftwareProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="SoftwareName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Version" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SourceName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="DetectionDate" Nullable="false" />
+    <Property Type="Binary" Name="Hash" Nullable="false" MaxLength="20" FixedLength="true" />
+    <NavigationProperty Name="DetectedSoftwareInstallation" Relationship="GmsrModel.FK_SWD_Installation_SWD_Product" FromRole="SWD_Product" ToRole="DetectedSoftwareInstallation" />
+    <NavigationProperty Name="DetectedSoftwareProductMatch" Relationship="GmsrModel.FK_SWD_ProductMatch_SWD_Product" FromRole="SWD_Product" ToRole="DetectedSoftwareProductMatch" />
+    <NavigationProperty Name="DetectedSoftwareUninstallation" Relationship="GmsrModel.FK_SWD_Uninstallation_SWD_Product" FromRole="SWD_Product" ToRole="DetectedSoftwareUninstallation" />
+  </EntityType>
+  <Association Name="FK_SWD_Installation_SWD_Product">
+    <End Type="GmsrModel.DetectedSoftwareProduct" Multiplicity="1" Role="SWD_Product" />
+    <End Type="GmsrModel.DetectedSoftwareInstallation" Multiplicity="*" Role="DetectedSoftwareInstallation" />
+    <ReferentialConstraint>
+      <Principal Role="SWD_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DetectedSoftwareInstallation">
+        <PropertyRef Name="DetectedSoftwareProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_ProductMatch_SWD_Product">
+    <End Type="GmsrModel.DetectedSoftwareProduct" Role="SWD_Product" Multiplicity="1" />
+    <End Type="GmsrModel.DetectedSoftwareProductMatch" Role="DetectedSoftwareProductMatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SWD_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DetectedSoftwareProductMatch">
+        <PropertyRef Name="DetectedSoftwareProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SWD_Uninstallation_SWD_Product">
+    <End Type="GmsrModel.DetectedSoftwareProduct" Multiplicity="1" Role="SWD_Product" />
+    <End Type="GmsrModel.DetectedSoftwareUninstallation" Multiplicity="*" Role="DetectedSoftwareUninstallation" />
+    <ReferentialConstraint>
+      <Principal Role="SWD_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DetectedSoftwareUninstallation">
+        <PropertyRef Name="DetectedSoftwareProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UnknownHardwareItem">
+    <Key>
+      <PropertyRef Name="MachineName" />
+      <PropertyRef Name="FoundOn" />
+      <PropertyRef Name="SourceName" />
+    </Key>
+    <Property Type="String" Name="MachineName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FoundOn" Nullable="false" />
+    <Property Type="String" Name="SourceName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UnknownUser">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="FoundOn" />
+      <PropertyRef Name="SourceName" />
+    </Key>
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FoundOn" Nullable="false" />
+    <Property Type="String" Name="SourceName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ServiceQualityIndicatorHistoryItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="SqiId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="AverageProfiledSQI_Value" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="ComputationDate" Nullable="false" />
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="ServiceQualityIndicatorType" Relationship="GmsrModel.IndicatorsSqiHistoryIndicatorsSqiType" FromRole="IndicatorsSqiHistory" ToRole="IndicatorsSqiType" />
+  </EntityType>
+  <EntityType Name="ServiceQualityIndicatorType">
+    <Key>
+      <PropertyRef Name="SQISTYPESID" />
+    </Key>
+    <Property Type="String" Name="SQISTYPESID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOMAINSTYPESID" />
+    <Property Type="Int32" Name="UNITSID" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FORMULA" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TARGET" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="LIMIT" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="POINTS" Nullable="false" />
+    <Property Type="Int32" Name="MINNBROFQOS" Nullable="false" />
+    <Property Type="Decimal" Name="MAXIMUMDELAY" Precision="18" Scale="4" />
+    <Property Type="String" Name="TARGETDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LIMITDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MINorMAX" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EXPLANATION" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SOURCE" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SERVER" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="STATUS" />
+    <Property Type="String" Name="QUERY" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MMValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ServiceQualityIndicatorHistoryItem" Relationship="GmsrModel.IndicatorsSqiHistoryIndicatorsSqiType" FromRole="IndicatorsSqiType" ToRole="IndicatorsSqiHistory" />
+  </EntityType>
+  <Association Name="IndicatorsSqiHistoryIndicatorsSqiType">
+    <End Type="GmsrModel.ServiceQualityIndicatorHistoryItem" Role="IndicatorsSqiHistory" Multiplicity="*" />
+    <End Type="GmsrModel.ServiceQualityIndicatorType" Role="IndicatorsSqiType" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="IndicatorsSqiType">
+        <PropertyRef Name="SQISTYPESID" />
+      </Principal>
+      <Dependent Role="IndicatorsSqiHistory">
+        <PropertyRef Name="SqiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

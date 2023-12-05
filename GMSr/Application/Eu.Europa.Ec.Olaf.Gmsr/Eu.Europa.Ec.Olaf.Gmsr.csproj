@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1323FA88-E42C-45B3-9935-24FF60EBB19F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eu.Europa.Ec.Olaf.Gmsr</RootNamespace>
+    <AssemblyName>Eu.Europa.Ec.Olaf.Gmsr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>false</PublishDatabases>
+    <DeployIisAppPath>
+    </DeployIisAppPath>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release%28Prod%29|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release%28Test%29|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Eu.Europa.Ec.Olaf.Gmsr.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28Test%29|AnyCPU'">
+    <PublishDatabases>false</PublishDatabases>
+    <DesktopBuildPackageLocation>obj\Release%28Test%29\Package\Eu.Europa.Ec.Olaf.Gmsr.zip</DesktopBuildPackageLocation>
+    <DeployIisAppPath>GmsrTest</DeployIisAppPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DesktopBuildPackageLocation>obj\Release%28Prod%29\Package\Eu.Europa.Ec.Olaf.Gmsr.zip</DesktopBuildPackageLocation>
+    <DeployIisAppPath>GmsrProd</DeployIisAppPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.htm" />
+    <Content Include="Administration\ApplicationArchitecture.aspx" />
+    <Content Include="Administration\Backlog.aspx" />
+    <Content Include="Administration\WebEventLog.aspx" />
+    <Content Include="Administration\SessionLog.aspx" />
+    <Content Include="Administration\OpenSessions.aspx" />
+    <Content Include="Administration\DataModel.aspx" />
+    <Content Include="Administration\DataModelGetSmc.aspx" />
+    <Content Include="Administration\Deployment.aspx" />
+    <Content Include="Administration\EditUser.aspx" />
+    <Content Include="Administration\EditGroup.aspx" />
+    <Content Include="Administration\Groups.aspx" />
+    <Content Include="Administration\AuditTrail.aspx" />
+    <Content Include="Administration\Membership.aspx" />
+    <Content Include="Administration\Methodology.aspx" />
+    <Content Include="Administration\Users.aspx" />
+    <Content Include="Administration\UserAccess.aspx" />
+    <Content Include="Administration\GroupAccess.aspx" />
+    <Content Include="Contracts\Main.aspx" />
+    <Content Include="Hardware\MainHelp2.htm" />
+    <Content Include="Hardware\EditHardwareItem.aspx" />
+    <Content Include="Hardware\MainHelp.aspx" />
+    <Content Include="Hardware\MainHelp1.htm" />
+    <Content Include="Images\ActionHelp.png" />
+    <Content Include="Images\ActionHelpGray.png" />
+    <Content Include="Images\AddBigGray.png" />
+    <Content Include="Images\AddOrangeSmall.png" />
+    <Content Include="Images\AddPurpleSmall.png" />
+    <Content Include="Images\ArrowUp.png" />
+    <Content Include="Images\ArrowUpGray.png" />
+    <Content Include="Images\Ascending.gif" />
+    <Content Include="Images\BackgroundPopupRed.png" />
+    <Content Include="Images\Blank.png" />
+    <Content Include="Images\Change.png" />
+    <Content Include="Images\ChangeGray.png" />
+    <Content Include="Images\CircleBlue.png" />
+    <Content Include="Images\CircleBlueBig.png" />
+    <Content Include="Images\CircleGreen.png" />
+    <Content Include="Images\CirclePurple.png" />
+    <Content Include="Images\CircleRed.png" />
+    <Content Include="Images\Denied.png" />
+    <Content Include="Images\Deployment.png" />
+    <Content Include="Images\Descending.gif" />
+    <Content Include="Images\DiagramApplicationArchitecture.png" />
+    <Content Include="Images\DiagramDataModelGetSmc.png" />
+    <Content Include="Images\DiagramDataModel.png" />
+    <Content Include="Images\DiagramDeployment.png" />
+    <Content Include="Images\DiagramMethodology.png" />
+    <Content Include="Images\Download.png" />
+    <Content Include="Images\EditBlue.png" />
+    <Content Include="Images\EditGreen.png" />
+    <Content Include="Images\EditPurple.png" />
+    <Content Include="Images\EditRed.png" />
+    <Content Include="Images\ExportToExcel.png" />
+    <Content Include="Images\ExportToExcelBig.png" />
+    <Content Include="Images\ExportToExcelBigText.png" />
+    <Content Include="Images\E_BlueBig.png" />
+    <Content Include="Images\E_LeftPurple.png" />
+    <Content Include="Images\E_Purple.png" />
+    <Content Include="Images\E_RightPurple.png" />
+    <Content Include="Images\ForwardBlue.png" />
+    <Content Include="Images\ForwardGreen.png" />
+    <Content Include="Images\ForwardPurple.png" />
+    <Content Include="Images\ForwardRed.png" />
+    <Content Include="Images\Help\1.png" />
+    <Content Include="Images\Help\2.png" />
+    <Content Include="Images\Help\3.png" />
+    <Content Include="Images\Help\4.png" />
+    <Content Include="Images\Help\ExcelBtn.png" />
+    <Content Include="Images\Help\HardwareMain.png" />
+    <Content Include="Images\Help\HardwareMain1-2.png" />
+    <Content Include="Images\Help\HardwareMain1.png" />
+    <Content Include="Images\Help\HardwareMainTitleBar.png" />
+    <Content Include="Images\Help\LogoGmsr.png" />
+    <Content Include="Images\Help\LogoOlaf.png" />
+    <Content Include="Images\Help\UsersMain.png" />
+    <Content Include="Images\Loading.gif" />
+    <Content Include="Images\Loading2.gif" />
+    <Content Include="Images\LogoGmsrBig.png" />
+    <Content Include="Images\LogoOlafDebug.png" />
+    <Content Include="Images\LogoOlafTest.png" />
+    <Content Include="Images\L_Blue.png" />
+    <Content Include="Images\L_BlueBig.png" />
+    <Content Include="Images\menu-bg.gif" />
+    <Content Include="Images\PreviousBlue.png" />
+    <Content Include="Images\PreviousPurple.png" />
+    <Content Include="Images\P_BlueBig.png" />
+    <Content Include="Images\P_Green.png" />
+    <Content Include="Images\WarningSmallRed.png" />
+    <Content Include="Reports\Calls.aspx" />
+    <Content Include="Reports\Hardware.aspx" />
+    <Content Include="Reports\ServerMonitoring.aspx" />
+    <Content Include="Reports\Users.aspx" />
+    <Content Include="Scripts\jquery-ui-1.8.14.custom.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Services\FerretCreate.aspx" />
+    <Content Include="Services\HardwareLoan.aspx" />
+    <Content Include="Software\Documents.aspx" />
+    <Content Include="Software\EditDocument.aspx" />
+    <Content Include="Hardware\Main.aspx" />
+    <Content Include="Software\Main.aspx" />
+    <Content Include="Software\MediaItems.aspx" />
+    <Content Include="Software\EditMediaItem.aspx" />
+    <Content Include="Software\Products.aspx" />
+    <Content Include="Software\OrderForms.aspx" />
+    <Content Include="Software\EditOrderForm.aspx" />
+    <Content Include="Software\EditLicenseAssignment.aspx" />
+    <Content Include="Software\EditProduct.aspx" />
+    <Content Include="Software\EditLicense.aspx" />
+    <Content Include="Software\OrderItems.aspx" />
+    <Content Include="Software\EditOrderItem.aspx" />
+    <Content Include="Hardware\MapHardware.aspx" />
+    <Content Include="Images\ActionClear.png" />
+    <Content Include="Images\ActionClearGray.png" />
+    <Content Include="Images\ActionForward.png" />
+    <Content Include="Images\ActionForwardGray.png" />
+    <Content Include="Images\ActionSearch.png" />
+    <Content Include="Images\ActionSearchGray.png" />
+    <Content Include="Images\Add.png" />
+    <Content Include="Images\AddBig.png" />
+    <Content Include="Images\AddGray.png" />
+    <Content Include="Images\ArrowDown.png" />
+    <Content Include="Images\ArrowDownGray.png" />
+    <Content Include="Images\ArrowLeft.png" />
+    <Content Include="Images\ArrowLeftGray.png" />
+    <Content Include="Images\ArrowRight.png" />
+    <Content Include="Images\ArrowRightGray.png" />
+    <Content Include="Images\ActionBack.png" />
+    <Content Include="Images\ActionBackGray.png" />
+    <Content Include="Images\BackgroundHeader.png" />
+    <Content Include="Images\BackgroundPopup.png" />
+    <Content Include="Images\BackgroundSeparator.png" />
+    <Content Include="Images\BackgroundMenuStart.png" />
+    <Content Include="Images\Cube1.png" />
+    <Content Include="Images\Cube2.png" />
+    <Content Include="Images\Cube3.png" />
+    <Content Include="Images\Cube4.png" />
+    <Content Include="Images\CubeBig.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\DeleteBig.png" />
+    <Content Include="Images\Edit.png" />
+    <Content Include="Images\BackgroundMain.png" />
+    <Content Include="Images\BackgroundMenuBar.png" />
+    <Content Include="Images\LogoGmsr.png" />
+    <Content Include="Images\LogoOlaf.png" />
+    <Content Include="Images\ActionSave.png" />
+    <Content Include="Images\ActionSaveGray.png" />
+    <Content Include="Images\MenuArrow.png" />
+    <Content Include="Images\Warning.png" />
+    <Content Include="Images\WarningSmall.png" />
+    <Content Include="Images\Working.png" />
+    <Content Include="Maintenance.aspx" />
+    <Content Include="Oops.aspx" />
+    <Content Include="App_Themes\Theme1\StyleSheet1.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Users\Main.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Users\MainHelp.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\ApplicationArchitecture.aspx.cs">
+      <DependentUpon>ApplicationArchitecture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ApplicationArchitecture.aspx.designer.cs">
+      <DependentUpon>ApplicationArchitecture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Backlog.aspx.cs">
+      <DependentUpon>Backlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Backlog.aspx.designer.cs">
+      <DependentUpon>Backlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\WebEventLog.aspx.cs">
+      <DependentUpon>WebEventLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\WebEventLog.aspx.designer.cs">
+      <DependentUpon>WebEventLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\SessionLog.aspx.cs">
+      <DependentUpon>SessionLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\SessionLog.aspx.designer.cs">
+      <DependentUpon>SessionLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\OpenSessions.aspx.cs">
+      <DependentUpon>OpenSessions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\OpenSessions.aspx.designer.cs">
+      <DependentUpon>OpenSessions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\DataModel.aspx.cs">
+      <DependentUpon>DataModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\DataModel.aspx.designer.cs">
+      <DependentUpon>DataModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\DataModelGetSmc.aspx.cs">
+      <DependentUpon>DataModelGetSmc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\DataModelGetSmc.aspx.designer.cs">
+      <DependentUpon>DataModelGetSmc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Deployment.aspx.cs">
+      <DependentUpon>Deployment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Deployment.aspx.designer.cs">
+      <DependentUpon>Deployment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\EditGroup.aspx.cs">
+      <DependentUpon>EditGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\EditGroup.aspx.designer.cs">
+      <DependentUpon>EditGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Groups.aspx.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Groups.aspx.designer.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\AuditTrail.aspx.cs">
+      <DependentUpon>AuditTrail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\AuditTrail.aspx.designer.cs">
+      <DependentUpon>AuditTrail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Membership.aspx.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Membership.aspx.designer.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Methodology.aspx.cs">
+      <DependentUpon>Methodology.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Methodology.aspx.designer.cs">
+      <DependentUpon>Methodology.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\UserAccess.aspx.cs">
+      <DependentUpon>UserAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\UserAccess.aspx.designer.cs">
+      <DependentUpon>UserAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\GroupAccess.aspx.cs">
+      <DependentUpon>GroupAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\GroupAccess.aspx.designer.cs">
+      <DependentUpon>GroupAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contracts\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\EditHardwareItem.aspx.cs">
+      <DependentUpon>EditHardwareItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hardware\EditHardwareItem.aspx.designer.cs">
+      <DependentUpon>EditHardwareItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\MainHelp.aspx.cs">
+      <DependentUpon>MainHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hardware\MainHelp.aspx.designer.cs">
+      <DependentUpon>MainHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Calls.aspx.cs">
+      <DependentUpon>Calls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Calls.aspx.designer.cs">
+      <DependentUpon>Calls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Hardware.aspx.cs">
+      <DependentUpon>Hardware.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Hardware.aspx.designer.cs">
+      <DependentUpon>Hardware.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ServerMonitoring.aspx.cs">
+      <DependentUpon>ServerMonitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ServerMonitoring.aspx.designer.cs">
+      <DependentUpon>ServerMonitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FerretCreate.aspx.cs">
+      <DependentUpon>FerretCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\FerretCreate.aspx.designer.cs">
+      <DependentUpon>FerretCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\HardwareLoan.aspx.cs">
+      <DependentUpon>HardwareLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\HardwareLoan.aspx.designer.cs">
+      <DependentUpon>HardwareLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\Documents.aspx.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\Documents.aspx.designer.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\EditDocument.aspx.cs">
+      <DependentUpon>EditDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\EditDocument.aspx.designer.cs">
+      <DependentUpon>EditDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hardware\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\MediaItems.aspx.cs">
+      <DependentUpon>MediaItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\MediaItems.aspx.designer.cs">
+      <DependentUpon>MediaItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\EditMediaItem.aspx.cs">
+      <DependentUpon>EditMediaItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\EditMediaItem.aspx.designer.cs">
+      <DependentUpon>EditMediaItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\OrderForms.aspx.cs">
+      <DependentUpon>OrderForms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\OrderForms.aspx.designer.cs">
+      <DependentUpon>OrderForms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\EditOrderForm.aspx.cs">
+      <DependentUpon>EditOrderForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\EditOrderForm.aspx.designer.cs">
+      <DependentUpon>EditOrderForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\EditLicenseAssignment.aspx.cs">
+      <DependentUpon>EditLicenseAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\EditLicenseAssignment.aspx.designer.cs">
+      <DependentUpon>EditLicenseAssignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\EditLicense.aspx.cs">
+      <DependentUpon>EditLicense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\EditLicense.aspx.designer.cs">
+      <DependentUpon>EditLicense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\OrderItems.aspx.cs">
+      <DependentUpon>OrderItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\OrderItems.aspx.designer.cs">
+      <DependentUpon>OrderItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Software\EditOrderItem.aspx.cs">
+      <DependentUpon>EditOrderItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software\EditOrderItem.aspx.designer.cs">
+      <DependentUpon>EditOrderItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\MapHardware.aspx.cs">
+      <DependentUpon>MapHardware.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hardware\MapHardware.aspx.designer.cs">
+      <DependentUpon>MapHardware.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance.aspx.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance.aspx.designer.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Oops.aspx.cs">
+      <DependentUpon>Oops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oops.aspx.designer.cs">
+      <DependentUpon>Oops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\MainHelp.aspx.cs">
+      <DependentUpon>MainHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\MainHelp.aspx.designer.cs">
+      <DependentUpon>MainHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eu.Europa.Ec.Olaf.GmsrBLL\Eu.Europa.Ec.Olaf.GmsrBLL.csproj">
+      <Project>{C2623D0B-D530-4461-9FEA-E5E8F6B4FD63}</Project>
+      <Name>Eu.Europa.Ec.Olaf.GmsrBLL</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Theme1\Skin1.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release%28Prod%29.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release%28Test%29.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7710</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

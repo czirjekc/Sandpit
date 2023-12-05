@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GmsrModelStoreContainer" CdmEntityContainer="GmsrEntities">
+    <EntitySetMapping Name="MenuElementSet">
+      <EntityTypeMapping TypeName="GmsrModel.MenuElement">
+        <MappingFragment StoreEntitySet="R_MenuElement">
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuElementGroupSet">
+      <EntityTypeMapping TypeName="GmsrModel.MenuElementGroup">
+        <MappingFragment StoreEntitySet="R_MenuElementGroup">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MenuElementId" ColumnName="MenuElementId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuElementUserSet">
+      <EntityTypeMapping TypeName="GmsrModel.MenuElementUser">
+        <MappingFragment StoreEntitySet="R_MenuElementUser">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MenuElementId" ColumnName="MenuElementId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupSet">
+      <EntityTypeMapping TypeName="GmsrModel.Group">
+        <MappingFragment StoreEntitySet="R_Group">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="GmsrModel.User">
+        <MappingFragment StoreEntitySet="R_User">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditSet">
+      <EntityTypeMapping TypeName="GmsrModel.Audit">
+        <MappingFragment StoreEntitySet="R_Audit">
+          <ScalarProperty Name="ChangedColumns" ColumnName="ChangedColumns" />
+          <ScalarProperty Name="NewData" ColumnName="NewData" />
+          <ScalarProperty Name="OldData" ColumnName="OldData" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="RevisionStamp" ColumnName="RevisionStamp" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupUserSet">
+      <EntityTypeMapping TypeName="GmsrModel.GroupUser">
+        <MappingFragment StoreEntitySet="R_GroupUser">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaItemSet">
+      <EntityTypeMapping TypeName="GmsrModel.MediaItem">
+        <MappingFragment StoreEntitySet="R_MediaItem">
+          <ScalarProperty Name="SoftwareOrderItemId" ColumnName="SoftwareOrderId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="MediaItemLocationId" ColumnName="MediaItemLocationId" />
+          <ScalarProperty Name="MediaItemTypeId" ColumnName="MediaItemTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaItemLocationSet">
+      <EntityTypeMapping TypeName="GmsrModel.MediaItemLocation">
+        <MappingFragment StoreEntitySet="R_MediaItemLocation">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaItemTypeSet">
+      <EntityTypeMapping TypeName="GmsrModel.MediaItemType">
+        <MappingFragment StoreEntitySet="R_MediaItemType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareLicenseSet">
+      <EntityTypeMapping TypeName="GmsrModel.SoftwareLicense">
+        <MappingFragment StoreEntitySet="R_SoftwareLicense">
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="IsPresentInSource" ColumnName="IsPresentInSource" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="SerialKey" ColumnName="SerialKey" />
+          <ScalarProperty Name="MaintenanceEndDate" ColumnName="DateEnd" />
+          <ScalarProperty Name="MaintenanceStartDate" ColumnName="DateStart" />
+          <ScalarProperty Name="PreviousSoftwareLicenseId" ColumnName="PreviousSoftwareLicenseId" />
+          <ScalarProperty Name="MultiUserQuantity" ColumnName="MultiUserQuantity" />
+          <ScalarProperty Name="SoftwareLicenseTypeId" ColumnName="SoftwareLicenseTypeId" />
+          <ScalarProperty Name="SoftwareOrderItemId" ColumnName="SoftwareOrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareLicenseTypeSet">
+      <EntityTypeMapping TypeName="GmsrModel.SoftwareLicenseType">
+        <MappingFragment StoreEntitySet="R_SoftwareLicenseType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareProductSet">
+      <EntityTypeMapping TypeName="GmsrModel.SoftwareProduct">
+        <MappingFragment StoreEntitySet="R_SoftwareProduct">
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="SoftwareProductStatusId" ColumnName="SoftwareProductStatusId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OlafUserSet">
+      <EntityTypeMapping TypeName="GmsrModel.OlafUser">
+        <MappingFragment StoreEntitySet="Olaf_User">
+          <ScalarProperty Name="Phone" ColumnName="PEO_TELNR1_CD" />
+          <ScalarProperty Name="Unit" ColumnName="PEO_DG_CD" />
+          <ScalarProperty Name="PeoId" ColumnName="PEO_ID" />
+          <ScalarProperty Name="Fl" ColumnName="PEO_ACTUEL_FL" />
+          <ScalarProperty Name="Login" ColumnName="PEO_USERID_CD" />
+          <ScalarProperty Name="Email" ColumnName="PEO_EMAIL_NM" />
+          <ScalarProperty Name="Office" ColumnName="PEO_BUR_CD" />
+          <ScalarProperty Name="Building" ColumnName="PEO_BAT_CD" />
+          <ScalarProperty Name="Status" ColumnName="PEO_STATUS_CD" />
+          <ScalarProperty Name="Title" ColumnName="PEO_TITLE_CD" />
+          <ScalarProperty Name="Local" ColumnName="OLAF_LOCAL" />
+          <ScalarProperty Name="Act" ColumnName="OLAF_STATUS" />
+          <ScalarProperty Name="FirstName" ColumnName="PEO_FIRST_NM" />
+          <ScalarProperty Name="LastName" ColumnName="PEO_LAST_NM" />
+          <ScalarProperty Name="Id" ColumnName="OlafUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareProductStatusSet">
+      <EntityTypeMapping TypeName="GmsrModel.SoftwareProductStatus">
+        <MappingFragment StoreEntitySet="R_SoftwareProductStatus">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HardwareItemOrderFormSet">
+      <EntityTypeMapping TypeName="GmsrModel.HardwareItemOrderForm">
+        <MappingFragment StoreEntitySet="R_HardwareItemOrderForm">
+          <ScalarProperty Name="HardwareItemId" ColumnName="OlafHardId" />
+          <ScalarProperty Name="OrderFormId" ColumnName="ContractOrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderFormDocumentSet">
+      <EntityTypeMapping TypeName="GmsrModel.OrderFormDocument">
+        <MappingFragment StoreEntitySet="R_OrderFormDocument">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="OrderFormId" ColumnName="ContractOrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareOrderItemSet">
+      <EntityTypeMapping TypeName="GmsrModel.SoftwareOrderItem">
+        <MappingFragment StoreEntitySet="R_SoftwareOrder">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="OlafRef" ColumnName="OlafRef" />
+          <ScalarProperty Name="PreviousSoftwareOrderItemId" ColumnName="PreviousSoftwareOrderId" />
+          <ScalarProperty Name="SoftwareOrderItemTypeId" ColumnName="SoftwareOrderTypeId" />
+          <ScalarProperty Name="SoftwareProductId" ColumnName="SoftwareProductId" />
+          <ScalarProperty Name="OrderFormId" ColumnName="ContractOrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareOrderItemTypeSet">
+      <EntityTypeMapping TypeName="GmsrModel.SoftwareOrderItemType">
+        <MappingFragment StoreEntitySet="R_SoftwareOrderType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HardwareItemSet">
+      <EntityTypeMapping TypeName="GmsrModel.HardwareItem">
+        <MappingFragment StoreEntitySet="Olaf_Hard">
+          <ScalarProperty Name="DeliveryDate" ColumnName="RMT_LIVRAISON_DT" />
+          <ScalarProperty Name="Login" ColumnName="RMT_USERID_CD" />
+          <ScalarProperty Name="MaintenanceEndDate" ColumnName="RMT_FIN_GARANTIE_DT" />
+          <ScalarProperty Name="RmtParentCtgNm" ColumnName="RMT_PARENT_CTG_NM" />
+          <ScalarProperty Name="RmtCtgNm" ColumnName="RMT_CTG_NM" />
+          <ScalarProperty Name="Unit" ColumnName="RMT_ORG_CD" />
+          <ScalarProperty Name="RmtMatId" ColumnName="RMT_MAT_ID" />
+          <ScalarProperty Name="Serial" ColumnName="RMT_SERIE_NO" />
+          <ScalarProperty Name="Description" ColumnName="RMT_PRO_DESC" />
+          <ScalarProperty Name="LongName" ColumnName="RMT_TECHNIQUE_REM" />
+          <ScalarProperty Name="Model" ColumnName="RMT_PRO_CD" />
+          <ScalarProperty Name="Office" ColumnName="RMT_BUREAU_CD" />
+          <ScalarProperty Name="Building" ColumnName="RMT_BAT_CD" />
+          <ScalarProperty Name="Phone" ColumnName="RMT_TELNR1_CD" />
+          <ScalarProperty Name="FirstName" ColumnName="RMT_FIRST_NM" />
+          <ScalarProperty Name="LastName" ColumnName="RMT_LAST_NM" />
+          <ScalarProperty Name="InventoryNo" ColumnName="RMT_GEN_CD" />
+          <ScalarProperty Name="OlafName" ColumnName="OlafHardName" />
+          <ScalarProperty Name="Local" ColumnName="Olaf_local" />
+          <ScalarProperty Name="Status" ColumnName="Olaf_status" />
+          <ScalarProperty Name="Id" ColumnName="OlafHardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HardwareItemModificationSet">
+      <EntityTypeMapping TypeName="GmsrModel.HardwareItemModification">
+        <MappingFragment StoreEntitySet="Olaf_Hard_Historic">
+          <ScalarProperty Name="Type" ColumnName="Status" />
+          <ScalarProperty Name="OldUser" ColumnName="Old_user" />
+          <ScalarProperty Name="NewUser" ColumnName="RMT_USERID_CD" />
+          <ScalarProperty Name="Description" ColumnName="RMT_PRO_DESC" />
+          <ScalarProperty Name="InventoryNo" ColumnName="RMT_GEN_CD" />
+          <ScalarProperty Name="RmtMatId" ColumnName="RMT_MAT_ID" />
+          <ScalarProperty Name="Date" ColumnName="Mod_Date" />
+          <ScalarProperty Name="Id" ColumnName="OlafHardHistoricId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OlafUserModificationSet">
+      <EntityTypeMapping TypeName="GmsrModel.OlafUserModification">
+        <MappingFragment StoreEntitySet="Olaf_User_Historic">
+          <ScalarProperty Name="Type" ColumnName="Status" />
+          <ScalarProperty Name="NewOffice" ColumnName="PEO_BUR_CD" />
+          <ScalarProperty Name="OldOffice" ColumnName="Old_office" />
+          <ScalarProperty Name="User" ColumnName="PEO_USERID_CD" />
+          <ScalarProperty Name="FirstName" ColumnName="PEO_FIRST_NM" />
+          <ScalarProperty Name="LastName" ColumnName="PEO_LAST_NM" />
+          <ScalarProperty Name="PeoId" ColumnName="PEO_ID" />
+          <ScalarProperty Name="Date" ColumnName="Mod_Date" />
+          <ScalarProperty Name="Id" ColumnName="OlafUserHistoricId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActiveDirectoryGroupOlafUserSet">
+      <EntityTypeMapping TypeName="GmsrModel.ActiveDirectoryGroupOlafUser">
+        <MappingFragment StoreEntitySet="AUTO_GROUPXUSR">
+          <ScalarProperty Name="User" ColumnName="USER" />
+          <ScalarProperty Name="Group" ColumnName="GROUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLoanAssignementSet">
+      <EntityTypeMapping TypeName="GmsrModel.GLoanAssignment">
+        <MappingFragment StoreEntitySet="GLoan_Assignements">
+          <ScalarProperty Name="TicketCode" ColumnName="TicketCode" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="Id" ColumnName="Id_Assignement_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLoanCategorySet">
+      <EntityTypeMapping TypeName="GmsrModel.GLoanCategory">
+        <MappingFragment StoreEntitySet="GLoan_Categories">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id_Category_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLoanItemSet">
+      <EntityTypeMapping TypeName="GmsrModel.GLoanItem">
+        <MappingFragment StoreEntitySet="GLoan_Items">
+          <ScalarProperty Name="IsPermaLoan" ColumnName="IsPermaLoan" />
+          <ScalarProperty Name="IsItemActive" ColumnName="IsItemActive" />
+          <ScalarProperty Name="HardwareItemId" ColumnName="Id_Olaf_Hard_FK" />
+          <ScalarProperty Name="Id" ColumnName="Id_Item_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLoanStatusSet">
+      <EntityTypeMapping TypeName="GmsrModel.GLoanStatus">
+        <MappingFragment StoreEntitySet="GLoan_Status">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id_Status_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_GLoan_Assignements_GLoan_Items" TypeName="GmsrModel.FK_GLoan_Assignements_GLoan_Items" StoreEntitySet="GLoan_Assignements">
+      <EndProperty Name="GLoan_Assignements">
+        <ScalarProperty Name="Id" ColumnName="Id_Assignement_PK" />
+      </EndProperty>
+      <EndProperty Name="GLoan_Items">
+        <ScalarProperty Name="Id" ColumnName="Id_Item_FK" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_GLoan_Items_GLoan_Categories" TypeName="GmsrModel.FK_GLoan_Items_GLoan_Categories" StoreEntitySet="GLoan_Items">
+      <EndProperty Name="GLoan_Items">
+        <ScalarProperty Name="Id" ColumnName="Id_Item_PK" />
+      </EndProperty>
+      <EndProperty Name="GLoan_Categories">
+        <ScalarProperty Name="Id" ColumnName="Id_Category_FK" />
+      </EndProperty>
+      <Condition ColumnName="Id_Category_FK" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_GLoan_Items_GLoan_Status" TypeName="GmsrModel.FK_GLoan_Items_GLoan_Status" StoreEntitySet="GLoan_Items">
+      <EndProperty Name="GLoan_Items">
+        <ScalarProperty Name="Id" ColumnName="Id_Item_PK" />
+      </EndProperty>
+      <EndProperty Name="GLoan_Status">
+        <ScalarProperty Name="Id" ColumnName="Id_Status_FK" />
+      </EndProperty>
+      <Condition ColumnName="Id_Status_FK" IsNull="false" />
+    </AssociationSetMapping>
+    <EntitySetMapping Name="ContractAmendmentSet">
+      <EntityTypeMapping TypeName="GmsrModel.ContractAmendment">
+        <MappingFragment StoreEntitySet="Contract_Amendment">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Prices" ColumnName="Prices" />
+          <ScalarProperty Name="BudgetLine" ColumnName="BudgetLine" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="DateBegin" ColumnName="DateBegin" />
+          <ScalarProperty Name="ContractFrameworkId" ColumnName="ContractCCId" />
+          <ScalarProperty Name="Name" ColumnName="ContractAmendmentNumber" />
+          <ScalarProperty Name="Id" ColumnName="ContractAmendmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractFrameworkSet">
+      <EntityTypeMapping TypeName="GmsrModel.ContractFramework">
+        <MappingFragment StoreEntitySet="Contract_Framework">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OlafContact" ColumnName="OlafContact" />
+          <ScalarProperty Name="CompanyContact" ColumnName="CompanyContact" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="CE_Contact" ColumnName="CEContact" />
+          <ScalarProperty Name="IsIntraMuros" ColumnName="IsIntraMuros" />
+          <ScalarProperty Name="IsSLA" ColumnName="IsSLA" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Prices" ColumnName="Prices" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="DateBegin" ColumnName="DateBegin" />
+          <ScalarProperty Name="Name" ColumnName="ContractNumber" />
+          <ScalarProperty Name="Id" ColumnName="ContractCCId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderFormSet">
+      <EntityTypeMapping TypeName="GmsrModel.OrderForm">
+        <MappingFragment StoreEntitySet="Contract_Order">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProfileId" ColumnName="ProfileId" />
+          <ScalarProperty Name="ServiceType" ColumnName="Service_type" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="DateEnd" ColumnName="dateend" />
+          <ScalarProperty Name="DateBegin" ColumnName="datebegin" />
+          <ScalarProperty Name="Scope" ColumnName="Scope" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Name" ColumnName="OrderName" />
+          <ScalarProperty Name="SpecificContractId" ColumnName="ContractSpecContractId" />
+          <ScalarProperty Name="ContractAmendmentId" ColumnName="ContractAmendmentId" />
+          <ScalarProperty Name="Id" ColumnName="ContractOrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecificContractSet">
+      <EntityTypeMapping TypeName="GmsrModel.SpecificContract">
+        <MappingFragment StoreEntitySet="Contract_SpecContract">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="SpecificContractPatch" ColumnName="Contract_SpecContractPatch" />
+          <ScalarProperty Name="Garantees" ColumnName="Garantees" />
+          <ScalarProperty Name="IsPenalties" ColumnName="IsPenalties" />
+          <ScalarProperty Name="InvoicingPeriod" ColumnName="Invoicing_Period" />
+          <ScalarProperty Name="Price3" ColumnName="Price3" />
+          <ScalarProperty Name="Price3Def" ColumnName="Price3_def" />
+          <ScalarProperty Name="Price2" ColumnName="Price2" />
+          <ScalarProperty Name="Price2Def" ColumnName="Price2_def" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
+          <ScalarProperty Name="Price1Def" ColumnName="Price1_Def" />
+          <ScalarProperty Name="PriceTotal" ColumnName="PriceTotal" />
+          <ScalarProperty Name="AcceptanceDelay" ColumnName="AcceptanceDelay" />
+          <ScalarProperty Name="AcceptanceType" ColumnName="Acceptance_Type" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="DateBegin" ColumnName="Datebegin" />
+          <ScalarProperty Name="ContractAmendmentId" ColumnName="ContractAmendmentId" />
+          <ScalarProperty Name="ContractFrameworkId" ColumnName="ContractFrameworkId" />
+          <ScalarProperty Name="Name" ColumnName="ContractSpecContrNumber" />
+          <ScalarProperty Name="Id" ColumnName="ContractSpecContrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BacklogItemSet">
+      <EntityTypeMapping TypeName="GmsrModel.BacklogItem">
+        <MappingFragment StoreEntitySet="R_BacklogItem">
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BacklogItemStatusSet">
+      <EntityTypeMapping TypeName="GmsrModel.BacklogItemStatus">
+        <MappingFragment StoreEntitySet="R_BacklogItemStatus">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_R_BacklogItem_R_BacklogItemType" TypeName="GmsrModel.FK_R_BacklogItem_R_BacklogItemType" StoreEntitySet="R_BacklogItem">
+      <EndProperty Name="R_BacklogItem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <EndProperty Name="R_BacklogItemStatus">
+        <ScalarProperty Name="Id" ColumnName="BacklogItemTypeId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="SoftwareLicenseAssignmentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(GmsrModel.SoftwareLicenseAssignment)">
+        <MappingFragment StoreEntitySet="R_SoftwareLicenseInUse">
+          <ScalarProperty Name="DateUnassigned" ColumnName="DateUnassigned" />
+          <ScalarProperty Name="DateInstalled" ColumnName="DateInstalled" />
+          <ScalarProperty Name="DateAssigned" ColumnName="DateAssigned" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="HardwareItemId" ColumnName="HardwareItemId" />
+          <ScalarProperty Name="OlafUserId" ColumnName="OlafUserId" />
+          <ScalarProperty Name="SoftwareLicenseId" ColumnName="SoftwareLicenseId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetectedSoftwareProductMatchSet">
+      <EntityTypeMapping TypeName="GmsrModel.DetectedSoftwareProductMatch">
+        <MappingFragment StoreEntitySet="SWD_ProductMatch">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SoftwareProductId" ColumnName="R_SoftwareProductId" />
+          <ScalarProperty Name="DetectedSoftwareProductId" ColumnName="SWD_ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetectedSoftwareInstallationSet">
+      <EntityTypeMapping TypeName="GmsrModel.DetectedSoftwareInstallation">
+        <MappingFragment StoreEntitySet="SWD_Installation">
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+          <ScalarProperty Name="AdditionalInfo" ColumnName="AdditionalInfo" />
+          <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DetectedSoftwareProductId" ColumnName="SWD_ProductId" />
+          <ScalarProperty Name="DetectionDate" ColumnName="DetectionDate" />
+          <ScalarProperty Name="HardwareItemId" ColumnName="Olaf_HardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetectedSoftwareUninstallationSet">
+      <EntityTypeMapping TypeName="GmsrModel.DetectedSoftwareUninstallation">
+        <MappingFragment StoreEntitySet="SWD_Uninstallation">
+          <ScalarProperty Name="AdditionalInfo" ColumnName="AdditonalInfo" />
+          <ScalarProperty Name="InstallationDate" ColumnName="InstallationDate" />
+          <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DetectedSoftwareProductId" ColumnName="SWD_ProductId" />
+          <ScalarProperty Name="DetectionDate" ColumnName="DetectionDate" />
+          <ScalarProperty Name="HardwareItemId" ColumnName="Olaf_HardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetectedSoftwareProductSet">
+      <EntityTypeMapping TypeName="GmsrModel.DetectedSoftwareProduct">
+        <MappingFragment StoreEntitySet="SWD_Product">
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+          <ScalarProperty Name="DetectionDate" ColumnName="DetectionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="SoftwareName" ColumnName="SoftwareName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnknownHardwareItemSet">
+      <EntityTypeMapping TypeName="GmsrModel.UnknownHardwareItem">
+        <MappingFragment StoreEntitySet="R_UnknownHardware">
+          <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+          <ScalarProperty Name="FoundOn" ColumnName="FoundOn" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnknownUserSet">
+      <EntityTypeMapping TypeName="GmsrModel.UnknownUser">
+        <MappingFragment StoreEntitySet="R_UnknownUser">
+          <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+          <ScalarProperty Name="FoundOn" ColumnName="FoundOn" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IND_SqiHistory">
+      <EntityTypeMapping TypeName="GmsrModel.ServiceQualityIndicatorHistoryItem">
+        <MappingFragment StoreEntitySet="IND_SqiHistory">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="ComputationDate" ColumnName="ComputationDate" />
+          <ScalarProperty Name="AverageProfiledSQI_Value" ColumnName="AverageProfiledSQI_Value" />
+          <ScalarProperty Name="SqiId" ColumnName="Sqi_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IND_SQISTYPES">
+      <EntityTypeMapping TypeName="GmsrModel.ServiceQualityIndicatorType">
+        <MappingFragment StoreEntitySet="IND_SQISTYPES">
+          <ScalarProperty Name="MMValue" ColumnName="MMValue" />
+          <ScalarProperty Name="QUERY" ColumnName="QUERY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="SERVER" ColumnName="SERVER" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="EXPLANATION" ColumnName="EXPLANATION" />
+          <ScalarProperty Name="MINorMAX" ColumnName="MINorMAX" />
+          <ScalarProperty Name="LIMITDESCRIPTION" ColumnName="LIMITDESCRIPTION" />
+          <ScalarProperty Name="TARGETDESCRIPTION" ColumnName="TARGETDESCRIPTION" />
+          <ScalarProperty Name="MAXIMUMDELAY" ColumnName="MAXIMUMDELAY" />
+          <ScalarProperty Name="MINNBROFQOS" ColumnName="MINNBROFQOS" />
+          <ScalarProperty Name="POINTS" ColumnName="POINTS" />
+          <ScalarProperty Name="LIMIT" ColumnName="LIMIT" />
+          <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+          <ScalarProperty Name="FORMULA" ColumnName="FORMULA" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="UNITSID" ColumnName="UNITSID" />
+          <ScalarProperty Name="DOMAINSTYPESID" ColumnName="DOMAINSTYPESID" />
+          <ScalarProperty Name="SQISTYPESID" ColumnName="SQISTYPESID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

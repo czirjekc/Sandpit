@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="GetSmcModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="GetSmcEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HelpdeskActionGroupSet" EntityType="GetSmcModel.HelpdeskActionGroup" />
+    <EntitySet Name="HelpdeskItemSet" EntityType="GetSmcModel.HelpdeskItem" />
+    <EntitySet Name="HelpdeskNatureSet" EntityType="GetSmcModel.HelpdeskNature" />
+    <AssociationSet Name="FK_Helpdesk_ActionGroup_Helpdesk_Item" Association="GetSmcModel.FK_Helpdesk_ActionGroup_Helpdesk_Item">
+      <End Role="Helpdesk_Item" EntitySet="HelpdeskItemSet" />
+      <End Role="Helpdesk_ActionGroup" EntitySet="HelpdeskActionGroupSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Helpdesk_Item_Helpdesk_Nature" Association="GetSmcModel.FK_Helpdesk_Item_Helpdesk_Nature">
+      <End Role="Helpdesk_Nature" EntitySet="HelpdeskNatureSet" />
+      <End Role="Helpdesk_Item" EntitySet="HelpdeskItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Helpdesk_Nature_Helpdesk_Nature" Association="GetSmcModel.FK_Helpdesk_Nature_Helpdesk_Nature">
+      <End Role="Helpdesk_Nature" EntitySet="HelpdeskNatureSet" />
+      <End Role="Helpdesk_Nature1" EntitySet="HelpdeskNatureSet" />
+    </AssociationSet>
+    <EntitySet Name="HelpdeskCallSet" EntityType="GetSmcModel.HelpdeskCall" />
+    <AssociationSet Name="FK_Helpdesk_Call_Helpdesk_Nature" Association="GetSmcModel.FK_Helpdesk_Call_Helpdesk_Nature">
+      <End Role="HelpdeskNature" EntitySet="HelpdeskNatureSet" />
+      <End Role="Helpdesk_Call" EntitySet="HelpdeskCallSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HelpdeskActionGroup">
+    <Key>
+      <PropertyRef Name="IdActionGroup" />
+    </Key>
+    <Property Type="Int32" Name="IdActionGroup" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="IdItem" Nullable="false" />
+    <Property Type="Int32" Name="Number" Nullable="false" />
+    <Property Type="Int32" Name="IdCreator" Nullable="false" />
+    <Property Type="DateTime" Name="CreationDate" Nullable="false" />
+    <Property Type="DateTime" Name="StartingDate" />
+    <Property Type="Int32" Name="IdFunctionalServiceCreator" Nullable="false" />
+    <Property Type="Int32" Name="IdFunctionalServiceCurrent" Nullable="false" />
+    <Property Type="Int32" Name="IdFunctionalServiceAffected" Nullable="false" />
+    <Property Type="Int32" Name="IdPersonInCharge" />
+    <Property Type="Int32" Name="IdPreviousPersonInCharge" />
+    <Property Type="String" Name="SendEmail" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Report" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TransferDate" />
+    <Property Type="Int32" Name="IdTransferedBy" />
+    <Property Type="DateTime" Name="AcknowledgmentDate" />
+    <Property Type="Int32" Name="IdAcknowledgedBy" />
+    <Property Type="DateTime" Name="ResolutionDate" />
+    <Property Type="Int32" Name="IdResolvedBy" />
+    <Property Type="DateTime" Name="ClosureDate" />
+    <Property Type="Int32" Name="IdClosedBy" />
+    <Property Type="Int32" Name="IdState" Nullable="false" />
+    <Property Type="String" Name="IsResponsabilityTransfer" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="HelpdeskItem" Relationship="GetSmcModel.FK_Helpdesk_ActionGroup_Helpdesk_Item" FromRole="Helpdesk_ActionGroup" ToRole="Helpdesk_Item" />
+  </EntityType>
+  <EntityType Name="HelpdeskItem">
+    <Key>
+      <PropertyRef Name="IdItem" />
+    </Key>
+    <Property Type="Int32" Name="IdItem" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Number" Nullable="false" />
+    <Property Type="Int32" Name="IdCreator" Nullable="false" />
+    <Property Type="DateTime" Name="CreationDate" Nullable="false" />
+    <Property Type="String" Name="ItemCreatorCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IdCaller" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerCelluleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerCelluleTown" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerCentraleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerServiceDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerLanguageDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerLocation" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IdConcern" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernCelluleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernCelluleTown" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernCentraleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernServiceDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernLanguageDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernLocation" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SendEmailCaller" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="IdProject" />
+    <Property Type="Int32" Name="IdConfiguration" />
+    <Property Type="Int32" Name="IdRequestType" />
+    <Property Type="Int32" Name="IdNature" />
+    <Property Type="Int32" Name="IdPriority" />
+    <Property Type="Int32" Name="IdProblem" />
+    <Property Type="String" Name="IsPaying" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="IdFunctionalServiceCreator" Nullable="false" />
+    <Property Type="Int32" Name="IdFunctionalServiceCurrent" Nullable="false" />
+    <Property Type="Int32" Name="IdPersonInCharge" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IsSolution" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Report" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="AcknowledgmentDate" />
+    <Property Type="Int32" Name="IdAcknowledgedBy" />
+    <Property Type="DateTime" Name="ResolutionDate" />
+    <Property Type="Int32" Name="IdResolvedBy" />
+    <Property Type="DateTime" Name="ClosureDate" />
+    <Property Type="Int32" Name="IdClosedBy" />
+    <Property Type="Int32" Name="IdState" Nullable="false" />
+    <Property Type="Int32" Name="IdItemType" Nullable="false" />
+    <Property Type="String" Name="Valid" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ArtemisDescription" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SendEmailConcern" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ConfigurationDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerOfficeDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerPhoneDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernOfficeDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernPhoneDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="AgreedDate" />
+    <Property Type="String" Name="IsVIP" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="ImpactedComputer" />
+    <Property Type="Int32" Name="IdAnnexTableQualification" />
+    <Property Type="Int32" Name="IdClassification" />
+    <NavigationProperty Name="HelpdeskActionGroup" Relationship="GetSmcModel.FK_Helpdesk_ActionGroup_Helpdesk_Item" FromRole="Helpdesk_Item" ToRole="Helpdesk_ActionGroup" />
+    <NavigationProperty Name="HelpdeskNature" Relationship="GetSmcModel.FK_Helpdesk_Item_Helpdesk_Nature" FromRole="Helpdesk_Item" ToRole="Helpdesk_Nature" />
+  </EntityType>
+  <EntityType Name="HelpdeskNature">
+    <Key>
+      <PropertyRef Name="IdNature" />
+    </Key>
+    <Property Type="Int32" Name="IdNature" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="IdParent" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmptyNode" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="Level" />
+    <Property Type="Int32" Name="Node1" />
+    <Property Type="Int32" Name="Node2" />
+    <Property Type="Int32" Name="Node3" />
+    <Property Type="Int32" Name="Node4" />
+    <Property Type="String" Name="Type" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Valid" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ArtemisDescription" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HelpdeskItem" Relationship="GetSmcModel.FK_Helpdesk_Item_Helpdesk_Nature" FromRole="Helpdesk_Nature" ToRole="Helpdesk_Item" />
+    <NavigationProperty Name="HelpdeskNature1" Relationship="GetSmcModel.FK_Helpdesk_Nature_Helpdesk_Nature" FromRole="Helpdesk_Nature" ToRole="Helpdesk_Nature1" />
+    <NavigationProperty Name="HelpdeskNature2" Relationship="GetSmcModel.FK_Helpdesk_Nature_Helpdesk_Nature" FromRole="Helpdesk_Nature1" ToRole="Helpdesk_Nature" />
+    <NavigationProperty Name="HelpdeskCall" Relationship="GetSmcModel.FK_Helpdesk_Call_Helpdesk_Nature" FromRole="HelpdeskNature" ToRole="Helpdesk_Call" />
+  </EntityType>
+  <Association Name="FK_Helpdesk_ActionGroup_Helpdesk_Item">
+    <End Type="GetSmcModel.HelpdeskItem" Role="Helpdesk_Item" Multiplicity="1" />
+    <End Type="GetSmcModel.HelpdeskActionGroup" Role="Helpdesk_ActionGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helpdesk_Item">
+        <PropertyRef Name="IdItem" />
+      </Principal>
+      <Dependent Role="Helpdesk_ActionGroup">
+        <PropertyRef Name="IdItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Helpdesk_Item_Helpdesk_Nature">
+    <End Type="GetSmcModel.HelpdeskNature" Role="Helpdesk_Nature" Multiplicity="0..1" />
+    <End Type="GetSmcModel.HelpdeskItem" Role="Helpdesk_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helpdesk_Nature">
+        <PropertyRef Name="IdNature" />
+      </Principal>
+      <Dependent Role="Helpdesk_Item">
+        <PropertyRef Name="IdNature" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Helpdesk_Nature_Helpdesk_Nature">
+    <End Type="GetSmcModel.HelpdeskNature" Role="Helpdesk_Nature" Multiplicity="0..1" />
+    <End Type="GetSmcModel.HelpdeskNature" Role="Helpdesk_Nature1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helpdesk_Nature">
+        <PropertyRef Name="IdNature" />
+      </Principal>
+      <Dependent Role="Helpdesk_Nature1">
+        <PropertyRef Name="IdParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HelpdeskCall">
+    <Key>
+      <PropertyRef Name="IdCall" />
+    </Key>
+    <Property Type="Int32" Name="IdCall" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ClosureDate" />
+    <Property Type="Int32" Name="IdClosedBy" />
+    <Property Type="DateTime" Name="CreationDate" />
+    <Property Type="Int32" Name="IdCreator" Nullable="false" />
+    <Property Type="String" Name="IdConcern" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernCelluleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernCelluleTown" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernCentraleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernServiceDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernLanguageDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernLocation" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IdCaller" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerCelluleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerCelluleTown" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerCentraleDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerServiceDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerLanguageDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerLocation" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SendEmailCaller" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="IdConfiguration" />
+    <Property Type="Int32" Name="IdFunctionalServiceCreator" Nullable="false" />
+    <Property Type="Int32" Name="IdFunctionalServiceCurrent" Nullable="false" />
+    <Property Type="Int32" Name="IdNature" />
+    <Property Type="Int32" Name="Number" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Report" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SolutionCall" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ArtemisDescription" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdState" Nullable="false" />
+    <Property Type="String" Name="SendEmailConcern" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ConfigurationDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerOfficeDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallerPhoneDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernOfficeDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConcernPhoneDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdClassification" />
+    <NavigationProperty Name="HelpdeskNature" Relationship="GetSmcModel.FK_Helpdesk_Call_Helpdesk_Nature" FromRole="Helpdesk_Call" ToRole="HelpdeskNature" />
+  </EntityType>
+  <Association Name="FK_Helpdesk_Call_Helpdesk_Nature">
+    <End Type="GetSmcModel.HelpdeskNature" Role="HelpdeskNature" Multiplicity="0..1" />
+    <End Type="GetSmcModel.HelpdeskCall" Role="Helpdesk_Call" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HelpdeskNature">
+        <PropertyRef Name="IdNature" />
+      </Principal>
+      <Dependent Role="Helpdesk_Call">
+        <PropertyRef Name="IdNature" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

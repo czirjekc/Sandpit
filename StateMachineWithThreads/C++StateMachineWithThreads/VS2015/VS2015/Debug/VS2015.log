@@ -1,0 +1,10 @@
+﻿  main.cpp
+  LockGuard.cpp
+  CentrifugeTest.cpp
+  PressureTest.cpp
+  SelfTest.cpp
+  SelfTestEngine.cpp
+  StateMachine.cpp
+  WorkerThread.cpp
+  Generating Code...
+  VS2015.vcxproj -> C:\Work\Work\Sandpit\StateMachineWithThreads\C++StateMachineWithThreads\VS2015\Debug\VS2015.exe

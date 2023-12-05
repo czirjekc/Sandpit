@@ -1,0 +1,9 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.202.134'
+  Validating architecture
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  createTable.cpp
+  Linking objects
+  SQLiteExamples.vcxproj -> C:\Work\Work\Sandpit\SQLiteExamples\bin\x64\Debug\SQLiteExamples.out

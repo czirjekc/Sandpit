@@ -1,0 +1,9 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.202.143'
+  Validating architecture
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  main.cpp
+  Linking objects
+  MutiThreadIncrement.vcxproj -> C:\Work\Work\Sandpit\MutiThreadIncrement\bin\x64\Debug\MutiThreadIncrement.out

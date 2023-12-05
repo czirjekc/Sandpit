@@ -1,0 +1,1 @@
+g++ -o "/home/csaba/projects/SQLiteExamples/bin/x64/Debug/SQLiteExamples.out" -Wl,--no-undefined -Wl,-L/home/csaba/projects/SQLiteExamples/../build/.libs -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -l sqlite3 /home/csaba/projects/SQLiteExamples/obj/x64/Debug/createTable.o

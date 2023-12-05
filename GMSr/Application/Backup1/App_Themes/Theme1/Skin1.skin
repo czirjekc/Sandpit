@@ -1,0 +1,38 @@
+﻿<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="act" %>
+
+<asp:GridView runat="server" width="100%" AutoGenerateColumns="False" CellPadding="1" ForeColor="#133984" GridLines="Vertical" CssClass="gvGrid">
+    <HeaderStyle BackColor="#557dc3" Font-Bold="True" ForeColor="#FFFFFF" CssClass="gvHeader" />
+    <RowStyle HorizontalAlign="Left" />
+    <FooterStyle BackColor="#DDDDDD" />
+    <PagerStyle BackColor="#DDDDDD" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />    
+    <SortedAscendingCellStyle BackColor="#FAFAE7" />
+    <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+    <SortedDescendingCellStyle BackColor="#E1DB9C" />
+    <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+</asp:GridView>
+
+<asp:Calendar runat="server" Height="180px" Width="200px" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana,Tahoma,Arial,Helvetica,sans-serif" Font-Size="11px" ForeColor="Black">
+    <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+    <NextPrevStyle VerticalAlign="Bottom" />
+    <OtherMonthDayStyle ForeColor="#808080" />
+    <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+    <SelectorStyle BackColor="#CCCCCC" />
+    <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+    <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+    <WeekendDayStyle BackColor="#FFFFCC" />
+</asp:Calendar>
+
+<asp:Button runat="server" width="100px" Font-Names="Verdana,Tahoma,Arial,Helvetica,sans-serif" Font-Size="11px" />
+
+<asp:LinkButton runat="server" ForeColor="#557dc3" />
+
+<asp:ImageButton runat="server" ImageAlign="AbsMiddle" BorderWidth="1px" BorderColor="Transparent" />
+
+<asp:TextBox runat="server" width="200px" BorderStyle="Solid" BorderWidth="1px" BorderColor="#888888"  Font-Names="Verdana,Tahoma,Arial,Helvetica,sans-serif" Font-Size="11px"></asp:TextBox>
+
+<asp:DropDownList runat="server" width="204px" BorderStyle="Solid" BorderWidth="1px" BorderColor="#888888" Font-Names="Verdana,Tahoma,Arial,Helvetica,sans-serif" Font-Size="11px"></asp:DropDownList>
+
+<act:ComboBox runat="server" width="200px" BorderStyle="Solid" BorderWidth="1px" BorderColor="#888888" Font-Names="Verdana,Tahoma,Arial,Helvetica,sans-serif" Font-Size="11px" MaxLength="0" AutoCompleteMode="SuggestAppend" DropDownStyle="DropDownList" RenderMode="Block"></act:ComboBox>
+
+<asp:ListBox runat="server" Width="200px" Rows="10" BorderStyle="Solid" BorderWidth="1px" BorderColor="#888888" Font-Names="Verdana,Tahoma,Arial,Helvetica,sans-serif" Font-Size="11px"></asp:ListBox>
+

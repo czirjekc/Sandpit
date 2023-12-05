@@ -1,0 +1,8 @@
+Product and licenses basic import rules:
+
+The data imported should be the smallest element: a license.
+The information concerning products is computed from the licenses (group on product name + version + company name + sourcename).
+The possibly unknown users and hardware found in the UserName and ComputerName columns will be added to the R_UnknownUser and R_UnknownHardware tables for inspection.
+Products are only added. They're never deleted or updated.
+Orders are created on the fly to link licenses to products.
+Licenses must have a unique identifier, preferably the combination of the source name + a unique id (eg: ABAC.215235).
