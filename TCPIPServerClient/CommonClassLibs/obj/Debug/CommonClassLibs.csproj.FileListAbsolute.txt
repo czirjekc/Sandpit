@@ -1,0 +1,5 @@
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\CommonClassLibs\bin\Debug\CommonClassLibs.dll
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\CommonClassLibs\bin\Debug\CommonClassLibs.pdb
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\CommonClassLibs\obj\Debug\CommonClassLibs.csprojAssemblyReference.cache
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\CommonClassLibs\obj\Debug\CommonClassLibs.dll
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\CommonClassLibs\obj\Debug\CommonClassLibs.pdb

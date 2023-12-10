@@ -1,0 +1,13 @@
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\bin\Release\TCPIPServer.exe.config
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\bin\Release\TCPIPServer.exe
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\bin\Release\TCPIPServer.pdb
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\bin\Release\CommonClassLibs.dll
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\bin\Release\CommonClassLibs.pdb
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.csproj.AssemblyReference.cache
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.frmServer.resources
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.Properties.Resources.resources
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.csproj.GenerateResource.cache
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.csproj.CoreCompileInputs.cache
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.csproj.CopyComplete
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.exe
+C:\Work\Sandpit\TCPIPServerClient\TCPIPServer\obj\Release\TCPIPServer.pdb

@@ -1,0 +1,6 @@
+C:\Work\Sandpit\TCPIPServerClient\CommonClassLibs\bin\Release\CommonClassLibs.dll
+C:\Work\Sandpit\TCPIPServerClient\CommonClassLibs\bin\Release\CommonClassLibs.pdb
+C:\Work\Sandpit\TCPIPServerClient\CommonClassLibs\obj\Release\CommonClassLibs.csproj.AssemblyReference.cache
+C:\Work\Sandpit\TCPIPServerClient\CommonClassLibs\obj\Release\CommonClassLibs.csproj.CoreCompileInputs.cache
+C:\Work\Sandpit\TCPIPServerClient\CommonClassLibs\obj\Release\CommonClassLibs.dll
+C:\Work\Sandpit\TCPIPServerClient\CommonClassLibs\obj\Release\CommonClassLibs.pdb

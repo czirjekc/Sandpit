@@ -1,0 +1,25 @@
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\bin\Debug\TCPIPServer.exe.config
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\bin\Debug\TCPIPServer.exe
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\bin\Debug\TCPIPServer.pdb
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\bin\Debug\CommonClassLibs.dll
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\bin\Debug\CommonClassLibs.pdb
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.csprojAssemblyReference.cache
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.frmServer.resources
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.Properties.Resources.resources
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.csproj.GenerateResource.cache
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.csproj.CopyComplete
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.exe
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.pdb
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\bin\Debug\TCPIPServer.exe.config
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\bin\Debug\TCPIPServer.exe
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\bin\Debug\TCPIPServer.pdb
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\bin\Debug\CommonClassLibs.dll
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\bin\Debug\CommonClassLibs.pdb
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.csproj.AssemblyReference.cache
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.frmServer.resources
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.Properties.Resources.resources
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.csproj.GenerateResource.cache
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.csproj.CoreCompileInputs.cache
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.csproj.CopyComplete
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.exe
+C:\Projects\2015\TCPIPServerClient\TCPIPServer\obj\Debug\TCPIPServer.pdb

@@ -1,0 +1,12 @@
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\bin\Debug\TCPIPClient.exe.config
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\bin\Debug\TCPIPClient.exe
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\bin\Debug\TCPIPClient.pdb
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\bin\Debug\CommonClassLibs.dll
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\bin\Debug\CommonClassLibs.pdb
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\obj\Debug\TCPIPClient.csprojAssemblyReference.cache
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\obj\Debug\TCPIPClient.frmClient.resources
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\obj\Debug\TCPIPClient.Properties.Resources.resources
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\obj\Debug\TCPIPClient.csproj.GenerateResource.cache
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\obj\Debug\TCPIPClient.csproj.CopyComplete
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\obj\Debug\TCPIPClient.exe
+D:\MyDocuments\Visual Studio 2015\Projects\TCPIPServerClient\TCPIPClient\obj\Debug\TCPIPClient.pdb
