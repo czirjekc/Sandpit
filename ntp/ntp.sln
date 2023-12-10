@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ntp", "ntp\ntp.vcxproj", "{9EC77BAC-1798-4A2F-AE54-EF400C19005F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_ntp", "unit_tests\server_client\ntp_test.vcxproj", "{F8635A97-994B-4240-8495-DFA5A15DF321}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_ntp_server_client_ui", "unit_tests\GUI\test_ntp_server_client_ui.vcxproj", "{DC033429-45DC-4D1B-BAAE-4DE2E0638C28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EC77BAC-1798-4A2F-AE54-EF400C19005F}.Debug|x64.ActiveCfg = Debug|x64
+		{9EC77BAC-1798-4A2F-AE54-EF400C19005F}.Debug|x64.Build.0 = Debug|x64
+		{9EC77BAC-1798-4A2F-AE54-EF400C19005F}.Debug|x86.ActiveCfg = Debug|x64
+		{9EC77BAC-1798-4A2F-AE54-EF400C19005F}.Release|x64.ActiveCfg = Release|x64
+		{9EC77BAC-1798-4A2F-AE54-EF400C19005F}.Release|x64.Build.0 = Release|x64
+		{9EC77BAC-1798-4A2F-AE54-EF400C19005F}.Release|x86.ActiveCfg = Release|x64
+		{F8635A97-994B-4240-8495-DFA5A15DF321}.Debug|x64.ActiveCfg = Debug|x64
+		{F8635A97-994B-4240-8495-DFA5A15DF321}.Debug|x64.Build.0 = Debug|x64
+		{F8635A97-994B-4240-8495-DFA5A15DF321}.Debug|x86.ActiveCfg = Debug|x64
+		{F8635A97-994B-4240-8495-DFA5A15DF321}.Release|x64.ActiveCfg = Release|x64
+		{F8635A97-994B-4240-8495-DFA5A15DF321}.Release|x64.Build.0 = Release|x64
+		{F8635A97-994B-4240-8495-DFA5A15DF321}.Release|x86.ActiveCfg = Release|x64
+		{DC033429-45DC-4D1B-BAAE-4DE2E0638C28}.Debug|x64.ActiveCfg = Debug|x64
+		{DC033429-45DC-4D1B-BAAE-4DE2E0638C28}.Debug|x64.Build.0 = Debug|x64
+		{DC033429-45DC-4D1B-BAAE-4DE2E0638C28}.Debug|x86.ActiveCfg = Debug|x64
+		{DC033429-45DC-4D1B-BAAE-4DE2E0638C28}.Release|x64.ActiveCfg = Release|x64
+		{DC033429-45DC-4D1B-BAAE-4DE2E0638C28}.Release|x64.Build.0 = Release|x64
+		{DC033429-45DC-4D1B-BAAE-4DE2E0638C28}.Release|x86.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {339BC5EC-6D32-463A-B783-8639EFA3518A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://playsight.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ntp\\ntp.vcxproj
+		SccProjectName1 = ntp
+		SccLocalPath1 = ntp
+		SccProjectUniqueName2 = unit_tests\\server_client\\ntp_test.vcxproj
+		SccProjectName2 = unit_tests/server_client
+		SccLocalPath2 = unit_tests\\server_client
+		SccProjectUniqueName3 = unit_tests\\GUI\\test_ntp_server_client_ui.vcxproj
+		SccProjectName3 = unit_tests/GUI
+		SccLocalPath3 = unit_tests\\GUI
+	EndGlobalSection
+EndGlobal
